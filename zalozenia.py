@@ -5,7 +5,7 @@ populacja = 350
 wymiar_x = 25
 wymiar_y = 25
 lokalizacja_rozklad_typ= {"Dom":0.6,"Praca":0.2,"Przestrzen komercyjna":0.2}
-udzial_drog = 0.2
+udzial_drog = 0.3
 gestosc_zakretow = 0.05
 
 
