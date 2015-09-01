@@ -1,7 +1,7 @@
 import random, zalozenia
 
 def losuj_rozklad_niestandardowy(prawdopodobienstwa,max_p):
-    los = max_p
+    los = random.random()*max_p
     skumulowany = 0
     for key in prawdopodobienstwa:
         if los > skumulowany and los < skumulowany + prawdopodobienstwa[key]:

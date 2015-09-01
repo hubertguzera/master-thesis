@@ -1,9 +1,7 @@
 import random
 import Image
 import zalozenia
-import csv
 import operator
-import funkcje_pomocnicze as f_p
 
 
 #funkcje przy podaniu slownika z badaniami sondazowymi losuje wartosc zgodna z rozkladem

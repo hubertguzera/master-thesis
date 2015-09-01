@@ -1,7 +1,8 @@
-import random,zalozenia,Image,pickle
-import funkcje_pomocnicze as f_p
-import funkcje_mapa as f_m
-import funkcje_losuj as f_l
+import zalozenia, random, Image,pickle
+from funkcje import funkcje_pomocnicze as f_p
+from funkcje import funkcje_mapa as f_m
+from funkcje import funkcje_losuj as f_l
+
 class swiat(object):
     def __init__(self):
         #stworzenie pustej mapy
@@ -19,9 +20,7 @@ class swiat(object):
             while punkt_jest_poprawny:
                 kontrola = kontrola + 1 
                 nowy_punkt = f_m.nowy_punkt(punkt)
-                ocena1= f_m.sprawdz_punkt(nowy_punkt,self,"Droga")[1]
-                ocena2=f_m.sprawdz_punkt(nowy_punkt,self,"Droga")[2]
-                if ocena1<2 and ocena2==True:
+                if f_m.sprawdz_punkt(nowy_punkt,self,"Droga")[1]<2 and f_m.sprawdz_punkt(nowy_punkt,self,"Droga")[2]==True:
                     punkt_jest_poprawny = False
                 if kontrola > 30:
                     punkt = random.choice(lista_punktow)
@@ -38,19 +37,21 @@ class swiat(object):
                     if  f_m.sprawdz_punkt([x,y],self,"Droga")[0] >0:
                         self.mapa[x][y] = lokalizacja(x,y, "random")
                         self.mapa[x][y].droga = [tuple(f_m.wypisz_sasiadujace([x,y], self, "Droga")[random.randrange(len(f_m.wypisz_sasiadujace([x,y], self, "Droga")))])]
+
         print "Czekaj..."        
         #dla kazdej drogi wypisujemy sasiadujace nodes
         for x in range(zalozenia.wymiar_x):
             for y in range(zalozenia.wymiar_y):
                 if self.mapa[x][y].typ=="Droga":
                     self.mapa[x][y].droga = f_m.wypisz_sasiadujace([x,y], self, "Droga",konwertuj=True)
+
         print "Czekaj..."            
         #tworzenie grafu z drog
         for x in range(zalozenia.wymiar_x):
             for y in range(zalozenia.wymiar_y):
                 if self.mapa[x][y].droga:
                     self.nodes[x,y] = self.mapa[x][y].droga
-                
+
         print "Czekaj..."
         #populowanie swiata                     
         self.ludnosc = [konsument(self) for x in range (zalozenia.populacja)]
@@ -74,13 +75,16 @@ class konsument(object):
     def __init__(self, swiat):
         self.plec = f_l.losuj_rozklad(zalozenia.plec_rozklad)
         self.wiek = int(f_l.losuj_rozklad(zalozenia.wiek_rozklad))
+
         if self.wiek>18: self.wyksztalcenie = (f_l.losuj_zlozony_rozklad(zalozenia.wyksztalcenie_rozklad,[self.plec]))
         else: self.wyksztalcenie = "Brak"        
+
         self.zarobki = int((f_l.losuj_zlozony_rozklad(zalozenia.zarobki_rozklad,[str(self.wiek),self.wyksztalcenie])))
         self.zainteresowania = [f_l.losuj_rozklad(zalozenia.charaktery_rozklad) for x in range(3)]
         self.znajomi = []
         self.wyksztalcenie = f_p.konwertuj_wyksztalcenie(self.wyksztalcenie)
         self.okazja = 0
+
         #wybieranie domu
         while True: 
             self.domx = random.randrange(0,zalozenia.wymiar_x)
@@ -95,17 +99,7 @@ class konsument(object):
                 break
             
     def macierz_cech(self):
-        tablica = []
-        tablica.append(self.wiek)
-        if self.plec=="Kobieta":
-            tablica = tablica + [1,0]
-        else:
-            tablica = tablica + [0,1]
-        tablica.append(self.wyksztalcenie)
-        tablica.append(int(self.zarobki))
-        tablica.append(0)
-        tablica = tablica + f_p.konwertuj_zainteresowania(self.zainteresowania)
-        return tablica
+            return f_p.wypisz_cechy_klienta(self.wiek,self.plec,self.wyksztalcenie,self.zarobki,self.zainteresowania)
     
     def odwiedzony_sklep(self, swiat):
         sklepy=[]
@@ -135,7 +129,6 @@ def generowanie_swiata():
     if wybor =="2":
         print "Wybrano 2"
         moj_swiat = pickle.load(open("Swiat.p","rb"))
-        
     f_m.rysujmape(moj_swiat,"mapy/typy")
     f_m.rysujludnosc(moj_swiat, moj_swiat.ludnosc,"mapy/ludnosc")
 

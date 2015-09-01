@@ -27,6 +27,7 @@ def prawdopodobienstwo_zakupu_piwa(tablica_y):
            if produkt[1]>wybrany[1]:
                wybrany = produkt
        return wybrany
+
     if zalozenia.prawdopodobienstwo_zakupu_piwa == 1:
         tablica = {}
         max_p = float(0)
@@ -42,3 +43,13 @@ def zlicz_sprzedaz(sklepy,towar):
         if towar in sklep.sprzedaz:
             suma += sklep.sprzedaz[towar]
     return suma
+
+def kombinacja_wszytkich_lokalizacji(a):
+    r=[[]]
+    for x in a:
+        t = []
+        for y in x:
+            for i in r:
+                t.append(i+[y])
+        r = t
+    return r

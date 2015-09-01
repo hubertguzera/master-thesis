@@ -1,7 +1,7 @@
-import funkcje_zalozenia
+from funkcje import funkcje_zalozenia
 #Swiat
 
-populacja = 350
+populacja = 100
 wymiar_x = 25
 wymiar_y = 25
 lokalizacja_rozklad_typ= {"Dom":0.6,"Praca":0.2,"Przestrzen komercyjna":0.2}
