@@ -1,0 +1,27 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdftex 2015.9.2)  2 SEP 2015 14:30
+entering extended mode
+**C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/bibliography.bib
+(C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/bibliography.bib
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no œ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no  in font cmr10!
+
+! Misplaced alignment tab character &.
+l.34 @article{McKinsey&
+                       Company2011,
+? 
+! Emergency stop.
+l.34 @article{McKinsey&
+                       Company2011,
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
