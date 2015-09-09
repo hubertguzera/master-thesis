@@ -165,7 +165,7 @@ class sciezka(trasy):
 #symulowany_swiat = swiat()
 #pickle.dump(symulowany_swiat ,open("Swiat.p","wb"))
 symulowany_swiat = pickle.load(open("Swiat.p","rb"))
-#symulowany_rynek = rynek(symulowany_swiat)
+symulowany_rynek = rynek(symulowany_swiat)
 
 pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
 
