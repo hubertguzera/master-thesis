@@ -132,4 +132,4 @@ def generowanie_swiata():
     f_m.rysujmape(moj_swiat,"mapy/typy")
     f_m.rysujludnosc(moj_swiat, moj_swiat.ludnosc,"mapy/ludnosc")
 
-# generowanie_swiata()
+#generowanie_swiata()

@@ -1,0 +1,128 @@
+% This file was created with JabRef 2.10.
+% Encoding: Cp1250
+
+
+@Article{brynjolfsson11,
+  Title                    = {Strength in Numbers: How Does Data-Driven Decisionmaking Affect Firm Performance?},
+  Author                   = {Brynjolfsson, Erik and Hitt, Lorin M. and Kim, Heekyung H.},
+  Journal                  = {SSRN eLibrary},
+  Year                     = {2011},
+
+  Added-at                 = {2013-06-22T14:22:00.000+0200},
+  Biburl                   = {http://www.bibsonomy.org/bibtex/2cb0a20f5c77828b6eaaed4b339cdc035/sb3000},
+  Description              = {Strength in Numbers: How Does Data-Driven Decisionmaking Affect Firm Performance? by Erik Brynjolfsson, Lorin M. Hitt, Heekyung Hellen Kim :: SSRN},
+  Doi                      = {10.2139/ssrn.1819486},
+  Interhash                = {ac444fb7166bb22b3ab18eb0911fd1f9},
+  Intrahash                = {cb0a20f5c77828b6eaaed4b339cdc035},
+  Keywords                 = {analytics bigdata management},
+  Publisher                = {SSRN},
+  Timestamp                = {2013-06-22T14:22:00.000+0200},
+  Type                     = {Working Paper Series},
+  Url                      = {http://ssrn.com/paper=1819486}
+}
+
+@Misc{frey2013,
+  Title                    = {The Future of Employment: How susceptible are jobs to computerisation?},
+
+  Author                   = {Frey, Carl Benedikt and Osborne, Michael},
+  HowPublished             = {Online PDF},
+  Month                    = sep,
+  Year                     = {2013},
+
+  Abstract                 = {The authors examine how susceptible jobs are to computerisation, by implementing a novel methodology to estimate the probability of computerisation for 702 detailed occupations, using a Gaussian process classifier. Based on these estimates, they examine expected impacts of future computerisation on US labour market outcomes, with the primary objective of analysing the number of jobs at risk and the relationship between an occupation’s probability of computerisation, wages and educational attainment. According to their estimates, about 47 per cent of total US employment is at risk. They further provide evidence that wages and educational attainment exhibit a strong negative relationship with an occupation’s probability of computerisation.},
+  Added-at                 = {2015-05-15T10:27:23.000+0200},
+  Address                  = {Oxford},
+  Biburl                   = {http://www.bibsonomy.org/bibtex/24fd92f360c3df51a16d6084eef07a0d5/meneteqel},
+  Day                      = {17},
+  Institution              = {Oxford Martin School},
+  Interhash                = {5492a8f97b6299aec439f7dd8d56a5c0},
+  Intrahash                = {4fd92f360c3df51a16d6084eef07a0d5},
+  Keywords                 = {Employment Occupational_Choice Skill_Demand Technological_Change Wage_Inequality digitalisierung},
+  Timestamp                = {2015-05-15T10:34:13.000+0200},
+  Type                     = {Academic Publication},
+  Url                      = {http://www.oxfordmartin.ox.ac.uk/publications/view/1314}
+}
+
+@Book{james2013,
+  Title                    = {An Introduction to Statistical Learning},
+  Author                   = {Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani},
+  Publisher                = {Springer-Verlag New York},
+  Year                     = {2013},
+
+  Owner                    = {Hubert},
+  Timestamp                = {2015.09.07}
+}
+
+@Book{hastie01statisticallearning,
+  Title                    = {The Elements of Statistical Learning},
+  Author                   = {Hastie, Trevor and Tibshirani, Robert and Friedman, Jerome},
+  Publisher                = {Springer New York Inc.},
+  Year                     = {2001},
+
+  Address                  = {New York, NY, USA},
+  Series                   = {Springer Series in Statistics},
+
+  Added-at                 = {2008-05-16T16:17:42.000+0200},
+  Biburl                   = {http://www.bibsonomy.org/bibtex/2f58afc5c9793fcc8ad8389824e57984c/sb3000},
+  Interhash                = {d585aea274f2b9b228fc1629bc273644},
+  Intrahash                = {f58afc5c9793fcc8ad8389824e57984c},
+  Keywords                 = {ml statistics},
+  Timestamp                = {2008-05-16T16:17:43.000+0200}
+}
+
+@Article{kawa2010,
+  Title                    = {System wieloagentowy do budowania ³añcuchów dostaw w bran¿y komputerowej},
+  Author                   = {Kawa, A.},
+  Journal                  = {Zarz¹dzanie Przedsiêbiorstwem},
+  Year                     = {2010},
+  Pages                    = {26-34},
+  Volume                   = {Vol. 13, nr 1},
+
+  Abstract                 = {There are two main contributions of the work presented in this paper. The first one is a particular approach to adapting multi-agent system and graph algorithms to the supply chain configuration in personal computer industry. The DyConSC model is described. The next contributions are the simulation experiments carried out in the NetLogo platform. The DyConSC (Dynamic Configuration of Supply Chain) model is based on the software agents. This model is adapted from [7] and extended here with the graph theory. It is mainly aimed at building dynamic and flexible temporary supply chains. Nowadays it is especially important because customer demand, production lines and distribution network frequently change. This model enables each entity of the supply chain to independently adjust their plans in such a way that they become optimal both within one enterprise and the whole supply chain. Such a supply chain may be successfully realized by agent oriented systems. Agents representing various enterprises from particular tiers cooperate with one another, coordinate and negotiate conditions to achieve the common goal whereas every agent may try to attain the target of the individual user delegating it. Thanks to that optimizing supply chains holistically and obtaining significant benefits for the final customer become attainable, even if supply chain partners have differing objectives, perspectives and processes [3]. In order to check the capabilities of supply chain configuration and its effectiveness the simulations of the DyConSC model in the NetLogo (a cross-platform multi-agent programmable modelling platform) were carried out. The assumptions and environment of the modelling system are discussed. The experiment simulations are described, too. In the last section of this paper the results of the simulations and the findings are provided.},
+  Affiliation              = {Katedra Logistyki i Transportu Uniwersytet Ekonomiczny w Poznaniu Al. Niepodleg³o.ci 10 61-875 Poznañ},
+  Keywords                 = {system wieloagentowy; symulacje; teoria grafów},
+  Language                 = {pol}
+}
+
+@TechReport{manyika11,
+  Title                    = {Big Data: The Next Frontier for Innovation, Competition, and Productivity},
+  Author                   = {Manyika, James and Chui, Michael and Brown, Brad and Bughin, Jacques and Dobbs, Richard and Roxburgh, Charles and Byers, Angela Hung},
+  Institution              = {McKinsey Global Institute},
+  Year                     = {2011},
+  Month                    = {June},
+
+  Added-at                 = {2013-03-15T09:48:25.000+0100},
+  Biburl                   = {http://www.bibsonomy.org/bibtex/2cb919811c0adab2e1d359ce1bdbac9d4/sb3000},
+  Interhash                = {117de3444c856242c38ab48d24604b52},
+  Intrahash                = {cb919811c0adab2e1d359ce1bdbac9d4},
+  Keywords                 = {analytics bigdata mckinsey},
+  Timestamp                = {2013-07-01T22:02:25.000+0200}
+}
+
+@InCollection{raey2006,
+  Title                    = {Supply Chain Management and Multiagent Systems: An Overview},
+  Author                   = {Moyaux, Thierry and Chaib-draa, Brahim and D'Amours, Sophie},
+  Booktitle                = {Multiagent based Supply Chain Management},
+  Publisher                = {Springer Berlin Heidelberg},
+  Year                     = {2006},
+  Editor                   = {Chaib-draa, Brahim and MÃ¼ller, JÃ¶rgP.},
+  Pages                    = {1-27},
+  Volume                   = {28},
+
+  Doi                      = {10.1007/978-3-540-33876-5_1},
+  ISBN                     = {978-3-540-33875-8},
+  Language                 = {English},
+  Url                      = {http://dx.doi.org/10.1007/978-3-540-33876-5_1}
+}
+
+@Article{pwc2014,
+  Title                    = {{CEO Survey 2014}},
+  Author                   = {PwC},
+  Year                     = {2014},
+  Pages                    = {1--12},
+
+  File                     = {:C$\backslash$:/Users/Hubert/Desktop/master-thesis/master-thesis/sources/2014-us-ceo-survey.pdf:pdf},
+  Owner                    = {Hubert},
+  Timestamp                = {2015.09.07}
+}
+

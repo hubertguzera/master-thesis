@@ -1,6 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: bibliography.bib
-Warning--there's a number but no volume in McKinsey&Company2011
-Warning--empty journal in PwC2014
-(There were 2 warnings)
+Warning--I didn't find a database entry for "Brynjolfsson2011"
+Warning--I didn't find a database entry for "PwC2014"
+Warning--I didn't find a database entry for "Frey2013"
+Warning--I didn't find a database entry for "McKinsey&Company2011"
+Warning--I didn't find a database entry for "Moyaux2006"
+Warning--I didn't find a database entry for "Kawa2010"
+(There were 6 warnings)

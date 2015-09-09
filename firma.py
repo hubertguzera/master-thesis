@@ -72,7 +72,7 @@ class fabryka(firma):
         self.lokalizacja = f_f.wybierz_lokalizacje(swiat,"Przestrzen komercyjna",self.nazwa)
         self.droga = swiat.mapa[self.lokalizacja[0]][self.lokalizacja[1]].droga[0]
         self.oblozenie = 0
-        self.symbol = sympy.symbols("f" + str(x))
+        self.symbol = sympy.symbols("f" + str(x+1))
 
 class magazyn(firma):
     def __init__(self,swiat, x):
@@ -80,7 +80,7 @@ class magazyn(firma):
         self.lokalizacja = f_f.wybierz_lokalizacje(swiat,"Przestrzen komercyjna",self.nazwa)
         self.droga = swiat.mapa[self.lokalizacja[0]][self.lokalizacja[1]].droga[0]
         self.oblozenie = 0
-        self.symbol = sympy.symbols("m" + str(x))
+        self.symbol = sympy.symbols("m" + str(x+1))
 
 class sklep(firma):
     def __init__(self,swiat,x):
@@ -92,7 +92,7 @@ class sklep(firma):
         self.sklad = {}
         self.sprzedaz = {}
         self.oblozenie = 0
-        self.symbol = sympy.symbols("s" + str(x))
+        self.symbol = sympy.symbols("s" + str(x+1))
 
     def dostawa_towaru(self, rynek, trasa,symulowany_towar = 30,inne_towary=30):
         for produkt in rynek.produkty_na_rynku:
@@ -139,11 +139,13 @@ class trasy(firma):
             self.drogi.append(sciezka(item[0],item[1],swiat,k))
             k+=1
         self.trasy={}
+        self.kombinacje=[]
         for item in f_f.kombinacja_wszytkich_lokalizacji([firma.fabryki , firma.magazyny, firma.sklepy]):
             for droga in self.drogi:
                 if (droga.poczatek == item[0] and droga.koniec == item[1]) or (droga.poczatek == item[1] and droga.koniec == item[2]):
                     item.append(droga)
             self.trasy[tuple(item)] = 0
+            self.kombinacje.append(item)
 
     def dodaj_do_trasy(self,ilosc,trasa):
         for key in self.trasy:
@@ -158,28 +160,36 @@ class sciezka(trasy):
         self.koniec = koniec
         self.odleglosc = len(f_m.szukaj_drogi(swiat.nodes,tuple(poczatek.droga),tuple(poczatek.droga),nowy=True))
         self.oblozenie = 0
-        self.symbol = sympy.symbols("r" + str(x))
+        self.symbol = sympy.symbols("r" + str(x+1))
 
 #symulowany_swiat = swiat()
 #pickle.dump(symulowany_swiat ,open("Swiat.p","wb"))
 symulowany_swiat = pickle.load(open("Swiat.p","rb"))
-symulowany_rynek = rynek(symulowany_swiat)
-f_m.rysujmape(symulowany_swiat,"mapy/po_lokalizacji_sklepow")
+#symulowany_rynek = rynek(symulowany_swiat)
 
-for sklep in symulowany_rynek.symulowana_firma.sklepy:
-    sklep.dostawa_towaru(symulowany_rynek,symulowany_rynek.trasy.kombinacje[f_p.wypisz_trasy(sklep,symulowany_rynek.trasy.kombinacje)])
-symulowany_rynek.sprzedaz_w_sklepach()
-for sklep in symulowany_rynek.symulowana_firma.sklepy:
-    print f_f.zlicz_sprzedaz(symulowany_rynek.symulowana_firma.sklepy,symulowany_rynek.symulowana_firma.produkt.nazwa)
-
-expr = 0
-alfa = sympy.symbols('alfa')
-for item in symulowany_rynek.symulowana_firma.wszystkie:
-    expr = expr + item.symbol * item.oblozenie ** alfa
+pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
 
 
-print expr.subs(alfa,0.5)
-print sympy.simplify(expr.subs(alfa,0.5)).subs("f0",1)
+
+# for sklep in symulowany_rynek.symulowana_firma.sklepy:
+#      sklep.dostawa_towaru(symulowany_rynek,symulowany_rynek.trasy.kombinacje[f_p.wypisz_trasy(sklep,symulowany_rynek.trasy.kombinacje)])
+# symulowany_rynek.sprzedaz_w_sklepach()
+# for sklep in symulowany_rynek.symulowana_firma.sklepy:
+#      print "sprzedaż", sklep.sprzedaz
+#
+# expr = 0
+# alfa = sympy.symbols('alfa')
+# for item in symulowany_rynek.symulowana_firma.fabryki:
+#     expr = expr + item.symbol * item.oblozenie ** alfa
+#
+# for item in symulowany_rynek.symulowana_firma.magazyny:
+#     expr = expr + item.symbol * item.oblozenie ** alfa
+#
+# for item in symulowany_rynek.symulowana_firma.sklepy:
+#     expr = expr + item.symbol * item.oblozenie ** alfa
+#
+# print "111",expr
+# print sympy.simplify(expr.subs(alfa,0.5)).subs("f0",1)
 
 # for i in range(0,3):
 #      symulowany_rynek.symulowana_firma.klienci_w_sklepach(symulowany_swiat,i)

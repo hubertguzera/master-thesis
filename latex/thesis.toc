@@ -1,0 +1,28 @@
+\contentsline {paragraph}{Wprowadzenie}{1}
+\contentsline {section}{\numberline {1}Cel, za\IeC {\l }o\IeC {\.z}enia i podstawy teoretyczne pracy}{4}
+\contentsline {subsection}{\numberline {1.1}Koncepcja pracy}{4}
+\contentsline {subsection}{\numberline {1.2}Podstawy teoretyczne}{4}
+\contentsline {paragraph}{Przedsi\IeC {\k e}biorstwo jako system wieloagentowy}{4}
+\contentsline {paragraph}{Zadanie optymalizacyjne}{6}
+\contentsline {paragraph}{Modelowanie predykcyjne}{7}
+\contentsline {paragraph}{Proponowany algorytm optymalizacyjny}{9}
+\contentsline {section}{\numberline {2}Model}{12}
+\contentsline {subsection}{\numberline {2.1}Koncepcja modelu}{12}
+\contentsline {subsection}{\numberline {2.2}Zastosowane narz\IeC {\k e}dzia}{13}
+\contentsline {subsection}{\numberline {2.3}Struktura programu}{13}
+\contentsline {subsection}{\numberline {2.4}Generowanie mapy}{14}
+\contentsline {paragraph}{Algorytm wyszukiwania drogi}{15}
+\contentsline {subsection}{\numberline {2.5}Generowanie agent\IeC {\'o}w}{16}
+\contentsline {paragraph}{Konsumenci}{16}
+\contentsline {paragraph}{Przyk\IeC {\l }adowe rozk\IeC {\l }ady cech konsument\IeC {\'o}w}{16}
+\contentsline {subsection}{\numberline {2.6}Przedsi\IeC {\k e}biorstwo}{17}
+\contentsline {subsection}{\numberline {2.7}Produkt}{17}
+\contentsline {subsection}{\numberline {2.8}Konkurencja}{17}
+\contentsline {subsection}{\numberline {2.9}Symulowanie decyzji konsumenckich}{17}
+\contentsline {section}{\numberline {3}Efekty dzia\IeC {\l }ania algorytmu optymalizacyjnego}{19}
+\contentsline {subsection}{\numberline {3.1}Charakterystyka badanego \IeC {\'s}rodowiska}{19}
+\contentsline {subsection}{\numberline {3.2}Przewidywanie decyzji konsument\IeC {\'o}w}{19}
+\contentsline {subsection}{\numberline {3.3}Wyniki przedsi\IeC {\k e}biorstwa przy braku optymalizacji}{19}
+\contentsline {subsection}{\numberline {3.4}Optymalizacja przy sta\IeC {\l }ych cenach i braku efektu skali}{19}
+\contentsline {subsection}{\numberline {3.5}Optymalizacja przy sta\IeC {\l }ych cenach i istnieniu efektu skali}{19}
+\contentsline {subsection}{\numberline {3.6}Optymalizacja przy zmiennych cenach i istnieniu efektu skali}{19}
