@@ -66,9 +66,8 @@ class firma(object):
           for sklep in self.sklepy : sklep.klienci = []
           for czlowiek in swiat.ludnosc:
             print swiat.ludnosc.index(czlowiek) , "/" , str(len(swiat.ludnosc))
-            odwiedzone = czlowiek.odwiedzony_sklep(swiat)
             for sklep in self.sklepy:             
-                        if sklep.lokalizacja == odwiedzone:
+                        if sklep.lokalizacja == czlowiek.odwiedzony_sklep(swiat):
                               sklep.klienci.append(czlowiek.macierz_cech())
                               sklep.klienci_historycznie[tura].append(czlowiek.macierz_cech())
           print "Skonczylem przyporzadkowywac"
@@ -89,11 +88,11 @@ class firma(object):
           wr = csv.writer(wyniki_csv)
           wr.writerow(["Fabryka","Magazyn","Sklep","Droga1","Droga2","Oblozenie"])
 
-          for item in self.trasy.trasy:
+          for item in self.trasy.kombinacje:
               temp = []
-              for jednostka in item.elementy:
+              for jednostka in item:
                   temp.append(jednostka.symbol)
-              self.wyniki.append(temp+[item.oblozenie]+[f_p.koszt_trasy(item)])
+              self.wyniki.append(temp+[self.trasy.trasy[tuple(item)]]+[f_p.koszt_trasy(item,self.trasy.trasy)])
           wr.writerows(self.wyniki)
           self.wyniki = []
 
@@ -109,11 +108,9 @@ class firma(object):
 
               temp = [sklep.symbol,temp2,temp2 * self.cena]
               temp3=0
-
-              for item in self.trasy.trasy:
-                  if sklep in item.elementy:
-                      temp3 += f_p.koszt_trasy(item)
-
+              for item in self.trasy.kombinacje:
+                  if sklep in item:
+                      temp3 += f_p.koszt_trasy(item,self.trasy.trasy)
               self.wyniki.append(temp+[temp2]+[temp2*self.cena-temp3])
           wr.writerows(self.wyniki)
           self.wyniki = []
@@ -150,11 +147,10 @@ class firma(object):
                   item.efekt_skala = random.uniform(min_skala, max_skala)
           for item in self.trasy.drogi:
               if not(losowe):
-                  item.koszt = zalozenia.koszt_sciezka * item.odleglosc
+                  item.koszt = zalozenia.koszt_sciezka
                   item.efekt_skala = zalozenia.skala_sciezka
-                  print item.koszt
               else:
-                  item.koszt = random.uniform(min_cen, max_cena) * item.odleglosc
+                  item.koszt = random.uniform(min_cen, max_cena)
                   item.efekt_skala = random.uniform(min_skala, max_skala)
 
 class fabryka(firma):
@@ -232,35 +228,27 @@ class produkt(object):
 class trasy(firma):
     def __init__(self,firma,swiat):
         self.drogi = []
-        self.trasy = []
         k=0
         for item in (f_f.kombinacja_wszytkich_lokalizacji([firma.fabryki , firma.magazyny]) + f_f.kombinacja_wszytkich_lokalizacji([firma.magazyny, firma.sklepy])):
             self.drogi.append(sciezka(item[0],item[1],swiat,k))
             k+=1
-        k=0
+        self.trasy={}
+        self.udzial={}
+        self.kombinacje=[]
         for item in f_f.kombinacja_wszytkich_lokalizacji([firma.fabryki , firma.magazyny, firma.sklepy]):
-
             for droga in self.drogi:
                 if (droga.poczatek == item[0] and droga.koniec == item[1]) or (droga.poczatek == item[1] and droga.koniec == item[2]):
                     item.append(droga)
-            self.trasy.append(trasa(item,k))
-            k+=1
+            self.trasy[tuple(item)] = 0
 
+            self.kombinacje.append(item)
 
-    def dodaj_do_trasy(self,ilosc,trasa):
-        for key in self.trasy:
-            if key==trasa:
-                key.oblozenie += ilosc
-                for item in key.elementy:
-                    item.oblozenie += ilosc
-
-
-class trasa(trasy):
+def trasa(trasy):
     def __init__(self,elementy,x):
         self.elementy = elementy
         self.oblozenie = 0
         self.udzial = 0
-        self.symbol = self.symbol = sympy.symbols("t" + str(x+1))
+        self.symbol =
 
 
     def dodaj_do_trasy(self,ilosc,trasa):
@@ -274,18 +262,18 @@ class sciezka(trasy):
     def __init__(self,poczatek,koniec,swiat,x):
         self.poczatek = poczatek
         self.koniec = koniec
-        self.odleglosc = len(f_m.szukaj_drogi(swiat.nodes,tuple(poczatek.droga),tuple(koniec.droga),nowy=True))
+        self.odleglosc = len(f_m.szukaj_drogi(swiat.nodes,tuple(poczatek.droga),tuple(poczatek.droga),nowy=True))
         self.oblozenie = 0
         self.symbol = sympy.symbols("r" + str(x+1))
         self.koszt = 0
         self.efekt_skali = 0
 
 
-symulowany_swiat = swiat()
+#symulowany_swiat = swiat()
 #pickle.dump(symulowany_swiat ,open("Swiat.p","wb"))
-#symulowany_swiat = pickle.load(open("Swiat.p","rb"))
+symulowany_swiat = pickle.load(open("Swiat.p","rb"))
 symulowany_rynek = rynek(symulowany_swiat)
-print symulowany_swiat.nodes
+
 pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
 
 

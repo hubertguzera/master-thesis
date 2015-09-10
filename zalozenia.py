@@ -1,4 +1,5 @@
 from funkcje import funkcje_zalozenia
+import sympy
 #Swiat
 
 populacja = 100
@@ -28,6 +29,18 @@ szansa_na_zakupy = 1
 ilosc_fabryk = 2
 ilosc_magazyn = 3
 ilosc_sklepow = 7
+
+koszt_fabryka = 1
+koszt_magazyny = 1
+koszt_sklepy = 1
+koszt_sciezka = 0.1
+
+skala_fabryka = 1
+skala_magazyny = 1
+skala_sklepy = 1
+skala_sciezka = 1
+
+produkt_cena = 4
 
 #Konkurencja
 prawdopodobienstwo_zakupu_piwa = 1

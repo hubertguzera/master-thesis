@@ -113,6 +113,7 @@ class konsument(object):
                 znajomy = swiat.ludnosc[random.choice(self.znajomi)]
                 koniec=swiat.nodes[(znajomy.domx,znajomy.domy)][0]
             trasa = f_m.szukaj_drogi(swiat.nodes,start,koniec,nowy=True)
+            print trasa
             for punkt in trasa:
                 sklepy = sklepy + f_m.wypisz_sasiadujace(punkt,swiat,"Sklep")
             if sklepy : sklepy = random.choice(sklepy)

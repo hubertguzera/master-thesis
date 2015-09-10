@@ -2,8 +2,12 @@ import sympy
 b = 13
 x,y = sympy.symbols('x1 y2')
 
-expr = x * y ** 2 + 30
+expr = x * x * x
 
-print expr.subs([(x,2),(y,4)])
+print sympy.simplify(expr)
+
+print expr.subs([(x,2),(y,5)])
 
 print sympy.diff(expr,x)
+
+print 2**2

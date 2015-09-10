@@ -1,5 +1,5 @@
 import random,zalozenia
-
+import sympy
 
 def konwertuj_wyksztalcenie(wyksztalcenie):
    mozliwosci = {"Podstawowe":1,"Zawodowe":2,"Srednie":3,"Wyzsze":4,"Brak":0}
@@ -65,6 +65,27 @@ def wypisz_cechy_klienta(wiek,plec,wyksztalcenie,zarobki,zainteresowania):
 def wypisz_trasy(element,trasy):
     a = []
     for item in trasy:
-        if element in item:
+        if element in item.elementy:
             a.append(trasy.index(item))
     return random.choice(a)
+
+def koszt_jednostki(jednostka):
+    return jednostka.koszt*jednostka.oblozenie**jednostka.efekt_skala
+
+def koszt_trasy(trasa):
+    oblozenie = trasa.oblozenie
+    koszt = 0
+    for jednostka in trasa.elementy:
+        koszt += jednostka.koszt*oblozenie**jednostka.efekt_skala
+    return koszt
+
+def funkcja_do_optymalizacji(firma):
+     expr = 0
+     for trasa in firma.trasy.trasy:
+            expr = expr + trasa.symbol * trasa.elementy[2].symbol * firma.cena
+            for element in trasa.elementy:
+                expr = expr - element.koszt * trasa.symbol * trasa.elementy[2].symbol ** element.efekt_skala
+     return expr
+
+def podstaw(rownanie,liczby):
+    return rownanie.subs(liczby)
