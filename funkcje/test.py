@@ -1,13 +1,7 @@
 import sympy
-import rpy2
-b = 13
-x,y = sympy.symbols('x1 y2')
+import itertools
+import numpy as np
 
+a = [[1,2,3],[1,2,3]]
 
-
-
-a=["a","2","3"]
-
-a.remove(["a","2"])
-
-print a
+print np.mean(a)

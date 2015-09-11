@@ -2,7 +2,7 @@ from funkcje import funkcje_zalozenia
 import sympy
 #Swiat
 
-populacja = 300
+populacja = 100
 wymiar_x = 25
 wymiar_y = 25
 lokalizacja_rozklad_typ= {"Dom":0.6,"Praca":0.2,"Przestrzen komercyjna":0.2}
@@ -47,3 +47,8 @@ prawdopodobienstwo_zakupu_piwa = 1
 ilosc_produktow = 6
 mozliwe_nazwy = ["Mocne","Baltyckie","Lebskie","Slaskie","Pszczeniczne","Pyszne","Gornik","Opolskie","Babskie"]
 niedozwolone_nazwy = []
+
+#modelowanie
+udzial_treningowe = 0.2
+zakres_prawdopodobienstwa_warunkowego = 4
+znane_cechy = [0,1,2,3,4,29]

@@ -45,10 +45,9 @@ class rynek(object):
                 fabryka.oblozenie = 0
             for magazyn in self.symulowana_firma.magazyny:
                 magazyn.oblozenie = 0
-            for key in self.trasy.trasy:
-                self.trasy.trasy[key] = 0
-            for droga in self.trasy.drogi:
-                droga.oblozenie = 0
+            for trasa in self.symulowana_firma.trasy.trasy:
+                trasa.oblozenie = 0
+                trasa.udzial = 0
 
 
 
@@ -279,14 +278,15 @@ class sciezka(trasy):
         self.koszt = 0
         self.efekt_skali = 0
 
+def tworz_swiat_i_rynek():
+    symulowany_swiat = swiat()
+    pickle.dump(symulowany_swiat ,open("Swiat.p","wb"))
+    symulowany_swiat = pickle.load(open("Swiat.p","rb"))
+    symulowany_rynek = rynek(symulowany_swiat)
+    #print symulowany_swiat.nodes
+    pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
 
-#symulowany_swiat = swiat()
-#pickle.dump(symulowany_swiat ,open("Swiat.p","wb"))
-#symulowany_swiat = pickle.load(open("Swiat.p","rb"))
-#symulowany_rynek = rynek(symulowany_swiat)
-#print symulowany_swiat.nodes
-#pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
-
+#tworz_swiat_i_rynek()
 
 
 # for sklep in symulowany_rynek.symulowana_firma.sklepy:

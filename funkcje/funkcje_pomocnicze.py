@@ -79,3 +79,28 @@ def koszt_trasy(trasa):
         koszt += jednostka.koszt*oblozenie**jednostka.efekt_skala
     return koszt
 
+def kombinacja(a):
+    print "!!!", a
+    r=[[]]
+    for x in a:
+        t = []
+        for y in x:
+            for i in r:
+                t.append(i+[y])
+        r = t
+    return r
+
+def bez_ostatniej_kolumny(tabela):
+    a =[]
+    for item in tabela:
+        a.append(item[:len(item)-1])
+    return a
+
+def usun_kolumny(tabela,lista):
+    a = []
+    for item in tabela:
+        b =[]
+        for kolumna in lista:
+            b.append(item[kolumna])
+        a.append(b)
+    return a
