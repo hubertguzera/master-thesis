@@ -117,7 +117,6 @@ def szukaj_drogi(nodes,poczatek,koniec,sciezka=[],nowy=False):
    if nowy:
       sciezka = []
    sciezka.append(list(poczatek))
-
    if poczatek == koniec:
       return sciezka
    if not nodes.has_key(poczatek):

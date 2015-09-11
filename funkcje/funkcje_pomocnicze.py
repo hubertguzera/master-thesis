@@ -79,13 +79,3 @@ def koszt_trasy(trasa):
         koszt += jednostka.koszt*oblozenie**jednostka.efekt_skala
     return koszt
 
-def funkcja_do_optymalizacji(firma):
-     expr = 0
-     for trasa in firma.trasy.trasy:
-            expr = expr + trasa.symbol * trasa.elementy[2].symbol * firma.cena
-            for element in trasa.elementy:
-                expr = expr - element.koszt * trasa.symbol * trasa.elementy[2].symbol ** element.efekt_skala
-     return expr
-
-def podstaw(rownanie,liczby):
-    return rownanie.subs(liczby)

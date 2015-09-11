@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  9 SEP 2015 11:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  10 SEP 2015 20:13
 entering extended mode
 **C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/thesis.tex
 (C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/thesis.tex
@@ -821,20 +821,20 @@ s\tikzlibrarymatrix.code.tex"
 File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1 (rcs-revision 1.4)
 )
 (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -850,49 +850,49 @@ LaTeX Font Info:    ... okay on input line 59.
 \makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks41
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for OML+plm on input line 63.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 74.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 63.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 74.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 63.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 74.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 63.
+(Font)              <12> on input line 74.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 63.
+(Font)              <8> on input line 74.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 63.
+(Font)              <6> on input line 74.
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 
 Package natbib Warning: Citation `Brynjolfsson2011' on page 1 undefined on inpu
-t line 74.
+t line 85.
 
 
-Package natbib Warning: Citation `PwC2014' on page 1 undefined on input line 74
+Package natbib Warning: Citation `PwC2014' on page 1 undefined on input line 85
 .
 
 
-Package natbib Warning: Citation `Frey2013' on page 1 undefined on input line 7
-6.
+Package natbib Warning: Citation `Frey2013' on page 1 undefined on input line 8
+7.
 
 
 Package natbib Warning: Citation `McKinsey&Company2011' on page 1 undefined on 
-input line 78.
+input line 89.
 
 [1
 
@@ -909,118 +909,104 @@ LaTeX Font Info:    External font `plex10' loaded for size
  [3]
 
 Package natbib Warning: Citation `Moyaux2006' on page 4 undefined on input line
- 109.
+ 120.
 
 
 Package natbib Warning: Citation `Kawa2010' on page 4 undefined on input line 1
-09.
+20.
 
 
 Package natbib Warning: Citation `Moyaux2006' on page 4 undefined on input line
- 109.
+ 120.
 
 <pictures/siec.png, id=20, 536.75531pt x 283.0575pt>
 File: pictures/siec.png Graphic file (type png)
  <use pictures/siec.png>
-Package pdftex.def Info: pictures/siec.png used on input line 111.
+Package pdftex.def Info: pictures/siec.png used on input line 122.
 (pdftex.def)             Requested size: 345.0pt x 181.93361pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 111--112
+Overfull \hbox (15.0pt too wide) in paragraph at lines 122--123
 [][] 
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 119.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 130.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
  [5 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/pictures/siec.pn
 g>]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 133.
+(amsmath)                 on input line 144.
 
 [6] [7]
-Overfull \hbox (15.98903pt too wide) in paragraph at lines 172--173
+Overfull \hbox (15.98903pt too wide) in paragraph at lines 183--184
 []\OT4/cmr/m/n/10 jaki pro-dukt wy-bie-rze klient o da-nej cha-rak-te-ry-sty-ce
 , gdzie ^y $\OMS/plsy/m/n/10 2 f\OML/plm/m/it/10 pr[]; pr[]::pr[]\OMS/plsy/m/n/
 10 g$\OT4/cmr/m/n/10 ,
  []
 
 
-Overfull \hbox (44.12614pt too wide) in paragraph at lines 180--181
+Overfull \hbox (44.12614pt too wide) in paragraph at lines 191--192
 []\OT4/cmr/m/n/10 do wy-bo-ru produktu- me-to-dy kla-sy-fi-ka-cyj-ne - $\OML/pl
 m/m/it/10 k \OMS/plsy/m/n/10   \OML/plm/m/it/10 means$ \OT4/cmr/m/n/10 oraz $\O
 ML/plm/m/it/10 drzewaklasyfikacyjne$ 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
 
-Overfull \hbox (32.32526pt too wide) in paragraph at lines 242--243
+Overfull \hbox (32.32526pt too wide) in paragraph at lines 253--254
 [][] 
  []
 
 [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
 [11] [12]
-Overfull \hbox (4.1395pt too wide) in paragraph at lines 333--339
+Overfull \hbox (4.1395pt too wide) in paragraph at lines 344--350
  [] 
  []
 
 
-Overfull \hbox (36.53276pt too wide) in paragraph at lines 341--342
+Overfull \hbox (36.53276pt too wide) in paragraph at lines 352--353
 []\OT4/cmr/m/n/10 Kod ¹ró-dªo-wy pro-gra-mu do-st¦p-ny jest pod ad-re-sem \OT4/
 cmr/m/it/10 github.com/hubertguzera/master-
  []
 
-
-Overfull \hbox (39.52283pt too wide) in paragraph at lines 384--385
+Missing character: There is no d in font nullfont!
+[13]
+Overfull \hbox (149.11198pt too wide) in paragraph at lines 388--396
 [][] 
  []
 
-[13] [14]
-Overfull \hbox (149.11198pt too wide) in paragraph at lines 393--401
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
+Missing character: There is no d in font nullfont!
+[14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
-
- []
-
-[16] [17] [18]
-(C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.bbl
+[17] [18] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
@@ -1030,13 +1016,13 @@ Package natbib Warning: There were undefined citations.
 
 [19] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 15833 strings out of 493921
- 343492 string characters out of 3144873
- 395712 words of memory out of 3000000
- 18799 multiletter control sequences out of 15000+200000
+ 15698 strings out of 493921
+ 340388 string characters out of 3144873
+ 394712 words of memory out of 3000000
+ 18664 multiletter control sequences out of 15000+200000
  14362 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,9n,71p,1500b,800s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,9n,71p,1500b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C
 :/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files (x86)/MiKTeX 2.9
@@ -1060,7 +1046,7 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Program Files
 pe1/public/pl/plsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 pl/plsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plti10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plti8.pfb>
-Output written on thesis.pdf (19 pages, 279015 bytes).
+Output written on thesis.pdf (19 pages, 279113 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

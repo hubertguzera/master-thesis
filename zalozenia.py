@@ -26,21 +26,21 @@ charaktery_rozklad = funkcje_zalozenia.czytajprostyrozkladzcsv("dane/zainteresow
 szansa_na_zakupy = 1
 
 #Firma
-ilosc_fabryk = 2
-ilosc_magazyn = 3
-ilosc_sklepow = 7
+ilosc_fabryk = 1
+ilosc_magazyn = 1
+ilosc_sklepow = 2
 
 koszt_fabryka = 1
 koszt_magazyny = 1
 koszt_sklepy = 1
-koszt_sciezka = 0.1
+koszt_sciezka = 0.05
 
-skala_fabryka = 1
-skala_magazyny = 1
-skala_sklepy = 1
-skala_sciezka = 1
+skala_fabryka = 1.1
+skala_magazyny = 1.1
+skala_sklepy = 1.1
+skala_sciezka = 1.1
 
-produkt_cena = 4
+produkt_cena = 10
 
 #Konkurencja
 prawdopodobienstwo_zakupu_piwa = 1

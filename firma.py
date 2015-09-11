@@ -204,7 +204,7 @@ class sklep(firma):
                     if produkt[0] in self.sklad:
                         self.sklad[produkt[0]] += inne_towary
                     else:
-                        self.sklad[produkt[0]] = symulowany_towar
+                        self.sklad[produkt[0]] = inne_towary
         rynek.symulowana_firma.trasy.dodaj_do_trasy(symulowany_towar,trasa)
 
     def sprzedaz_w_sklepie(self,towar):
@@ -249,7 +249,7 @@ class trasy(firma):
 
     def dodaj_do_trasy(self,ilosc,trasa):
         for key in self.trasy:
-            if key==trasa:
+            if key.elementy==trasa:
                 key.oblozenie += ilosc
                 for item in key.elementy:
                     item.oblozenie += ilosc
@@ -281,13 +281,12 @@ class sciezka(trasy):
         self.efekt_skali = 0
 
 
-symulowany_swiat = swiat()
+#symulowany_swiat = swiat()
 #pickle.dump(symulowany_swiat ,open("Swiat.p","wb"))
 #symulowany_swiat = pickle.load(open("Swiat.p","rb"))
-symulowany_rynek = rynek(symulowany_swiat)
-print symulowany_swiat.nodes
-pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
-
+#symulowany_rynek = rynek(symulowany_swiat)
+#print symulowany_swiat.nodes
+#pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
 
 
 

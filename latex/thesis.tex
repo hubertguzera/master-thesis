@@ -16,6 +16,7 @@
 
 
 \usetikzlibrary{shapes.callouts}
+
 \tikzset{
   level/.style   = { ultra thick, blue },
   connect/.style = { dashed, gray },
@@ -55,6 +56,16 @@
   tuborg/.style={decorate},
   tubnode/.style={midway, right=2pt},
 }
+
+
+\tikzstyle{pierwsza} = [rectangle, draw, fill=green!20, 
+     text centered, minimum height=3em]
+\tikzstyle{druga} = [rectangle, draw, fill=orange!20, 
+     text centered, minimum height=3em]
+\tikzstyle{trzecia} = [rectangle, draw, fill=red!20, 
+     text centered, minimum height=3em]
+\tikzstyle{line} = [draw, -latex']
+
 
 \begin{document}
 
@@ -105,7 +116,7 @@ W celu zaprezentowania wyniku działania powstałego w ten sposób algorytmu, zo
 
 
 \subsection{Podstawy teoretyczne}
-\paragraph{Przedsiębiorstwo jako system wieloagentowy} \mbox{}\\
+\subsubsection{Przedsiębiorstwo jako system wieloagentowy} 
 Na możliwość wykorzystania modeli wieloagentowych do badania i zarządzania systemami logistycznymi wskazują m.in. Moyaux et al, 2006 \cite{Moyaux2006}  czy Kawa, 2010 \cite{Kawa2010}. W swoich pracach zauważyli oni, że  \textit{producenci},  \textit{dostawcy} i  \textit{odbiorcy} i inni uczestnicy łańcucha logistycznego mogą być opisani jako sieć autonomicznych, współpracujących ze sobą agentów. Takie podejście, i wynikająca z niego możliwość wykorzystania modeli wieloagentowych pomaga w rozwiązaniu problemów operacyjnych, na jakie wskazuje Moyaux \cite{Moyaux2006}. Należy bowiem zwrócić uwagę, że w zakresie wyboru tras i zarządzania flotą wieloetapowe łańcuchy dostaw wielu produktów są problemami NP-trudnymi, szczególnie, że decyzje podejmowane lokalnie są współzależne.\footnote{W praktyce, decyzje podjęte na wczesnym etapie łańcucha rezonują na dalsze etapy, co Moyaux opisuje jako "bullwhip effect"} Ponadto, jak zauważa Kawa, w sieci przedsiębiorstw pomiędzy dostawcami kolejnych rzędów (tj. fabryki, magazyny, sklepy) może istnieć wiele połączeń które są wobec siebie konkurencyjne, ponieważ jeden magazyn może zaopatrywać się w wielu fabrykach. Zastosowanie w tej dziedzinie modeli wieloagentowych pozwala więc na zbadanie, jak decyzje podejmowane na jednym z etapów łańcucha dostaw wpłyną na cały system i innych uczestników.  
 
 \includegraphics[width=\linewidth]{pictures/siec.png}
@@ -132,7 +143,7 @@ Zdefiniowanie jako agentów poszczególnych jednostkek przedsiębiorstwa jest pr
 
 przez które kolejno będzie musiał przejść produkt zanim będzie mógł być zakupiony przez klienta. Rozpatrując ten system w proponowanym przez Kawa, 2013 kontekście teorii grafów oznacza to, że łańcuch produkcyjny może składać się z $m= $ $n\choose 1 $ $ \times $ $k\choose 1 $ $ \times $ $i\choose 1 $ kombinacji $d_m$ połączeń pomiędzy jednostkami przedsiębiorstwa. Jak zauważa Kawa, każde z tych połączeń będzie miało swoją maksymalną przepustowość oraz koszt $k_d \in f[d]$, będący sumą kosztów ponoszonych na każdym z ogniw łańcucha wartości. Na krańcach grafu może dojść do sprzedaży towaru i przychodu dla całego systemu - jednak zaopatrzenie sklepu w zbyt dużą ilość towaru doprowadzi do jego zmarnowania i strat. 
 
-\paragraph{Zadanie optymalizacyjne} \mbox{}\\
+\subsubsection{Zadanie optymalizacyjne} 
 Dlatego optymalizując działanie przedsiębiorstwa będziemy dążyć do tego, żeby dla danego poziomu produkcji $x$ i zbioru \textit{produktów} $\in$ $PR = \{pr_1,pr_2,pr_3..pr_x\} $ ze zbioru możliwych sterowań (możliwych tras) $<d_1,d_2,d_3..d_m>$ dla każdego z produktów wybrać trasy maksymalizujący wyrażenie
 
 \begin{equation} \label{eq:teoria1}
@@ -154,7 +165,7 @@ Trzecim aspektem który trzeba wziąć pod uwagę jest złożoność obliczeniow
 
  Proponowany algorytm będzie brał wszystkie te aspekty pod uwagę, a pierwszy z wymienionych problemów rozwiążemy wykorzystując  \textit{modelowanie predykcyjne}.
 
-\paragraph{Modelowanie predykcyjne} \mbox{}\\
+\subsubsection{Modelowanie predykcyjne} 
 Jak wskazuje James, 2013, \textit{modelowanie predykcyjne}\ zakładając, że dysponujemy zbiorem $n$ obserwacji $p$ zmiennych, możemy zbadać ich relację ze zmienną wyjaśnianą $y$ i otrzymać \textit{model}, który dla nowych - nieanalizowanych wcześniej - obserwacji $x_1,x_2..x_n$  zwraca przewidywaną wartość zmiennej objaśnianej \^{y}. Różnorodne metody dzięki którym możemy otrzymać \^{y} James nazywa \textit{Statistical learning} i może być wykorzystany do modelowania predykcyjnego, tj. przewidywania przyszłych wartości \^{y}. 
 
 Zastosowanie metod \textit{statistical learning} w przedsiębiorstwach potwierdza Buckinx, 2007, który wskazywał na możliwość prognozowania lojalności klienta na podstawie wewnętrznych danych o transakcjach, oraz Davenport, który w Harvard Business Review 12/2011 opisuje szereg  \textit{case studies} firm, w których wykorzystuje się istniejące dane o transakcjach do przewidywania przyszłych zakupów klientów. Jednym z podanych przez niego przykładów jest Tesco, które na podstawie zebranych danych przewiduje, jak będzie wyglądał koszyk zakupów klienta podczas następnych zakupów, i odpowiednio wcześnie wysyła mu bony zniżkowe. 
@@ -182,7 +193,7 @@ Jak wskazuje James, zmienna objaśniana \^{y} może przyjąć formę liczby rzec
 
 \newpage
 
-\paragraph{Proponowany algorytm optymalizacyjny} \mbox{}\\
+\subsection{Proponowany algorytm optymalizacyjny} 
 Znając przewidywaną sprzedaż na krańcach grafu, proponowany w niniejszej pracy algorytm rozwiązania powyższego problemu opiera się na obserwacji, że równanie \ref{eq:teoria1} będzie równoważne zapisowi sumującemu po możliwych kombinacjach łańcucha (zamiast dla każdego produktu z osobna).
 
 \begin{equation}  \label{eq:teoria2}
@@ -342,46 +353,30 @@ Kod źródłowy programu dostępny jest pod adresem  \textit{github.com/hubertgu
 
 \subsection{Struktura programu}
 
-Program podzielony jest na dwie główne części. Pierwsza odpowiada za stworzenie, w drodze losowań, środowiska w ramach którego toczy się symulacja, wraz z agentami i macierzą lokalizacji. \footnote{Model może pominąć ten część i wczytać pregenerowany świat w celu sprawdzenia różnych scenariuszy w statycznym świecie (ceteris paribus).}
+Program podzielony jest na trzy części. Pierwsza odpowiada za stworzenie, w drodze losowań, środowiska w ramach którego toczy się symulacja, wraz z agentami i macierzą lokalizacji. \footnote{Model może pominąć ten część i wczytać pregenerowany świat w celu sprawdzenia różnych scenariuszy w statycznym świecie (ceteris paribus).}
 
  Druga część przez $t_n$ jednostek czasu egzekwuje decyzje podjęte przez przedsiębiorstwo i symuluje zachowania konsumenckie, zwracając na koniec wyniki (przychody i zysk) przedsiębiorstwa w danej jednostce czasu $t$.
 
+Trzecia po $t_n$ rund symulacji aplikuje algorytm optymalizacyjny, który poprzez prognozowanie sprzedaży na krańcach grafu w $t_{n+1}$, szuka najlepszych decyzji o alokacji produktów.
 
-\begin{tikzpicture}
-  [node distance=.8cm,
-  start chain=going below,]
-     \node[punktchain, join] (intro) {Generowanie mapy i lokalizacji};
-     \node[punktchain, join] (probf)      {Generowanie konsumentow};
-     \node[punktchain, join] (investeringer)      {Generowanie symulowanego przedsiebiorstwa i konkurencji};
-     \node[punktchain, join] (perfekt) {Alokacja konsumentów i przedsiębiorstw na mapie};
-      \node (asym) [punktchain ]  {Podjęcie przez zarząd decyzji dla przedsiębiorstwa};
-      \begin{scope}[start branch=venstre,
-        every join/.style={->, thick, shorten <=1pt}, ]
-        \node[punktchain, on chain=going left, join=by {<-}]
-            (risiko) {Modelowanie predykcyjne popytu na towary};
-      \end{scope}
-      \begin{scope}[start branch=hoejre,]
-      \node (finans) [punktchain, on chain=going right] {Symulowanie wyborów konsumenckich};
-    \end{scope}
-  \node[punktchain, join,] (disk) {Symulowanie zakupów };
-  \node[punktchain, join,] (makro) {Investerings};
-  \node[punktchain, join] (konk) {Konklusion};
-  % Now that we have finished the main figure let us add some "after-drawings"
-  %% First, let us connect (finans) with (disk). We want it to have
-  %% square corners.
-  \draw[|-,-|,->, thick,] (finans.south) |-+(0,-1em)-| (disk.north);
-  % Now, let us add some braches. 
-  %% No. 1
-  \draw[tuborg] let
-    \p1=(risiko.west), \p2=(finans.east) in
-    ($(\x1,\y1+2.5em)$) -- ($(\x2,\y2+2.5em)$) node[above, midway]  {Symulacja};
-  %% No. 2
-  \draw[tuborg, decoration={brace}] let \p1=(disk.north), \p2=(makro.south) in
-    ($(2, \y1)$) -- ($(2, \y2)$) node[tubnode] {Analyse};
-  %% No. 3
-  \draw[tuborg, decoration={brace}] let \p1=(intro.north), \p2=(perfekt.south) in
-    ($(2, \y1)$) -- ($(2, \y2)$) node[tubnode] {Przygotowanie agentów};
-  \end{tikzpicture}
+\begin{center}
+\begin{tikzpicture}[node distance = 1.5cm]d
+    % Place nodes
+    \node [pierwsza] (jeden) {Generowanie mapy};
+    \node [pierwsza, below of=jeden] (dwa) {Generowanie agentów};
+    \node [druga, below of=dwa] (trzy) {Symulowanie łańcucha logistycznego (dostaw)};
+    \node [druga, below of=trzy] (cztery) {Symulowanie decyzji klientów (zakupów)};
+    \node [trzecia, below of=cztery] (piec) {Zastosowanie algorytmu optymalizacyjnego)};
+    \node [trzecia, below of=piec] (szesc) {Sprawdzenie wpływu algorytmu na wyniki firmy)};
+
+\path [line,dashed] (jeden) -- (dwa);
+\path [line,dashed] (dwa) -- (trzy);
+\path [line,dashed] (trzy) -- (cztery);
+\path [line,dashed] (cztery) -- (piec);
+\path [line,dashed] (piec) -- (szesc);
+\end{tikzpicture}
+
+\end{center}
 
 \subsection{Generowanie mapy}
 
@@ -401,7 +396,26 @@ droga & [integer,integer] & Współrzędne drogi dojazdowej - potrzebne do algor
 
 które generowane są według algorytmu
 
-!!!
+\begin{center}
+\begin{tikzpicture}[node distance = 1.5cm]d
+    % Place nodes
+    \node [pierwsza] (jeden) {Stwórz pustą macierz o wymiarach x,y};
+    \node [pierwsza, below of=jeden] (dwa) {Wylosuj punkt startowy};
+    \node [druga, below of=dwa] (trzy) {Czy punkt spełnia kryteria?};
+    \node [pierwsza, below of=trzy] (cztery) {Umieść drogę w tym punkcie};
+    \node [pierwsza, right of=trzy] (piec) {Wylosuj kolejny punkt w sąsiedztwie};
+    \node [pierwsza, below of=cztery] (szesc) {Kontynuuj aż ilość dróg będzie równa założeniom)};
+    \node [pierwsza, below of=szesc] (siedem) {Dla kazdego punktu na mapie - czy sąsiaduje z drogą?)};
+    \node [pierwsza, right of=siedem] (dziewiec) {Wylosuj lokalizację ze zbioru $(dom,praca,przestrzen komercyjna)$};
+\path [line,dashed] (jeden) -- (dwa);
+\path [line,dashed] (dwa) -- (trzy);
+\path [line,dashed] (trzy) -- (cztery);
+\path [line,dashed] (cztery) -- (piec);
+\path [line,dashed] (piec) -- (szesc);
+\end{tikzpicture}
+
+\end{center}
+
 
 Każda mapa wygenerowana przez program spełniać będzie następujące założenia
 
@@ -413,7 +427,7 @@ Każda mapa wygenerowana przez program spełniać będzie następujące założe
 	 	\item Gęstość sieci dróg oraz prawdopodobieństwo występowania zakrętów jest predefiniowana przez użytkownika
 	\end{itemize}
 
-\paragraph{Algorytm wyszukiwania drogi} \mbox{}\\
+\subsubsection{Algorytm wyszukiwania drogi} 
 
 Odległości pomiędzy zadanymi piunktami w modelu są wyszukiwane dynamicznie, na podstawie algorytmu wyszukiwania drogi i zliczaniu ilości punktów w zwracanym przez niego łańcuchu. Algorytm oparty jest na metodach wyszukiwania ścieżek w grafach, dzięki założeniu, że każdy droga o współrzędnej (x,y) na mapie jest punktem grafu, który może sąsiadować z punktami o współrzędnych (x-1,y),(x+1,y),(x,y+1),(x,y-1) \footnote{Punkty (x-1,y-1),(x+1,y-1),(x+1,y+1),(x-1,y+1) wykluczamy przez wcześniejsze założenie, że drogi krzyżują się tylko pod katem prostym}, o ile również są drogrami. Informacje o punktach i sąsiadujących przechowywane są w zmiennej nodes, która jesst słownikiem, dla każdego klucza - punktu na mapie - przechowuje informacje o sąsiadujących punktach, np. (3,2) = [(3,3)(4,3). \footnote{Pewnym ograniczeniem jest, że jako punkty grafu definiujemy tylko drogi, tak więc szukając trasy z punktu A do punktu B de facto szukamy trasy z drogi przy punkcie A do drogi przy punkcie B.}
 
@@ -426,8 +440,10 @@ Algorytm ma następujące cechy
 		\item działa według następującego schemtu.
 	\end{itemize}
 
-\subsection{Generowanie agentów}
-\paragraph{Konsumenci} \mbox{}\\
+!!! Przeklej pseudokod
+
+\subsection{Agenci, ich rodzaje i właściwości}
+\subsubsection{Konsumenci} 
 
 Idąc za Kamiński, w modelu stosujemy modelowanie rynku za pomocą heterogeniczne konsumentów. Stąd, każdy z konsumentów ma swoją unikalną charakterystykę, która wpływa na jego wybory. Ponadto, ponieważ każdy klient ma przypisany dom, pracę i znajomych i mieszka w towarzystwie osób sobie podobnych  \footnote{Jest to założenie inspirowanie !!!, i osiągane w podobny sposób - po wstępnej alokacji konsumentów do lokalizacji przeprowadzamy $n$ rund, w których jest szansa na przeprowadzkę do miejsca o bardziej podobnym profilu mieszkańców}, pula lokalizacji w ramach których się porusza się zamknięta. Dzięki temu, odwzierciedlamy zjawisko ze świata rzeczywistego, że konsumenci zazwyczaj robią zakupy w ograniczonej liczbie sklepów będących po drodze bądz niedaleko. Jest to bardzo istotny warunek funkcjonowania modelu, ponieważ losowy dobór klientów uniemożliwiłby modelowanie predykcyjne.
 
@@ -449,7 +465,7 @@ Zmienna & Zależność & Opis \\
 
 \paragraph{Przykładowe rozkłady cech konsumentów} \mbox{}\\
 
-\subsection{Przedsiębiorstwo}
+\subsubsection{Przedsiębiorstwo}
 
 Jak wskazano w rozdziale 1, przedsiębiorstwo nie jest modelowane jako jedna jednostka, a zamiast tego stosowane jest podejście wieloagentowe - każda z jednostek organizacyjnych jest samodzielnym, niezależnym agentem. Stąd, klasa firma jest tylko klasą przechowującą dane o wszystkich jednostkach wchodzących w skład przedsiębiorstwa, z następującymi właściwiościami.
 
@@ -468,11 +484,11 @@ przy czym sklepy mają dodatkowe zmienne i funkcje przechowujące informacje o i
 !!!
 
 
-\subsection{Produkt}
+\subsubsection{Produkt}
 
 Opierając się na argumentacji, wedle którego każdy produkt charakteryzuje się cechami wpływające na prawdopodobieństwo jego zakupu przez konsumentów, nasz produkt definiujemy przez zestaw dowolnych cech, definiowanych jako $factors$, skalę ocen bądź zmienne binarne, które odróżniają go od produktów konkurencji. \footnote{Ich istotność nie jest w tym momencie ważna, ponieważ nawet jeśli w zbiorze znajdzie się cecha mająca mały wpływ na decyzje konsumentów, zostanie ona wyeliminowana na etapie tworzenia modelu bądź drzewa klasyfikacyjnego ze względu brak istotności statystycznej współczynnika} Produkt jest więc klasą przechowującą jednowymiarową macierz z cechami produktu $[x_1,x_2,x_3]$
 
-\subsection{Konkurencja}
+\subsubsection{Konkurencja}
  
 W założeniach przyjmujemy, że konkurencja jest pasywna - tj. nie podejmuje działań ani decyzji w trakcie trwania symulacji. Wynika to z odmiennego celu badania, którym jest analiza działania algorytmów optymalizacyjnych - nagłe zmiany sprzedaży spowodowane np. obniżeniem ceny przez konkurencję spowodowałyby wątpliwości interpretacyjne i są zbędne. Konkurencja jest za to potrzebna do stworzenia alternatywnych dla symulowanego produktu, o odmiennych cechach i przyciągających klientów o specyficznych charakterystykach. 
 
