@@ -31,6 +31,7 @@ class rynek(object):
                           k+=1
                           wybor = f_f.prawdopodobienstwo_zakupu_piwa(tabela_y)
                           if sklep.sprzedaz_w_sklepie(wybor) or k==4:
+                                sklep.klienci_historycznie[self.tura].append(klient+[wybor])
                                 break
       def nowa_tura(self):
           #zapisywanie statystyk po turze?
@@ -65,12 +66,10 @@ class firma(object):
           print "Przyporzadkowuje klientow do sklepu..."
           for sklep in self.sklepy : sklep.klienci = []
           for czlowiek in swiat.ludnosc:
-            print swiat.ludnosc.index(czlowiek) , "/" , str(len(swiat.ludnosc))
             odwiedzone = czlowiek.odwiedzony_sklep(swiat)
-            for sklep in self.sklepy:             
-                        if sklep.lokalizacja == odwiedzone:
-                              sklep.klienci.append(czlowiek.macierz_cech())
-                              sklep.klienci_historycznie[tura].append(czlowiek.macierz_cech())
+            for sklep in self.sklepy:
+                if sklep.lokalizacja == odwiedzone:
+                    sklep.klienci.append(czlowiek.macierz_cech())
           print "Skonczylem przyporzadkowywac"
 
       def wypisz_wyniki(self):
@@ -192,7 +191,7 @@ class sklep(firma):
         self.efekt_skali = 0
         self.przewidywana_sprzedaz = 0
 
-    def dostawa_towaru(self, rynek, trasa,symulowany_towar = 30,inne_towary=30):
+    def dostawa_towaru(self, rynek, trasa=None,symulowany_towar = 30,inne_towary=30):
         for produkt in rynek.produkty_na_rynku:
             #to można wrzucić do funkcji
               if produkt[0] == rynek.symulowana_firma.produkt.nazwa:

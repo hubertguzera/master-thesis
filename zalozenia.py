@@ -2,7 +2,7 @@ from funkcje import funkcje_zalozenia
 import sympy
 #Swiat
 
-populacja = 100
+populacja = 300
 wymiar_x = 25
 wymiar_y = 25
 lokalizacja_rozklad_typ= {"Dom":0.6,"Praca":0.2,"Przestrzen komercyjna":0.2}
@@ -27,8 +27,8 @@ szansa_na_zakupy = 1
 
 #Firma
 ilosc_fabryk = 1
-ilosc_magazyn = 1
-ilosc_sklepow = 2
+ilosc_magazyn = 2
+ilosc_sklepow = 3
 
 koszt_fabryka = 1
 koszt_magazyny = 1
@@ -40,7 +40,7 @@ skala_magazyny = 1.1
 skala_sklepy = 1.1
 skala_sciezka = 1.1
 
-produkt_cena = 10
+produkt_cena = 20
 
 #Konkurencja
 prawdopodobienstwo_zakupu_piwa = 1

@@ -9,21 +9,19 @@ firma = rynek.symulowana_firma
 
 firma.przypisz_koszty()
 
-prognozowana = []
-
 for sklep in firma.sklepy:
-
+    sklep.dostawa_towaru(rynek, symulowany_towar=0,inne_towary=100)
     sklep.przewidywana_sprzedaz = 10
-    prognozowana.append((sklep.symbol,sklep.przewidywana_sprzedaz))
-rynek.sprzedaz_w_sklepach()
 
-
-
-firma.wypisz_wyniki()
-
-punkty_stacjonarne = f_o.punkty_stacjonarne(firma,prognozowana)
 
 f_o.dostawy_optymalne(firma,rynek)
-
 for sklep in firma.sklepy:
     print sklep.sklad
+
+
+rynek.sprzedaz_w_sklepach()
+for sklep in firma.sklepy:
+    print sklep.sklad
+    print sklep.klienci_historycznie
+
+firma.wypisz_wyniki()
