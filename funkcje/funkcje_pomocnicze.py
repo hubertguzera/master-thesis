@@ -1,4 +1,4 @@
-import random,zalozenia
+import random
 import sympy
 
 def konwertuj_wyksztalcenie(wyksztalcenie):
@@ -104,3 +104,11 @@ def usun_kolumny(tabela,lista):
             b.append(item[kolumna])
         a.append(b)
     return a
+
+def losuj_proba(lista):
+    los = random.random()
+    if los<lista[0]:
+        return 0
+    else:
+        return 1
+

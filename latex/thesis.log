@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  10 SEP 2015 20:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  12 SEP 2015 14:42
 entering extended mode
 **C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/thesis.tex
 (C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/thesis.tex
@@ -698,6 +698,34 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1 (rcs-revision 1.2)
 )))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count120
+\lst@gtempboxa=\box39
+\lst@token=\toks40
+\lst@length=\count121
+\lst@currlwidth=\dimen160
+\lst@column=\count122
+\lst@pos=\count123
+\lst@lostspace=\dimen161
+\lst@width=\dimen162
+\lst@newlines=\count124
+\lst@lineno=\count125
+\lst@maxwidth=\dimen163
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count126
+\lst@skipnumbers=\count127
+\lst@framebox=\box40
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibraryshapes.callouts.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
@@ -725,7 +753,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1 (rcs-revision 1.1)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.
 code.tex"
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1 (rcs-revision 1.16)
-\arrowsize=\dimen160
+\arrowsize=\dimen164
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarychains.code.tex"
@@ -746,16 +774,16 @@ s\tikzlibrarydecorations.pathreplacing.code.tex"
 s\tikzlibrarydecorations.code.tex"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecoration
 s.code.tex"
-\pgfdecoratedcompleteddistance=\dimen161
-\pgfdecoratedremainingdistance=\dimen162
-\pgfdecoratedinputsegmentcompleteddistance=\dimen163
-\pgfdecoratedinputsegmentremainingdistance=\dimen164
-\pgf@decorate@distancetomove=\dimen165
-\pgf@decorate@repeatstate=\count120
-\pgfdecorationsegmentamplitude=\dimen166
-\pgfdecorationsegmentlength=\dimen167
+\pgfdecoratedcompleteddistance=\dimen165
+\pgfdecoratedremainingdistance=\dimen166
+\pgfdecoratedinputsegmentcompleteddistance=\dimen167
+\pgfdecoratedinputsegmentremainingdistance=\dimen168
+\pgf@decorate@distancetomove=\dimen169
+\pgf@decorate@repeatstate=\count128
+\pgfdecorationsegmentamplitude=\dimen170
+\pgfdecorationsegmentlength=\dimen171
 )
-\tikz@lib@dec@box=\box39
+\tikz@lib@dec@box=\box41
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgfli
 brarydecorations.pathreplacing.code.tex"))
@@ -795,104 +823,105 @@ File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1 (rcs-revision 1.1)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibrary
 shapes.multipart.code.tex"
 File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1 (rcs-revision 1.2)
-\pgfnodepartlowerbox=\box40
-\pgfnodeparttwobox=\box41
-\pgfnodepartthreebox=\box42
-\pgfnodepartfourbox=\box43
-\pgfnodeparttwentybox=\box44
-\pgfnodepartnineteenbox=\box45
-\pgfnodeparteighteenbox=\box46
-\pgfnodepartseventeenbox=\box47
-\pgfnodepartsixteenbox=\box48
-\pgfnodepartfifteenbox=\box49
-\pgfnodepartfourteenbox=\box50
-\pgfnodepartthirteenbox=\box51
-\pgfnodeparttwelvebox=\box52
-\pgfnodepartelevenbox=\box53
-\pgfnodeparttenbox=\box54
-\pgfnodepartninebox=\box55
-\pgfnodeparteightbox=\box56
-\pgfnodepartsevenbox=\box57
-\pgfnodepartsixbox=\box58
-\pgfnodepartfivebox=\box59
+\pgfnodepartlowerbox=\box42
+\pgfnodeparttwobox=\box43
+\pgfnodepartthreebox=\box44
+\pgfnodepartfourbox=\box45
+\pgfnodeparttwentybox=\box46
+\pgfnodepartnineteenbox=\box47
+\pgfnodeparteighteenbox=\box48
+\pgfnodepartseventeenbox=\box49
+\pgfnodepartsixteenbox=\box50
+\pgfnodepartfifteenbox=\box51
+\pgfnodepartfourteenbox=\box52
+\pgfnodepartthirteenbox=\box53
+\pgfnodeparttwelvebox=\box54
+\pgfnodepartelevenbox=\box55
+\pgfnodeparttenbox=\box56
+\pgfnodepartninebox=\box57
+\pgfnodeparteightbox=\box58
+\pgfnodepartsevenbox=\box59
+\pgfnodepartsixbox=\box60
+\pgfnodepartfivebox=\box61
 )))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarymatrix.code.tex"
 File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1 (rcs-revision 1.4)
 )
 (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen168
-\scratchbox=\box60
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen169
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count129
+\scratchdimen=\dimen172
+\scratchbox=\box62
+\nofMPsegments=\count130
+\nofMParguments=\count131
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen173
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
+\everyMPtoPDFconversion=\toks42
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for OML+plm on input line 74.
+\c@lstlisting=\count135
+LaTeX Font Info:    Try loading font information for OML+plm on input line 85.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\polski\omlplm.fd"
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 74.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 85.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\polski\omsplsy.fd"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 74.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 85.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\polski\omxplex.fd"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 74.
+(Font)              <12> on input line 85.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 74.
+(Font)              <8> on input line 85.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 74.
+(Font)              <6> on input line 85.
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
 Package natbib Warning: Citation `Brynjolfsson2011' on page 1 undefined on inpu
-t line 85.
+t line 96.
 
 
-Package natbib Warning: Citation `PwC2014' on page 1 undefined on input line 85
+Package natbib Warning: Citation `PwC2014' on page 1 undefined on input line 96
 .
 
 
-Package natbib Warning: Citation `Frey2013' on page 1 undefined on input line 8
-7.
+Package natbib Warning: Citation `Frey2013' on page 1 undefined on input line 9
+8.
 
 
 Package natbib Warning: Citation `McKinsey&Company2011' on page 1 undefined on 
-input line 89.
+input line 100.
 
 [1
 
@@ -909,104 +938,127 @@ LaTeX Font Info:    External font `plex10' loaded for size
  [3]
 
 Package natbib Warning: Citation `Moyaux2006' on page 4 undefined on input line
- 120.
+ 131.
 
 
 Package natbib Warning: Citation `Kawa2010' on page 4 undefined on input line 1
-20.
+31.
 
 
 Package natbib Warning: Citation `Moyaux2006' on page 4 undefined on input line
- 120.
+ 131.
 
 <pictures/siec.png, id=20, 536.75531pt x 283.0575pt>
 File: pictures/siec.png Graphic file (type png)
  <use pictures/siec.png>
-Package pdftex.def Info: pictures/siec.png used on input line 122.
+Package pdftex.def Info: pictures/siec.png used on input line 135.
 (pdftex.def)             Requested size: 345.0pt x 181.93361pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 122--123
-[][] 
- []
-
 [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 130.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 149.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
  [5 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/pictures/siec.pn
 g>]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 144.
+(amsmath)                 on input line 163.
 
-[6] [7]
-Overfull \hbox (15.98903pt too wide) in paragraph at lines 183--184
-[]\OT4/cmr/m/n/10 jaki pro-dukt wy-bie-rze klient o da-nej cha-rak-te-ry-sty-ce
-, gdzie ^y $\OMS/plsy/m/n/10 2 f\OML/plm/m/it/10 pr[]; pr[]::pr[]\OMS/plsy/m/n/
-10 g$\OT4/cmr/m/n/10 ,
- []
-
-
-Overfull \hbox (44.12614pt too wide) in paragraph at lines 191--192
-[]\OT4/cmr/m/n/10 do wy-bo-ru produktu- me-to-dy kla-sy-fi-ka-cyj-ne - $\OML/pl
-m/m/it/10 k \OMS/plsy/m/n/10   \OML/plm/m/it/10 means$ \OT4/cmr/m/n/10 oraz $\O
-ML/plm/m/it/10 drzewaklasyfikacyjne$ 
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+[6] [7] [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Overfull \hbox (32.32526pt too wide) in paragraph at lines 253--254
+Overfull \hbox (32.32526pt too wide) in paragraph at lines 281--282
 [][] 
  []
 
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
 
  []
 
+<pictures/diagramoptymalizacyny.png, id=55, 725.71124pt x 364.36125pt>
+File: pictures/diagramoptymalizacyny.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
-
- []
-
-[11] [12]
-Overfull \hbox (4.1395pt too wide) in paragraph at lines 344--350
+<use pictures/diagramoptymalizacyny.png>
+Package pdftex.def Info: pictures/diagramoptymalizacyny.png used on input line 
+322.
+(pdftex.def)             Requested size: 345.0pt x 173.21794pt.
+ [11] [12 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/pictures/d
+iagramoptymalizacyny.png>]
+Overfull \hbox (11.63956pt too wide) in paragraph at lines 368--374
  [] 
  []
 
+[13] <pictures/Struktura.png, id=70, 766.865pt x 775.89874pt>
+File: pictures/Struktura.png Graphic file (type png)
 
-Overfull \hbox (36.53276pt too wide) in paragraph at lines 352--353
-[]\OT4/cmr/m/n/10 Kod ¹ró-dªo-wy pro-gra-mu do-st¦p-ny jest pod ad-re-sem \OT4/
-cmr/m/it/10 github.com/hubertguzera/master-
+<use pictures/Struktura.png>
+Package pdftex.def Info: pictures/Struktura.png used on input line 390.
+(pdftex.def)             Requested size: 345.0pt x 349.06833pt.
+
+<pictures/tworzeniedrog.png, id=71, 795.97375pt x 475.7775pt>
+File: pictures/tworzeniedrog.png Graphic file (type png)
+
+<use pictures/tworzeniedrog.png>
+Package pdftex.def Info: pictures/tworzeniedrog.png used on input line 427.
+(pdftex.def)             Requested size: 345.0pt x 206.21378pt.
+ [14] [15 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/pictures/S
+truktura.png>] [16 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/p
+ictures/tworzeniedrog.png>]
+Overfull \hbox (9.0036pt too wide) in paragraph at lines 464--465
+[][][][][][][][][][][][][][][][][][][][] 
  []
 
-Missing character: There is no d in font nullfont!
-[13]
-Overfull \hbox (149.11198pt too wide) in paragraph at lines 388--396
-[][] 
+[17] <pictures/rplot01.png, id=86, 781.92125pt x 488.82625pt>
+File: pictures/rplot01.png Graphic file (type png)
+
+<use pictures/rplot01.png>
+Package pdftex.def Info: pictures/rplot01.png used on input line 495.
+(pdftex.def)             Requested size: 345.0pt x 215.68091pt.
+
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 510--511
+[][][][][][][][][][][][][][][][][][] 
  []
 
-Missing character: There is no d in font nullfont!
-[14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 464--465
-
+[18]
+Overfull \hbox (51.00403pt too wide) in paragraph at lines 523--524
+[][][][][][][][][][][][][][][][][][] 
  []
 
-[17] [18] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.bbl
+
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 525--526
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.00366pt too wide) in paragraph at lines 534--535
+[][][][][][][][][][][][][][][] 
+ []
+
+[19 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/pictures/rplot01
+.png>]
+
+LaTeX Warning: Command \l invalid in math mode on input line 549.
+
+Missing character: There is no ª in font plmi10!
+
+LaTeX Warning: Command \. invalid in math mode on input line 553.
+
+Missing character: There is no » in font plmi10!
+[20] [21] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
@@ -1014,15 +1066,15 @@ Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
 Package natbib Warning: There were undefined citations.
 
-[19] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.aux) ) 
+[22] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 15698 strings out of 493921
- 340388 string characters out of 3144873
- 394712 words of memory out of 3000000
- 18664 multiletter control sequences out of 15000+200000
+ 17501 strings out of 493921
+ 363802 string characters out of 3144873
+ 428092 words of memory out of 3000000
+ 20447 multiletter control sequences out of 15000+200000
  14362 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,9n,71p,1500b,594s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,9n,71p,1500b,1632s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C
 :/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Program Files 
 (x86)/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Program Files (x86)/MiKTeX 2.9
@@ -1046,9 +1098,9 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Program Files
 pe1/public/pl/plsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 pl/plsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plti10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plti8.pfb>
-Output written on thesis.pdf (19 pages, 279113 bytes).
+Output written on thesis.pdf (22 pages, 468188 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
+ 172 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,24 +5,24 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Przedsi\IeC {\k e}biorstwo jako system wieloagentowy}{4}
 \contentsline {subsubsection}{\numberline {1.2.2}Zadanie optymalizacyjne}{6}
 \contentsline {subsubsection}{\numberline {1.2.3}Modelowanie predykcyjne}{7}
-\contentsline {subsection}{\numberline {1.3}Proponowany algorytm optymalizacyjny}{9}
+\contentsline {subsection}{\numberline {1.3}Proponowany algorytm optymalizacyjny}{10}
 \contentsline {section}{\numberline {2}Model}{12}
 \contentsline {subsection}{\numberline {2.1}Koncepcja modelu}{12}
 \contentsline {subsection}{\numberline {2.2}Zastosowane narz\IeC {\k e}dzia}{13}
-\contentsline {subsection}{\numberline {2.3}Struktura programu}{13}
+\contentsline {subsection}{\numberline {2.3}Struktura programu}{14}
 \contentsline {subsection}{\numberline {2.4}Generowanie mapy}{14}
-\contentsline {subsubsection}{\numberline {2.4.1}Algorytm wyszukiwania drogi}{15}
-\contentsline {subsection}{\numberline {2.5}Agenci, ich rodzaje i w\IeC {\l }a\IeC {\'s}ciwo\IeC {\'s}ci}{16}
-\contentsline {subsubsection}{\numberline {2.5.1}Konsumenci}{16}
-\contentsline {paragraph}{Przyk\IeC {\l }adowe rozk\IeC {\l }ady cech konsument\IeC {\'o}w}{17}
-\contentsline {subsubsection}{\numberline {2.5.2}Przedsi\IeC {\k e}biorstwo}{17}
-\contentsline {subsubsection}{\numberline {2.5.3}Produkt}{17}
-\contentsline {subsubsection}{\numberline {2.5.4}Konkurencja}{17}
-\contentsline {subsection}{\numberline {2.6}Symulowanie decyzji konsumenckich}{18}
-\contentsline {section}{\numberline {3}Efekty dzia\IeC {\l }ania algorytmu optymalizacyjnego}{19}
-\contentsline {subsection}{\numberline {3.1}Charakterystyka badanego \IeC {\'s}rodowiska}{19}
-\contentsline {subsection}{\numberline {3.2}Przewidywanie decyzji konsument\IeC {\'o}w}{19}
-\contentsline {subsection}{\numberline {3.3}Wyniki przedsi\IeC {\k e}biorstwa przy braku optymalizacji}{19}
-\contentsline {subsection}{\numberline {3.4}Optymalizacja przy sta\IeC {\l }ych cenach i braku efektu skali}{19}
-\contentsline {subsection}{\numberline {3.5}Optymalizacja przy sta\IeC {\l }ych cenach i istnieniu efektu skali}{19}
-\contentsline {subsection}{\numberline {3.6}Optymalizacja przy zmiennych cenach i istnieniu efektu skali}{19}
+\contentsline {subsubsection}{\numberline {2.4.1}Algorytm wyszukiwania drogi}{16}
+\contentsline {subsection}{\numberline {2.5}Agenci, ich rodzaje i w\IeC {\l }a\IeC {\'s}ciwo\IeC {\'s}ci}{17}
+\contentsline {subsubsection}{\numberline {2.5.1}Konsumenci}{17}
+\contentsline {subsubsection}{\numberline {2.5.2}Przedsi\IeC {\k e}biorstwo}{18}
+\contentsline {subsubsection}{\numberline {2.5.3}Produkt}{19}
+\contentsline {subsubsection}{\numberline {2.5.4}Konkurencja}{20}
+\contentsline {subsubsection}{\numberline {2.5.5}Trasy}{20}
+\contentsline {subsection}{\numberline {2.6}Symulowanie decyzji konsumenckich}{20}
+\contentsline {section}{\numberline {3}Efekty dzia\IeC {\l }ania algorytmu optymalizacyjnego}{22}
+\contentsline {subsection}{\numberline {3.1}Charakterystyka badanego \IeC {\'s}rodowiska}{22}
+\contentsline {subsection}{\numberline {3.2}Przewidywanie decyzji konsument\IeC {\'o}w}{22}
+\contentsline {subsection}{\numberline {3.3}Wyniki przedsi\IeC {\k e}biorstwa przy braku optymalizacji}{22}
+\contentsline {subsection}{\numberline {3.4}Optymalizacja przy sta\IeC {\l }ych cenach i braku efektu skali}{22}
+\contentsline {subsection}{\numberline {3.5}Optymalizacja przy sta\IeC {\l }ych cenach i istnieniu efektu skali}{22}
+\contentsline {subsection}{\numberline {3.6}Optymalizacja przy zmiennych cenach i istnieniu efektu skali}{22}

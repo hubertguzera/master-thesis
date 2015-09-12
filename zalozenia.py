@@ -50,5 +50,6 @@ niedozwolone_nazwy = []
 
 #modelowanie
 udzial_treningowe = 0.2
-zakres_prawdopodobienstwa_warunkowego = 4
+zakres_prawdopodobienstwa_warunkowego = 5
 znane_cechy = [0,1,2,3,4,29]
+ilosc_iteracji_prognoz = 10

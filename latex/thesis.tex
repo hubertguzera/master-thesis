@@ -14,6 +14,8 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 
+\usepackage{listings}
+\lstset{language=Python} 
 
 \usetikzlibrary{shapes.callouts}
 
@@ -66,6 +68,15 @@
      text centered, minimum height=3em]
 \tikzstyle{line} = [draw, -latex']
 
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [rectangle, draw, fill=yellow!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{cloud-a} = [rectangle, draw, fill=red!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
 
 \begin{document}
 
@@ -80,7 +91,7 @@
 
 \paragraph{Wprowadzenie} \mbox{}\\
 
-Wal-Mart, amerykański gigant handlowy, co godzinę umieszcza w swoich bazach danych 2.5 petabajtów danych, pochodzących z blisko miliona transakcji. I nie jest wyjątkiem - przeciętna ilość danych przechowywanych przez przedsiębiorstwa w Stanach Zjednoczonych jest większa niż zbiory Biblioteki Kongresu (szacowane na 235 terabajtów). W erze informacji większość z danych generowanych przez konsumentów trafia na serwery tej bądź innej firmy, w formie historii transakcji, koordynatu GPS czy zdjęcia. 
+Wal-Mart, amerykański gigant handlowy, co godzinę umieszcza w swoich bazach danych 2.5 petabajtów danych, pochodzących z blisko miliona transakcji. I nie jest wyjątkiem - przeciętna ilość danych przechowywanych przez przedsiębiorstwa w Stanach Zjednoczonych jest większa niż zbiory Biblioteki Kongresu (szacowane na 235 terabajtów). W erze informacji większość z danych działań trafia na serwery tej bądź innej firmy, w formie historii transakcji, koordynatu GPS czy zdjęcia. 
 
 Często informacje te zbierane są przypadkiem - ze względu na prowadzenie rachunkowości, specyfikę świadczonych usług, lub też względy archiwizacyjne. Jednak wydobycie z nich \textit{wiedzy} może stanowić źródło znaczącej przewagi konkurencyjnej.  Jak wskazują Brynjolfsson, Hitt i Kim \cite{Brynjolfsson2011}, przedsiębiorstwa podejmujące decyzje na podstawie analizy dużych zbiorów danych (\textit{data driven decision making}) osiągają efektywność o 5-6 proc. większą niż grupa porównawcza. Mają także większy zwrot z kapitału i wycenę rynkową - jednym słowem, radzą sobie lepiej. Nic więc dziwnego, że coraz częściej data analytics staje się priorytetem wśród dużych spółek. Skalę popularności business intelligence unaocznia badanie PwC \cite{PwC2014}, według którego 44 proc. CEO planuje oparcie rozwoju firmy o inwestycje w tej dziedzinie. 
 
@@ -102,9 +113,9 @@ Niniejsza praca ma na celu skonfrontowanie tej hipotezy. Po pierwsze, poprzez za
 \section{Cel, założenia i podstawy teoretyczne pracy}
 \subsection{Koncepcja pracy}
 
-Praca ma na celu zaproponowanie algorytmu optymalizacji podejmowania decyzji w przedsiębiorstwie na podstawie modelowania predyktywnego oraz sprawdzenie, jak zaimplementowanie takiego algorytmu wpływa na efektywność firmy.  
+Praca ma na celu zaproponowanie algorytmu optymalizacji podejmowania decyzji w przedsiębiorstwie na podstawie modelowania predyktywnego oraz sprawdzenie, jak zaimplementowanie takiego algorytmu wpływa na wyniki firmy.  
 
-Przyjmując, że optymalizowane przedsiębiorstwo z sektora FMCG zajmuje zarówno produkcją, jak i dystrybucją towarów do sklepów detalicznych, będziemy starali się w prognozować w krótkiej perspektywie wolumen sprzedaży w każdym ze sklepów. Wykorzystaną wiedzę wykorzystamy do optymalizacji procesów logistycznych, tj. zbudowanie takich tras dostaw i alokację wśród nich wolumenów produktów, żeby zysk firmy był jak największy. 
+Przyjmując, że optymalizowane przedsiębiorstwo z sektora FMCG zajmuje zarówno produkcją, jak i dystrybucją towarów do sklepów detalicznych, będziemy starali się w prognozować w krótkiej perspektywie wolumen sprzedaży w każdym z prowadzonych sklepów. Wykorzystaną wiedzę wykorzystamy do optymalizacji procesów logistycznych, tj. zbudowanie takich tras dostaw i alokację wśród nich wolumenów produktów, żeby zysk firmy był jak największy. 
 
 W celu zaprezentowania wyniku działania powstałego w ten sposób algorytmu, zostanie zbudowany model wieloagentowy symulujący rynek i zachowania klientów. Z jego pomocą sprawdzimy funkcjonowanie algorytmu w trzech przypadkach załozeń: 
 
@@ -119,11 +130,19 @@ W celu zaprezentowania wyniku działania powstałego w ten sposób algorytmu, zo
 \subsubsection{Przedsiębiorstwo jako system wieloagentowy} 
 Na możliwość wykorzystania modeli wieloagentowych do badania i zarządzania systemami logistycznymi wskazują m.in. Moyaux et al, 2006 \cite{Moyaux2006}  czy Kawa, 2010 \cite{Kawa2010}. W swoich pracach zauważyli oni, że  \textit{producenci},  \textit{dostawcy} i  \textit{odbiorcy} i inni uczestnicy łańcucha logistycznego mogą być opisani jako sieć autonomicznych, współpracujących ze sobą agentów. Takie podejście, i wynikająca z niego możliwość wykorzystania modeli wieloagentowych pomaga w rozwiązaniu problemów operacyjnych, na jakie wskazuje Moyaux \cite{Moyaux2006}. Należy bowiem zwrócić uwagę, że w zakresie wyboru tras i zarządzania flotą wieloetapowe łańcuchy dostaw wielu produktów są problemami NP-trudnymi, szczególnie, że decyzje podejmowane lokalnie są współzależne.\footnote{W praktyce, decyzje podjęte na wczesnym etapie łańcucha rezonują na dalsze etapy, co Moyaux opisuje jako "bullwhip effect"} Ponadto, jak zauważa Kawa, w sieci przedsiębiorstw pomiędzy dostawcami kolejnych rzędów (tj. fabryki, magazyny, sklepy) może istnieć wiele połączeń które są wobec siebie konkurencyjne, ponieważ jeden magazyn może zaopatrywać się w wielu fabrykach. Zastosowanie w tej dziedzinie modeli wieloagentowych pozwala więc na zbadanie, jak decyzje podejmowane na jednym z etapów łańcucha dostaw wpłyną na cały system i innych uczestników.  
 
+\begin{figure}
+  \centering
 \includegraphics[width=\linewidth]{pictures/siec.png}
+  \caption{Przykładowa sieć relacji w łańcuchu logistycznym}
+  \label{fig:siecKawa}
+
+\end{figure}
 
 W niniejszej pracy stosowane jest rozszerzenie tego podejścia, poprzez zaprogramowanie jako agentów jednostek organizacyjnych przedsiębiorstwa \textit{(fabryka, magazyn, sklep, zarząd)}, które razem tworzą system \textit{(przedsiębiorstwo)}. 
 
-To podejście opiera się na obserwacji, że relacje pomiędzy jednostkami w przedsiębiorstwie są analogiczne do relacji uczestników łańcucha dostaw. Michael Porter zauważył, że działalność przedsiębiorstwa to de facto sekwencja działań, która na każdym ogniwie zwiększa wartość dla odbiorcy. W przypadku firmy mamy więc również do czynienia z opisanym przez Portera łańcuchem wartości (\textit{value chain}).  Ponieważ przedsiębiorstwa często dysponują wieloma duplikującymi swoje działania jednostkami \footnote{Dobrym przykładem są tutaj zakłady samochodowe, które mogą produkować dany model w różnych krajach. Zmiana fabryki powoduje przy tym radykalną zmianę łańcucha dostaw}, łańcuch ten jest nieliniowy i w jego przypadku mamy do czynienia z podobnymi wyzwaniami co w łańcuchu logistycznym.
+To podejście opiera się na obserwacji, że relacje pomiędzy jednostkami w przedsiębiorstwie są analogiczne do relacji uczestników łańcucha dostaw. Michael Porter zauważył, że działalność przedsiębiorstwa to de facto sekwencja działań, która na każdym ogniwie zwiększa wartość dla odbiorcy. Zasady funkcjononawia opisywanego przez Portera \textit{łańcucha wartości} są identyczne co do opisywanego przez Moyeux i Kawę łańcucha dostaw - szczególnie, że przedsiębiorstwa poprzez strategię \textit{integracji wertykalnej} mogą swym zasięgiem mogą w rzadkich przypadkach objąć całość łańcucha dostaw.  
+
+Ponieważ przedsiębiorstwa często dysponują wieloma duplikującymi swoje działania jednostkami \footnote{Dobrym przykładem są tutaj zakłady samochodowe, które mogą produkować dany model w różnych krajach. Zmiana fabryki powoduje przy tym radykalną zmianę łańcucha dostaw}, łańcuch ten jest nieliniowy i w jego przypadku mamy do czynienia z podobnymi wyzwaniami co w łańcuchu logistycznym.
 
 Zdefiniowanie jako agentów poszczególnych jednostkek przedsiębiorstwa jest przy tym spójne z określoną przez Wooldridge i Jennings charakterystyką agenta, który według ich postulatów posiada : 
 	\begin{itemize}
@@ -144,7 +163,7 @@ Zdefiniowanie jako agentów poszczególnych jednostkek przedsiębiorstwa jest pr
 przez które kolejno będzie musiał przejść produkt zanim będzie mógł być zakupiony przez klienta. Rozpatrując ten system w proponowanym przez Kawa, 2013 kontekście teorii grafów oznacza to, że łańcuch produkcyjny może składać się z $m= $ $n\choose 1 $ $ \times $ $k\choose 1 $ $ \times $ $i\choose 1 $ kombinacji $d_m$ połączeń pomiędzy jednostkami przedsiębiorstwa. Jak zauważa Kawa, każde z tych połączeń będzie miało swoją maksymalną przepustowość oraz koszt $k_d \in f[d]$, będący sumą kosztów ponoszonych na każdym z ogniw łańcucha wartości. Na krańcach grafu może dojść do sprzedaży towaru i przychodu dla całego systemu - jednak zaopatrzenie sklepu w zbyt dużą ilość towaru doprowadzi do jego zmarnowania i strat. 
 
 \subsubsection{Zadanie optymalizacyjne} 
-Dlatego optymalizując działanie przedsiębiorstwa będziemy dążyć do tego, żeby dla danego poziomu produkcji $x$ i zbioru \textit{produktów} $\in$ $PR = \{pr_1,pr_2,pr_3..pr_x\} $ ze zbioru możliwych sterowań (możliwych tras) $<d_1,d_2,d_3..d_m>$ dla każdego z produktów wybrać trasy maksymalizujący wyrażenie
+Dlatego optymalizując działanie przedsiębiorstwa będziemy dążyć do tego, żeby dla danego poziomu produkcji $x$ i zbioru \textit{produktów} $\in$ $PR = \{pr_1,pr_2,pr_3..pr_x\} $ ze zbioru możliwych sterowań (możliwych tras dostawy) $<d_1,d_2,d_3..d_m>$ dla każdego z produktów wybrać trasy maksymalizujący wyrażenie
 
 \begin{equation} \label{eq:teoria1}
 \max \sum\limits_{pr=1}^x  zysk (cena,d) = \begin{cases}
@@ -157,20 +176,22 @@ k_d &\text{jeśli nie dokonano sprzedaży}
  \text{gdzie $k_d \in f[d] \wedge k_d < cena $ }
 \end{equation*}
 
-To zadanie optymalizacyjne byłoby trywialne, gdybyśmy mieli doskonałą informację na temat poziomu sprzedaży w każdym ze sklepów w $ t + 1 $. Na taką wiedzę nie możemy liczyć ani w tej pracy, ani w w rzeczywistości, dlatego rozwiązaniem proponowanym w niniejszej pracy jest zastosowanie modelowania predykcyjnego (predictive analytics), w celu prognozowania ilości klientów i ich wyborów w każdym ze sklepów w najbliższych okresach czasu. \footnote{Obecnie w przedsiębiorstwach rzadko stosuje się zaawansowane sposoby prognozowania sprzedaży (\textit{Predictive analytics}), a zarządzanie dostawami odbywa się raczej metodą manualnego uzupełniania zapasów.} 
+To zadanie optymalizacyjne byłoby trywialne, gdybyśmy mieli doskonałą informację na temat poziomu sprzedaży w każdym ze sklepów w $ t + 1 $. Na taką wiedzę nie możemy liczyć ani w tej pracy, ani w w rzeczywistości, dlatego rozwiązaniem proponowanym w niniejszej pracy jest zastosowanie modelowania predykcyjnego (\textit{predictive analytics}), w celu prognozowania ilości klientów i ich wyborów w każdym ze sklepów w najbliższych okresach czasu. \footnote{Obecnie w przedsiębiorstwach rzadko stosuje się zaawansowane sposoby prognozowania sprzedaży (\textit{predictive analytics}), a zarządzanie dostawami odbywa się raczej metodą manualnego uzupełniania zapasów.} 
 
-Ponadto, jak warto zauważyć, nie możemy liczyć na to, że $k_d$ będzie liniowe. Wspominana przez Kawę maksymalna przepustowość każdego z łańcuchów, która w przedsiębiorstwie będzie spowodowana ograniczonymi mocami produkcyjnymi, może spowodować, że funkcja kosztu będzie wykładnicza. W niektórych przypadkach mogą istnieć także korzyści skali, które spowodują, że funkcja będzie logarytmiczna, a całkiem realne jest istnienie obu tych efektów  \footnote{Korzyści skali odczuwalne do pewnego optymalnego poziomu produkcji, powyżej którego brak mocy produkcyjnych powoduje drastyczne powiększanie się kosztów krańcowych}, przez co musimy zakładać, że $f(d)$ może być dowolną funkcją nieliniową.
+Ponadto, jak warto zauważyć, nie możemy liczyć na to, że funkcja kosztu $k_d$ będzie liniowa. Wspominana przez Kawę maksymalna przepustowość każdego z łańcuchów, która w przedsiębiorstwie będzie spowodowana ograniczonymi mocami produkcyjnymi, może spowodować, że funkcja kosztu będzie wykładnicza \footnote{Wyprodukowanie każdego kolejnego produktu ponad moc produkcyjną będzie wymagało nadgodzin, dodatkowej przestrzeni magazynowej, pomocy poddostawców - a każde z tych wydarzeń będzie generowało dodatkowe koszty}. W niektórych przypadkach mogą istnieć także korzyści skali, które spowodują, że funkcja będzie logarytmiczna, a całkiem realne jest istnienie obu tych efektów  \footnote{Korzyści skali odczuwalne do pewnego optymalnego poziomu produkcji, powyżej którego brak mocy produkcyjnych powoduje  powiększanie się kosztów krańcowych}, przez co musimy zakładać, że $f(d)$ może być dowolną funkcją nieliniową.
 
-Trzecim aspektem który trzeba wziąć pod uwagę jest złożoność obliczeniowa. Nawet dla prostego układu, lecz wolumenu produkcji ponad 1000 sztuk sprawdzenie zysku w przypadku wszystkich kombinacji alokacji wymaga olbrzymiej ilości iteracji. Mimo znaczącego wzrostu mocy komputerów w ostatnich latach, wolumeny produkcji w dużych przedsiębiorstwach oraz złożoność tras logistycznych sprawia, że to podejście jest kompletnie niepraktyczne. 
+Trzecim aspektem który trzeba wziąć pod uwagę jest złożoność obliczeniowa. Nawet dla prostego układu, lecz wolumenu produkcji ponad 1000 sztuk sprawdzenie zysku w przypadku wszystkich kombinacji alokacji wymaga olbrzymiej ilości iteracji. Mimo znaczącego wzrostu mocy komputerów w ostatnich latach, wolumeny produkcji w dużych przedsiębiorstwach oraz złożoność tras logistycznych sprawia, że to podejście jest kompletnie niepraktyczne i należy szukać alternatywnych podejść, upraszczających problem.
 
  Proponowany algorytm będzie brał wszystkie te aspekty pod uwagę, a pierwszy z wymienionych problemów rozwiążemy wykorzystując  \textit{modelowanie predykcyjne}.
 
 \subsubsection{Modelowanie predykcyjne} 
-Jak wskazuje James, 2013, \textit{modelowanie predykcyjne}\ zakładając, że dysponujemy zbiorem $n$ obserwacji $p$ zmiennych, możemy zbadać ich relację ze zmienną wyjaśnianą $y$ i otrzymać \textit{model}, który dla nowych - nieanalizowanych wcześniej - obserwacji $x_1,x_2..x_n$  zwraca przewidywaną wartość zmiennej objaśnianej \^{y}. Różnorodne metody dzięki którym możemy otrzymać \^{y} James nazywa \textit{Statistical learning} i może być wykorzystany do modelowania predykcyjnego, tj. przewidywania przyszłych wartości \^{y}. 
+Jak wskazuje James, 2013, zakładając, że dysponujemy zbiorem $n$ obserwacji $p$ zmiennych, możemy zbadać ich relację ze zmienną wyjaśnianą $y$ i otrzymać \textit{model}, który dla nowych - nieanalizowanych wcześniej - obserwacji $x_1,x_2..x_n$  zwraca przewidywaną wartość zmiennej objaśnianej \^{y}. Różnorodne metody dzięki którym możemy otrzymać \^{y} James nazywa \textit{statistical learning} i może być wykorzystany do modelowania predykcyjnego, tj. przewidywania przyszłych wydarzeń na podstawie przeszłej historii danych. 
 
-Zastosowanie metod \textit{statistical learning} w przedsiębiorstwach potwierdza Buckinx, 2007, który wskazywał na możliwość prognozowania lojalności klienta na podstawie wewnętrznych danych o transakcjach, oraz Davenport, który w Harvard Business Review 12/2011 opisuje szereg  \textit{case studies} firm, w których wykorzystuje się istniejące dane o transakcjach do przewidywania przyszłych zakupów klientów. Jednym z podanych przez niego przykładów jest Tesco, które na podstawie zebranych danych przewiduje, jak będzie wyglądał koszyk zakupów klienta podczas następnych zakupów, i odpowiednio wcześnie wysyła mu bony zniżkowe. 
+Zastosowanie metod \textit{statistical learning} w przedsiębiorstwach potwierdza Buckinx, 2007, który wskazywał na możliwość prognozowania lojalności klienta na podstawie wewnętrznych danych o transakcjach, oraz Davenport, który w Harvard Business Review 12/2011 opisuje szereg  \textit{case studies} firm, w których wykorzystuje się istniejące dane o transakcjach do przewidywania przyszłych zakupów klientów. Jednym z podanych przez niego przykładów jest Tesco, które na podstawie zebranych danych przewiduje, jak będzie wyglądał koszyk zakupów klienta podczas następnych zakupów, i odpowiednio wcześnie wysyła mu bony zniżkowe. Podczas panelu \textit{Strategia B2C w erze Big Data - jak wykorzystać potencjał danych} na XXV Forum Ekonomicznego w Krynicy przedstawicielie polskiego biznesu zwracali uwagę na szerokie wykorzystanie modelowania predykcyjnego również w nasz gospodarce. \footnote{Jednak jak zwracano uwagę, \textit{big data}\ i \textit{modelowanie predykcyjne}\ służą głównie do zyskiwania wiedzy o kliencie i rynku do manualnego przetworzenia \textit{insight}\ , a nie automatyzacji podejmowania decyzji, co rozważamy w tej pracy}
 
-To daje nam podstawy, żeby w przypadku optymalizowanego przedsiębiorstwa zakładać, że dane o każdej transakcji są zapisywane i poza podstawowymi informacjami (produkt, cena, data) zawierają one także dane o kliencie, a cały zbiór danych może być wykorzystany do przewidywania sprzedaży w $t + 1$. Dla każdej transakcji w sklepie dysponujemy więc zbiorem informacji $ X = n \times x_i = <tr_1..tr_k, pr_1.. pr_k,kl_1..kl_k>$ gdzie $tr$ to identyfikatory transakcji (miejsce, data, rodzaj płatności), $pr$ to identyfikatory produktu (nazwa, cena, ilość) oraz $kl$ to identyfikatory klienta (płeć, wiek, zarobki, wykształcenie etc.). 
+To daje nam podstawy, żeby w przypadku optymalizowanego przedsiębiorstwa zakładać, że dane o każdej transakcji są zapisywane i poza podstawowymi informacjami (produkt, cena, data) zawierają one także dane o kliencie, a cały zbiór danych może być wykorzystany do przewidywania sprzedaży w $t + 1$. 
+
+Dla każdej transakcji w sklepie dysponujemy więc zbiorem informacji $ X = n \times x_i = <tr_1..tr_k, pr_1.. pr_k,kl_1..kl_k>$ gdzie $tr$ to identyfikatory transakcji (miejsce, data, rodzaj płatności), $pr$ to identyfikatory produktu (nazwa, cena, ilość) oraz $kl$ to identyfikatory klienta (płeć, wiek, zarobki, wykształcenie etc.). 
 
 Na podstawie takiego zbioru danych chcemy przewidzieć popyt na produkty w każdym ze sklepów, co w praktyce oznacza konieczność stworzenia modelu estymującego - 
 
@@ -180,7 +201,7 @@ Na podstawie takiego zbioru danych chcemy przewidzieć popyt na produkty w każd
 	oraz w zależności od zastosowanego podejścia
 	\begin{itemize} 
 		\item prawdopodobieństwo $p$ z jakim klient o danej charakterystyce kupi produkt $pr$, gdzie \^{y} $\in (0,1)$  
-		\item jaki produkt wybierze klient o danej charakterystyce, gdzie \^{y} $\in \{pr_1,pr_2..pr_n\}$, a $pr_i$ to dostępny produkt.
+		\item produkt wybrany przez danego klienta, gdzie \^{y} $\in \{pr_1,pr_2..pr_n\}$, a $pr_i$ to dostępny produkt.
 	\end{itemize}
 
 Jak wskazuje James, zmienna objaśniana \^{y} może przyjąć formę liczby rzeczywistej, zmiennej binarnej (1/0), prawdopodobieństwa, \textit{log odds} lub klasy, jednak ze względu na różne dziedziny \^{y}, każdy z tych przypadków różni się metodami które możemy zastosować. Według sugestii James i Hastie, zastosujemy następujące metody
@@ -188,8 +209,15 @@ Jak wskazuje James, zmienna objaśniana \^{y} może przyjąć formę liczby rzec
 	\begin{itemize} 
 		\item do liczby klientów - regresję metodą OLS (\textit{ordinary least squares, metoda najmniejszych kwadratów})
 		\item do prawdopodobieństwa zakupu - regresję logistyczną (\textit{logistic regression})
-		\item do wyboru produktu- metody klasyfikacyjne - $k-means$ oraz $drzewa klasyfikacyjne$
+		\item do wyboru produktu- metody klasyfikacyjne - \textit{k-means} oraz \textit{drzewa klasyfikacyjne}
 	\end{itemize}
+	oraz metody nie służące bezpośrednio do modelowania \^{y}, jednak wspierające proces predykcyjny
+	\begin{itemize} 
+		\item \textit{Distance scaling}, poprzez liczenie odległości euklidesowej (\textit{euclidean distance}) pomiędzy dwoma zbiorami danych
+		\item \textit{Subset selection}, do wybrania zmiennych wyjaśniających które wspólnie tworzą najlepszy model
+		\item Prawdopodobieństwo warunkowe i {naive bayes} do przewidywania, jacy konsumenci odwiedzą sklep w $t+1$, a co za tym idzie, jakie są wartości zmiennych wyjaśniających do prognozowania  \^{y}
+	\end{itemize}	
+
 
 \newpage
 
@@ -282,24 +310,20 @@ a = (cena \times pr_{sk_1} - ( \sum\limits_{j=1} k_j) \times pr_{sk_1}) ... \\
 .. b=(cena \times pr_{sk_i} - ( \sum\limits_{j=1} k_j) \times pr_{sk_1})
 \end{multline*}
 
-otrzymamy w ten sposób wieloman, w którym współczynniki $a,b$ są nam znane, a pary współczynników $\alpha, \beta$ jednego krańca grafu muszą być mniejsze lub równe 1. \footnote{Warunkiem nie jest "równe 1", ponieważ może istnieć taki udział $\alpha$ w przedziale $<0,1>$ powyżej którego przez nieliniowość funkcji kosztów dostawa może być nieopłacalna}. 
+otrzymamy w ten sposób wieloman, w którym współczynniki $a,b$ są nam znane \footnote{$pr_{sk_1}$ zostały wyprognozowane modelowaniem predykcyjnym, a $k_j$ to znana nam suma funkcji kosztów w każdej jednostce}, a pary współczynników $\alpha, \beta$ jednego krańca grafu muszą być mniejsze lub równe 1. \footnote{Warunkiem nie jest "równe 1", ponieważ może istnieć taki udział $\alpha$ w przedziale $<0,1>$ powyżej którego przez nieliniowość funkcji kosztów dostawa może być nieopłacalna}. 
 
-Możemy więc skorzystać  więc z twierdzenia o ekstremach lokalnych funkcji wielu zmiennych z Sydsaeter, 2005, który stwierdza, że jeśli istnieją ekstrema globalne  lub lokalne funkcji, to muszą być one położone w punktach stancjonarnych.  Punktami stancjonarnymi są takie wartości zmiennych ${x_1,x_2...x_n}$ dla których wszystkie pochodne pierwszego rzędu są równe 0. 
+Za Sydsaeter, 2005 zauważmy, że $\frac{\partial zysk}{\partial \alpha} , \frac{\partial zysk}{\partial \beta} ... \frac{\partial zysk}{\partial \delta}$ - czyli pierwsze pochodne cząstkowe po $\alpha,\beta,\delta$ z tak zdefiniowanej funkcji - dadzą nam informację, o ile wzrośnie zysk przedsiębiorstwa w przypadku zwiększenie obłożenia tej trasy. Dlatego dla każdego produktu $pr_n$ istnieje możliwość wybrania takiej z tras $<d_1,d_2,d_3..d_m>$, która będzie maksymalizowała wynik przedsiębiorstwa - jak w równaniu \ref{eq:teoria1}. 
 
-Dlatego szukamy rozwiązań układu równań
+Algorytm będzie więc działał następująco:
+\\ 
 
-\begin{align*} 
- \frac{\partial zysk}{\partial \alpha} = 0 \\
-\frac{\partial zysk}{\partial \beta} = 0 \\
-...\\
-\frac{\partial zysk}{\partial \delta} = 0 \\
-\end{align*} 
+\begin{figure}
+  \centering
+\includegraphics[width=\linewidth]{pictures/diagramoptymalizacyny.png}
+  \caption{Proponowany algorytm optymalizacyjny}
+  \label{fig:diagramoptymalizacyny}
 
-których rozwiązania \\
-
-$\begin{cases} \alpha_1=... \\ \beta_1=...  \\ \delta_1=... \end{cases}	$ $\begin{cases} \alpha_2=... \\ \beta_2=...  \\ \delta_2=... \end{cases}	$  $\qquad $.... $\qquad $ $\begin{cases} \alpha_3=... \\ \beta_3=...  \\ \delta_3=... \end{cases}	$   \\
-
-będą określać możliwe punkty, w których $zysk$ będzie przyjmował wartość największą. Ostatnim krokiem algorytmu będzie więc dla każdego zbioru punktów $\{\alpha_1,\beta_1,\delta_1\} \quad ... \quad \{\alpha_n,\beta_n,\delta_n\}$ sprawdzić wartość funkcji $zysk$ w tych punktach i wybrać z nich wartość największą. \footnote{Wprawdzie możliwe jest także matematyczne wyznaczenie, czy w danym punkcie jest maksimum czy minimum i czy jest to maksimum/minimum globalne, jednak kroki które trzeba przy tym wykonań, m.in. obliczanie Hesjanu, dodadzą niepotrzebnej złożoności obliczeniowej w sytuacji, gdy wartość najmniejszą z tego zbioru można sprawdzić szybą pętlą}
+\end{figure}
 
 \newpage
 
@@ -338,83 +362,72 @@ Każda z tych decyzji będzie miała wpływ na przychody \footnote{Przy założe
 
 \subsection{Zastosowane narzędzia}
 
-Model został zbudowany w języku programowania Python 2.7, z wykorzystaniem elementów języka R oraz następujących bibliotek: 
+Model został zbudowany w języku programowania Python 2.7, z wykorzystaniem następujących bibliotek: 
 
 \begin{center}
 \begin{tabular}{ c c c }
  Biblioteka & Źródło & Zastosowanie \\ 
+\hline
  Sympy & www.sympy.org & Wykorzystanie do obliczeń symbolicznych \\  
- rpy2 & rpy.sourceforge.net & Uruchomienie poleceń języka R   \\
- scikit-learn & scikit-learn.org & Budowania drzew klasyfikacyjnych
+ scikit-learn & scikit-learn.org & Wykorzystanie bibliotek metod statystycznych
 \end{tabular}
 \end{center}
 
-Kod źródłowy programu dostępny jest pod adresem  \textit{github.com/hubertguzera/master-thesis}
+Kod programu dostępny jest pod adresem  \textit{github.com/hubertguzera/master-thesis}
 
 \subsection{Struktura programu}
 
-Program podzielony jest na trzy części. Pierwsza odpowiada za stworzenie, w drodze losowań, środowiska w ramach którego toczy się symulacja, wraz z agentami i macierzą lokalizacji. \footnote{Model może pominąć ten część i wczytać pregenerowany świat w celu sprawdzenia różnych scenariuszy w statycznym świecie (ceteris paribus).}
+Program podzielony jest na trzy części, jak zaprezentowano na rysunku \ref{fig:struktura}
 
- Druga część przez $t_n$ jednostek czasu egzekwuje decyzje podjęte przez przedsiębiorstwo i symuluje zachowania konsumenckie, zwracając na koniec wyniki (przychody i zysk) przedsiębiorstwa w danej jednostce czasu $t$.
+	\begin{itemize}
+		\item Pierwsza odpowiada za stworzenie, w drodze losowań, środowiska w ramach którego toczy się symulacja, wraz z agentami i macierzą lokalizacji. \footnote{Model może pominąć ten część i wczytać pregenerowany świat w celu sprawdzenia różnych scenariuszy w statycznym świecie (ceteris paribus).}
+		\item  Druga część przez $t_n$ jednostek czasu egzekwuje decyzje podjęte przez przedsiębiorstwo i symuluje zachowania konsumenckie, zwracając na koniec wyniki (przychody i zysk) przedsiębiorstwa w danej jednostce czasu $t$.
+		\item Trzecia po $t_n$ rund symulacji aplikuje algorytm optymalizacyjny, który poprzez prognozowanie sprzedaży na krańcach grafu w $t_{n+1}$, szuka najlepszych decyzji o alokacji produktów.
+	\end{itemize}
 
-Trzecia po $t_n$ rund symulacji aplikuje algorytm optymalizacyjny, który poprzez prognozowanie sprzedaży na krańcach grafu w $t_{n+1}$, szuka najlepszych decyzji o alokacji produktów.
+\begin{figure}
+  \centering
+\includegraphics[width=\linewidth]{pictures/Struktura.png}
+  \caption{Struktura programu}
+  \label{fig:struktura}
+\end{figure}
 
-\begin{center}
-\begin{tikzpicture}[node distance = 1.5cm]d
-    % Place nodes
-    \node [pierwsza] (jeden) {Generowanie mapy};
-    \node [pierwsza, below of=jeden] (dwa) {Generowanie agentów};
-    \node [druga, below of=dwa] (trzy) {Symulowanie łańcucha logistycznego (dostaw)};
-    \node [druga, below of=trzy] (cztery) {Symulowanie decyzji klientów (zakupów)};
-    \node [trzecia, below of=cztery] (piec) {Zastosowanie algorytmu optymalizacyjnego)};
-    \node [trzecia, below of=piec] (szesc) {Sprawdzenie wpływu algorytmu na wyniki firmy)};
-
-\path [line,dashed] (jeden) -- (dwa);
-\path [line,dashed] (dwa) -- (trzy);
-\path [line,dashed] (trzy) -- (cztery);
-\path [line,dashed] (cztery) -- (piec);
-\path [line,dashed] (piec) -- (szesc);
-\end{tikzpicture}
-
-\end{center}
 
 \subsection{Generowanie mapy}
 
-W celu odpowiedniego odwzorowania kluczowego aspektu lokalizacji i dróg w łańcuchach dostaw, a przy tym wzorując się na podejściu !!!, agenci osadzoni są w przestrzeni, reprezentowaną przez macierz klas o wymiarach (x,y). Dodatkowo, lokalizacje będą połączone drogami, wymusząjąc na agentach poruszanie się tylko w obrębie ścieżek. Dzięki temu, w modelu będziemy mogli wiernie odwzorować wpływ odległości i wyboru trasy na efektywność procesów logistycznych, oraz zależność wyników sklepu od zamieszkującej okolicę populacji.
+W celu odpowiedniego odwzorowania kluczowego aspektu lokalizacji i dróg w łańcuchach dostaw, a przy tym wzorując się na podejściu zastosowanym w \textit{modelu segregacji Schellinga}, Schelling 1971, agenci osadzoni są w przestrzeni, reprezentowaną przez macierz klas o wymiarach (x,y). Dodatkowo, lokalizacje będą połączone drogami, wymusząjąc na agentach poruszanie się tylko w obrębie ścieżek. Dzięki temu, w modelu będziemy mogli wiernie odwzorować wpływ odległości i wyboru trasy na efektywność procesów logistycznych, oraz zależność wyników sklepu od zamieszkującej okolicę populacji.
+
+Wszystkie te informacje przechowywane są w klasie \textit{świat}, która zawiera wszystkie informacje dotyczące wirtualnego otoczenia przedsiębiorstwa - czyli także konsumentów. Klasa \textit{świat} ma następujące właściwości
+
+\begin{lstlisting}[frame=single]  
+class swiat:   
+	mapa = [] # macierz lokalizacji o wymiarach x,y
+	ludnosc = [] # macierz instacj klasy konsument
+	nodes = {} # slownik sieci drog
+\end{lstlisting}
+
 
 Każdy element macierzy mapa o wymiarach (x,y) jest instacją klasy lokalizacja o następujących właściwościach 
 
+\begin{lstlisting}[frame=single]  
+class lokalizacja:   
+	typ = string # typ budynku w lokalizacji
+	x = integer # lokalizacja x macierzy mapa
+	y = integer # lokalizacja y macierzy mapa
+	droga = [] # lokalizacja drogi dojazdowej
 
-\begin{tabular}{ c c c }
-Zmienna & Dziedzina & Opis \\ 
-x & integer & Współrzędna x w macierzy$[x,y]$ \\
-y & integer & Współrzędna y w macierzy $[x,y]$ \\
-typ & string & Opis typu posesji \\
-droga & [integer,integer] & Współrzędne drogi dojazdowej - potrzebne do algorytmu wyszukiwania drogi
+\end{lstlisting}
 
-\end{tabular}
 
-które generowane są według algorytmu
 
-\begin{center}
-\begin{tikzpicture}[node distance = 1.5cm]d
-    % Place nodes
-    \node [pierwsza] (jeden) {Stwórz pustą macierz o wymiarach x,y};
-    \node [pierwsza, below of=jeden] (dwa) {Wylosuj punkt startowy};
-    \node [druga, below of=dwa] (trzy) {Czy punkt spełnia kryteria?};
-    \node [pierwsza, below of=trzy] (cztery) {Umieść drogę w tym punkcie};
-    \node [pierwsza, right of=trzy] (piec) {Wylosuj kolejny punkt w sąsiedztwie};
-    \node [pierwsza, below of=cztery] (szesc) {Kontynuuj aż ilość dróg będzie równa założeniom)};
-    \node [pierwsza, below of=szesc] (siedem) {Dla kazdego punktu na mapie - czy sąsiaduje z drogą?)};
-    \node [pierwsza, right of=siedem] (dziewiec) {Wylosuj lokalizację ze zbioru $(dom,praca,przestrzen komercyjna)$};
-\path [line,dashed] (jeden) -- (dwa);
-\path [line,dashed] (dwa) -- (trzy);
-\path [line,dashed] (trzy) -- (cztery);
-\path [line,dashed] (cztery) -- (piec);
-\path [line,dashed] (piec) -- (szesc);
-\end{tikzpicture}
+które generowane są według algorytmu widocznego na rysunku \ref{fig:lokalizacje}
 
-\end{center}
+\begin{figure}
+  \centering
+\includegraphics[width=\linewidth]{pictures/tworzeniedrog.png}
+  \caption{Algorytm tworzenia dróg i lokalizacji}
+  \label{fig:lokalizacje}
+\end{figure}
 
 
 Każda mapa wygenerowana przez program spełniać będzie następujące założenia
@@ -431,16 +444,27 @@ Każda mapa wygenerowana przez program spełniać będzie następujące założe
 
 Odległości pomiędzy zadanymi piunktami w modelu są wyszukiwane dynamicznie, na podstawie algorytmu wyszukiwania drogi i zliczaniu ilości punktów w zwracanym przez niego łańcuchu. Algorytm oparty jest na metodach wyszukiwania ścieżek w grafach, dzięki założeniu, że każdy droga o współrzędnej (x,y) na mapie jest punktem grafu, który może sąsiadować z punktami o współrzędnych (x-1,y),(x+1,y),(x,y+1),(x,y-1) \footnote{Punkty (x-1,y-1),(x+1,y-1),(x+1,y+1),(x-1,y+1) wykluczamy przez wcześniejsze założenie, że drogi krzyżują się tylko pod katem prostym}, o ile również są drogrami. Informacje o punktach i sąsiadujących przechowywane są w zmiennej nodes, która jesst słownikiem, dla każdego klucza - punktu na mapie - przechowuje informacje o sąsiadujących punktach, np. (3,2) = [(3,3)(4,3). \footnote{Pewnym ograniczeniem jest, że jako punkty grafu definiujemy tylko drogi, tak więc szukając trasy z punktu A do punktu B de facto szukamy trasy z drogi przy punkcie A do drogi przy punkcie B.}
 
-Algorytm ma następujące cechy
+Algorytm, udostępniony przez Python Foundation \footnote{https://www.python.org/doc/essays/graphs/} ma następujące cechy
 
 	\begin{itemize}
 		\item jest rekurencyjny
 		\item nie jest losowy
 		\item nie gwarantuje znalezienia najkrótszej trasy
-		\item działa według następującego schemtu.
 	\end{itemize}
 
-!!! Przeklej pseudokod
+\begin{lstlisting}[frame=single]  
+    def find_path(graph, start, end, path=[]):
+        path = path + [start]
+        if start == end:
+            return path
+        if not graph.has_key(start):
+            return None
+        for node in graph[start]:
+            if node not in path:
+                newpath = find_path(graph, node, end, path)
+                if newpath: return newpath
+        return None
+\end{lstlisting}
 
 \subsection{Agenci, ich rodzaje i właściwości}
 \subsubsection{Konsumenci} 
@@ -449,39 +473,69 @@ Idąc za Kamiński, w modelu stosujemy modelowanie rynku za pomocą heterogenicz
 
 Każdy będzie definiowany w klasie o następujących właściwościach 
 
-\begin{center}
-\begin{tabular}{ c c c }
-Zmienna & Dziedzina & Opis \\ 
-\end{tabular}
-\end{center}
+\begin{lstlisting}[frame=single]  
+class konsument:   
+	plec = string
+	wiek = integer 
+	zarobki = integer 
+	zainteresowania = array # macierz trzech string 
+	znajomi = array # trzy relacje z innymi agentami
+	wyksztalcenie = integer # 5-stopniowa skala 
+	okazja = boolean # wskazanie czy wychodzi z domu
+	domx = integer # wspolrzedna x domu na mapie
+	domy = integer # wspolrzedna y domu  na mapie
+	pracax = integer # wspolrzedna x pracy na mapie
+	pracay = integer # wspolrzedna y pracy na mapie
+\end{lstlisting}
 
-Wartości dla każdego z konsumentów są losowane niezależnie na podstawie rozkładów publikowanych przez Główny Urząd Statystyczny oraz danych firmy Sedlak\&Sedlak \footnote{Raporty firmy Sedlak\&Seldlak służyły do zbudowania tabeli prawdopodobieństwa wystąpienia danego wynagrodzenia w zależności od płci i wykształcenia. Reszta danych oparta na GUS} w celu zagwarantowania odzwierciedlenia struktury społeczeństwa. Ze względu na zastosowanie prawdopodobieństw warunkowych dla niektórych cech (np. zarobki są zależne od wykształcenia) istnieje pomiędzy nimi współliniowość. \footnote{Chociaż współliniowość może być problemem przy modelowaniu, będziemy sobie z nią radzić na późniejszym etapie}
+Wartości dla każdego z konsumentów są losowane niezależnie na podstawie rozkładów publikowanych przez Główny Urząd Statystyczny oraz danych firmy Sedlak\&Sedlak \footnote{Raporty firmy Sedlak\&Seldlak służyły do zbudowania tabeli prawdopodobieństwa wystąpienia danego wynagrodzenia w zależności od płci i wykształcenia. Reszta danych oparta na GUS} w celu zagwarantowania odzwierciedlenia struktury społeczeństwa. Ze względu na zastosowanie prawdopodobieństw warunkowych dla niektórych cech (np. zarobki są zależne od wykształcenia) istnieje pomiędzy nimi współliniowość. \footnote{Chociaż współliniowość może być problemem przy modelowaniu, będziemy sobie z nią radzić na późniejszym etapie}. Przykładowy rozkład pokazany jest na rysunku \ref{fig:wiek}
 
-\begin{center}
-\begin{tabular}{ c c c }
-Zmienna & Zależność & Opis \\ 
-\end{tabular}
-\end{center}
+\begin{figure}
+  \centering
+\includegraphics[width=\linewidth]{pictures/rplot01.png}
+  \caption{Przykładowy rozkład prawdopodobieństwa zmiennej wiek, na podstawie GUS}
+  \label{fig:wiek}
+\end{figure}
 
-\paragraph{Przykładowe rozkłady cech konsumentów} \mbox{}\\
 
 \subsubsection{Przedsiębiorstwo}
 
 Jak wskazano w rozdziale 1, przedsiębiorstwo nie jest modelowane jako jedna jednostka, a zamiast tego stosowane jest podejście wieloagentowe - każda z jednostek organizacyjnych jest samodzielnym, niezależnym agentem. Stąd, klasa firma jest tylko klasą przechowującą dane o wszystkich jednostkach wchodzących w skład przedsiębiorstwa, z następującymi właściwiościami.
 
-\begin{center}
-\begin{tabular}{ c c c }
-Zmienna & Dziedzina & Opis \\ 
-\end{tabular}
-\end{center}
+\begin{lstlisting}[frame=single]  
+class firma:   
+	fabryki = array # macierz klasy fabryki
+	magazyny = array # macierz klasy magazyny
+	sklepy = array # macierz klasy sklepy
+	trasy = array # macierz przechowujaca trasy dostaw
+	produkt = class produkt 
+	cena = integer # cena produktu
+\end{lstlisting}
+
 
 Fabryki, magazyny i sklepy mają wspólnych zestaw cech podstawowych 
 
-!!!
+\begin{lstlisting}[frame=single]  
+class fabryka, magazyn, sklep:   
+	nazwa = string
+	lokalizacja = array # macierz zmiennej x i y
+	droga = array # lokalizacja drogi dojazdowej
+	oblozenie = integer # wolumen przechodzacy przez jednostke
+	self.koszt = integer # wspolczynnik kosztu
+	self.efekt_skali = integer # wspolczynnik efektu skali	
+	symbol = sympy.symbol 
+\end{lstlisting}
 
 przy czym sklepy mają dodatkowe zmienne i funkcje przechowujące informacje o inwentarzu, klientach odwiedzających sklep w danej jednostce czasu $t$ oraz historii transakcji - 
 
-!!!
+\begin{lstlisting}[frame=single]  
+class fabryka, magazyn, sklep:   
+	klienci = array #klienci odwiedzajacy w t
+	klienci_historycznie= array # wszyscy klienci sklepu
+	sklad = dict # ilosc produktow w sklepie
+	sprzedaz= dict # statystyki sprzedazy w t
+	przewidywana_sprzedaz= integer 
+\end{lstlisting}
 
 
 \subsubsection{Produkt}
@@ -492,16 +546,25 @@ Opierając się na argumentacji, wedle którego każdy produkt charakteryzuje si
  
 W założeniach przyjmujemy, że konkurencja jest pasywna - tj. nie podejmuje działań ani decyzji w trakcie trwania symulacji. Wynika to z odmiennego celu badania, którym jest analiza działania algorytmów optymalizacyjnych - nagłe zmiany sprzedaży spowodowane np. obniżeniem ceny przez konkurencję spowodowałyby wątpliwości interpretacyjne i są zbędne. Konkurencja jest za to potrzebna do stworzenia alternatywnych dla symulowanego produktu, o odmiennych cechach i przyciągających klientów o specyficznych charakterystykach. 
 
+Dlatego do symulowania konkurencji wystarczy stworzenie $n$ innych instancji klasy $produkt$ i dodanie ich do zmiennej $skład$ klasy $sklep$. Informacje o produktach konkurencji będą przechowywane w klasie $rynek$
+
+\subsubsection{Trasy}
+
+Klasa \textit{trasy} przechowuje wszystkie możliwe kombinacje łańcuchów dostaw, składające się z instacji klas $fabryka$, $magazyn$, $sklep$ oraz $scieżek$ pomiędzy nimi \footnote{Jako ścieżkę rozumiemy sekwencję punktów z drogami, jakie trzeba przebyć od fabryki do magazynu i od magazynu do skepu}. Długość ścieżki bezpośrednio wpływa na koszt łańcucha - koszt wzrasta liniowo w stosunku do długości ścieżki.
+
 \subsection{Symulowanie decyzji konsumenckich}
 
-W rozważanym modelu decyzje agentów-konsumentów oparte są na następujących założeniach
+Jak wskazano na \ref{fig:struktura}, podczas wizyty każdego z wirutalnych konsumentów w sklepie symulujemy jego decyzję co do zakupu towaru. Ta symulacja jest bardzo ważna dla modelu, i co warto odnotować, nie jest tym samym co późniejsze przewidywanie "prognozowanej sprzedaży". W tej części chcemy, aby decyzje konsumentów w modelu jak najbardziej przypominały decyzje klientów w analogicznych sytuacjach w świecie rzeczywistym. 
+
+Opierając się na Sagan, 2011, wiemy, że jesteśmy w stanie zdefiniować kluczowe cechy konsumenta i produktu jako zbiór zmiennych. Stąd, w grze eksperymentalnej przeprowadzonej na potrzeby pracy \footnote{Gra dostępna jest pod adresem http://serwer1418288.home.pl/test/piwo/zapisy.php}, poproszono uczestników o stwierdzenie, jakie produkty z dostępnej listy kupi klient o charakterystyce wylosowanej przez program. Po odpowiedzi udzielonej przez gracza, predefiniowane, jakościowe cechy produktu były transponowane na wartości liczbowe \footnote{Na przykład, piwo Grolsh jest drogie, klasy premium i jest lager, stąd otrzyma zapis [5,1,1], a tani smakowy Redd's [3,0,0].} i wraz z ilościowymi cechami klienta i informacją \textit{kupił/niekupił} zapisywany na serwerze SQL. 
+
+W programie dane te służą do budowy drzewa klasyfikacyjnego, które - ponieważ dane liczbiowe są w identycznej formie- dla każdego $query$ o klient i produkt zwraca prawdopodobieństwo zakupu. Stąd, dla każdego agenta możemy zbudować listę prawdopodobieństw zakupu każdego z towarów dostępnego na rynku, i w ten sposób losowaniem symulować decyzje konsumenckie. To podejście gwarantuje wysokie podobieństwo z wyborami realnych konsumentów ze względu na - 
 
 	\begin{itemize}
-		\item Konsumenci są heterogeniczni
-		\item Różne grupy klientów będą inaczej oceniać cechy produktów
-		\item Dla każdego produktu możemy wyznać prawdopodobieństwo zakupu produktu, będącego funkcją preferencji konsumenta i cech produktu
+		\item zastosowaniu podejścia, w którym budujemy bazę danych decyzji konsumenckich, w którym ze względu na wysoką ilość rekordów jest duża szansa, że istnieje zapis o decyzjach klienta o bardzo podobnej charakterystyce
+		\item baza danych jest generowana przez ludzi, przez co zapisy mają wysoką jakość, rozumianą jako zgodność z wyborami w świecie rzeczywistym
+		\item wybór drzewa klasyfikacyjnego  jako metody i wysoki $n$ rekordówpozwala na bardzo pożądany w tej sytuacji \textit{overfit}, który jak opisuje James powoduje, że dostajemy bardzo dokładne odwzorowanie zbioru uczącego \footnote{Chociaż to by było bardzo niepożądane w modelach predykcyjnych, tutaj bardzo nam odpowiada, ponieważ chcemy odwzorować zbiór uczący} 
 	\end{itemize}
-
 
 
 \newpage
