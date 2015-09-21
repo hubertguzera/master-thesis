@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  12 SEP 2015 15:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  20 SEP 2015 16:27
 entering extended mode
 **C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/thesis.tex
 (C:/Users/Hubert/Desktop/master-thesis/master-thesis/latex/thesis.tex
@@ -908,6 +908,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
  []
 
 
+Package natbib Warning: Citation `Economist2010' on page 1 undefined on input l
+ine 94.
+
+
+Package natbib Warning: Citation `McKinsey2011' on page 1 undefined on input li
+ne 94.
+
+
 Package natbib Warning: Citation `Brynjolfsson2011' on page 1 undefined on inpu
 t line 96.
 
@@ -1077,10 +1085,10 @@ Package natbib Warning: There were undefined citations.
 
 [23] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\latex\thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 17508 strings out of 493921
- 364001 string characters out of 3144873
+ 17510 strings out of 493921
+ 364030 string characters out of 3144873
  428092 words of memory out of 3000000
- 20452 multiletter control sequences out of 15000+200000
+ 20454 multiletter control sequences out of 15000+200000
  14362 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  55i,9n,71p,1500b,1632s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1107,7 +1115,7 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Program Files
 pe1/public/pl/plsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 pl/plsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plti10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/pl/plti8.pfb>
-Output written on thesis.pdf (23 pages, 475438 bytes).
+Output written on thesis.pdf (23 pages, 475476 bytes).
 PDF statistics:
  176 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

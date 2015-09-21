@@ -71,51 +71,6 @@ class firma(object):
                     sklep.klienci.append(czlowiek.macierz_cech())
           print "Skonczylem przyporzadkowywac"
 
-      def wypisz_wyniki(self):
-
-          wyniki_csv = open("rezultaty/koszty.csv",'wb')
-          wr = csv.writer(wyniki_csv )
-          wr.writerow(["Symbol","Oblozenie","Koszt jednostkowy","Efekt skali","Koszt"])
-
-          for item in self.fabryki + self.magazyny + self.sklepy:
-              self.wyniki.append([item.symbol,item.oblozenie,item.koszt,item.efekt_skala,f_p.koszt_jednostki(item)])
-          wr.writerows(self.wyniki)
-
-          self.wyniki = []
-
-          wyniki_csv = open("rezultaty/trasy.csv",'wb')
-          wr = csv.writer(wyniki_csv)
-          wr.writerow(["Fabryka","Magazyn","Sklep","Droga1","Droga2","Oblozenie"])
-
-          for item in self.trasy.trasy:
-              temp = []
-              for jednostka in item.elementy:
-                  temp.append(jednostka.symbol)
-              self.wyniki.append(temp+[item.oblozenie]+[f_p.koszt_trasy(item)])
-          wr.writerows(self.wyniki)
-          self.wyniki = []
-
-          wyniki_csv = open("rezultaty/wyniki.csv",'wb')
-          wr = csv.writer(wyniki_csv)
-          wr.writerow(["Fabryka","Magazyn","Sklep","Droga1","Droga2","Oblozenie"])
-
-          for sklep in self.sklepy:
-              if "Symulowane" in sklep.sprzedaz:
-                  temp2 = sklep.sprzedaz["Symulowane"]
-              else:
-                  temp2 = 0
-
-              temp = [sklep.symbol,temp2,temp2 * self.cena]
-              temp3=0
-
-              for item in self.trasy.trasy:
-                  if sklep in item.elementy:
-                      temp3 += f_p.koszt_trasy(item)
-
-              self.wyniki.append(temp+[temp2]+[temp2*self.cena-temp3])
-          wr.writerows(self.wyniki)
-          self.wyniki = []
-
 
       def przypisz_koszty(self,losowe=False,skala=False,min_cen=0.8,max_cena=1.3,min_skala=0.9,max_skala=1.1):
           for item in self.fabryki:
@@ -150,7 +105,6 @@ class firma(object):
               if not(losowe):
                   item.koszt = zalozenia.koszt_sciezka * item.odleglosc
                   item.efekt_skala = zalozenia.skala_sciezka
-                  print item.koszt
               else:
                   item.koszt = random.uniform(min_cen, max_cena) * item.odleglosc
                   item.efekt_skala = random.uniform(min_skala, max_skala)
@@ -203,6 +157,13 @@ class sklep(firma):
                         self.sklad[produkt[0]] += inne_towary
                     else:
                         self.sklad[produkt[0]] = inne_towary
+        b = []
+        if trasa=="Los":
+            for element in rynek.symulowana_firma.trasy.trasy:
+                if element.elementy[2].lokalizacja==self.lokalizacja:
+                    b.append(element)
+            print b
+            trasa = random.choice(b)
         rynek.symulowana_firma.trasy.dodaj_do_trasy(symulowany_towar,trasa)
 
     def sprzedaz_w_sklepie(self,towar):

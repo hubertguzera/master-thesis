@@ -29,9 +29,7 @@ def symbole_tras(trasy):
 def pierwsze_pochodne(funkcja,trasy):
     a = []
     for trasa in trasy:
-        print "Funkcja",funkcja
-        print "Symbol",trasa.symbol
-        print sympy.diff(funkcja,trasa.symbol)
+
         a.append(sympy.diff(funkcja,trasa.symbol))
 
     return a
@@ -56,29 +54,25 @@ def dostawy_optymalne(firma,rynek):
 
     while kombinacje:
         a = {}
-        print kombinacje
         for trasa in kombinacje:
             funkcja = podstaw(funkcja_do_optymalizacji(firma),dotychczasowa_sprzedaz(firma))
-            print sympy.diff(funkcja,trasa.symbol).subs(trasa.symbol,1)
+
             if sympy.diff(funkcja,trasa.symbol).subs(trasa.symbol,1) > 0:
                 a[trasa] = sympy.diff(funkcja,trasa.symbol).subs(trasa.symbol,1)
             else:
-
                 kombinacje.remove(trasa)
         if a:
             max = a.keys()[0]
             for key in a:
                 if a[max]<a[key]:
                     max = key
-            print max
+
             trasa = max.elementy
             sklep = trasa[2]
-            print sklep.oblozenie , sklep.przewidywana_sprzedaz
+
             if sklep.oblozenie < sklep.przewidywana_sprzedaz:
                 sklep.dostawa_towaru(rynek,trasa,symulowany_towar=1,inne_towary=0)
             else:
-                print kombinacje
-                print max
                 kombinacje.remove(max)
 
 

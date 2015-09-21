@@ -1,7 +1,4 @@
-import sympy
-import itertools
-import numpy as np
+a = [0.2,0.3]
 
-a = [[1,2,3],[1,2,3]]
+print  index(max(a)
 
-print np.mean(a)

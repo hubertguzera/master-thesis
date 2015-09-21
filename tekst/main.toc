@@ -1,0 +1,39 @@
+\select@language {polish}
+\contentsline {section}{\numberline {1}Wprowadzenie}{5}{section.1}
+\contentsline {section}{\numberline {2}Cel, za\IeC {\l }o\IeC {\.z}enia i podstawy teoretyczne pracy}{7}{section.2}
+\contentsline {subsection}{\numberline {2.1}Koncepcja pracy}{7}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Podstawy teoretyczne}{7}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Przedsi\IeC {\k e}biorstwo jako system wieloagentowy}{7}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Zadanie optymalizacyjne}{10}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Modelowanie predykcyjne}{11}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3}Proponowany algorytm optymalizacyjny}{14}{subsection.2.3}
+\contentsline {section}{\numberline {3}Model}{17}{section.3}
+\contentsline {subsection}{\numberline {3.1}Koncepcja modelu}{17}{subsection.3.1}
+\contentsline {paragraph}{Aspekt lokalizacji}{18}{section*.4}
+\contentsline {paragraph}{Symulowanie decyzji konsumenckich}{18}{section*.5}
+\contentsline {paragraph}{Decyzje przedsi\IeC {\k e}biorstwa}{19}{section*.6}
+\contentsline {subsection}{\numberline {3.2}Zastosowane narz\IeC {\k e}dzia}{20}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Struktura programu}{20}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Generowanie \IeC {\'s}rodowiska modelu}{20}{subsection.3.4}
+\contentsline {paragraph}{Klasa \textit {rynek}}{20}{section*.8}
+\contentsline {paragraph}{Klasa \textit {\IeC {\'s}wiat}}{22}{section*.9}
+\contentsline {subsubsection}{\numberline {3.4.1}Algorytm wyszukiwania drogi}{24}{subsubsection.3.4.1}
+\contentsline {subsection}{\numberline {3.5}Agenci, ich rodzaje i w\IeC {\l }a\IeC {\'s}ciwo\IeC {\'s}ci}{26}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Konsumenci}{26}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Przedsi\IeC {\k e}biorstwo}{28}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Produkt}{31}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Konkurencja}{32}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Trasy}{32}{subsubsection.3.5.5}
+\contentsline {subsection}{\numberline {3.6}Symulowanie decyzji konsumenckich}{33}{subsection.3.6}
+\contentsline {section}{\numberline {4}Efekty dzia\IeC {\l }ania algorytmu optymalizacyjnego}{34}{section.4}
+\contentsline {subsection}{\numberline {4.1}Charakterystyka badanego \IeC {\'s}rodowiska}{34}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Przewidywanie decyzji konsument\IeC {\'o}w}{34}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Wyniki przedsi\IeC {\k e}biorstwa przy braku optymalizacji}{34}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Optymalizacja przy sta\IeC {\l }ych cenach i braku efektu skali}{34}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Optymalizacja przy sta\IeC {\l }ych cenach i istnieniu efektu skali}{34}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Optymalizacja przy zmiennych cenach i istnieniu efektu skali}{34}{subsection.4.6}
+\contentsline {section}{\numberline {5}Rysunki i tablice}{35}{section.5}
+\contentsline {section}{\numberline {A}Dodatek: Wa\IeC {\.z}ne rzeczy do dodania}{37}{appendix.A}
+\contentsline {section}{Lista tablic}{40}{section*.17}
+\contentsline {section}{Lista rysunk\IeC {\'o}w}{41}{section*.18}
+\contentsline {section}{Streszczenie}{42}{section*.19}

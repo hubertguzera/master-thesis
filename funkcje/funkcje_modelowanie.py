@@ -4,6 +4,7 @@ import numpy as np
 from funkcje import funkcje_pomocnicze as f_p
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn import linear_model
+from sklearn.neighbors import KNeighborsClassifier
 
 import numpy as np
 
@@ -41,9 +42,21 @@ class training(object):
             self.historia_x.append(item[:(len(item)-1)])
 
         self.lg = linear_model.LogisticRegression()
+
         self.lg.fit(self.historia_x,self.historia_y)
-        for x in range(100):
-            konsument = stworz_konsumenta(self.historia,self.kolejnosc)
+        a= []
+
+        for i in range(10):
+            self.km = KNeighborsClassifier(n_neighbors=i+1)
+            self.km.fit(self.historia_x,self.historia_y)
+            a.append(self.km.score(self.historia_x,self.historia_y))
+
+        self.km = KNeighborsClassifier(n_neighbors=a.index(max(a))+1)
+        self.km.fit(self.historia_x,self.historia_y)
+
+
+
+
 
 
 
@@ -128,8 +141,14 @@ def stworz_grupe(historia_sklepu,training):
     return grupa
 
 def prognozuj_sprzedaz(historia_sklepu,training):
+    if zalozenia.sposob == 1:
+        model = training.lg
+    else:
+        model = training.km
+
     prognoza = [0 for x in range(zalozenia.ilosc_iteracji_prognoz)]
+
     for i in range(zalozenia.ilosc_iteracji_prognoz):
-        for item in training.lg.predict_proba(stworz_grupe(historia_sklepu,training)):
+        for item in model.predict_proba(stworz_grupe(historia_sklepu,training)):
             prognoza[i] += f_p.losuj_proba(item)
     return np.mean(prognoza)

@@ -60,6 +60,8 @@ class swiat(object):
             czlowiek.znajomi = [random.randrange(zalozenia.populacja) for x in range(3)]
         print "Gotowe!"
 
+
+
 class lokalizacja(swiat):
     def __init__(self,x,y, typ):
         self.x = x

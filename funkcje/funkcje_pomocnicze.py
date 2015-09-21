@@ -80,7 +80,6 @@ def koszt_trasy(trasa):
     return koszt
 
 def kombinacja(a):
-    print "!!!", a
     r=[[]]
     for x in a:
         t = []

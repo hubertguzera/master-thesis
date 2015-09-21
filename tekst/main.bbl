@@ -1,0 +1,97 @@
+\begin{thebibliography}{xx}
+
+\harvarditem[Brynjolfsson et~al.]{Brynjolfsson, Hitt \harvardand\
+  Kim}{2011}{Brynjolfsson2011}
+Brynjolfsson, E., Hitt, L.~M. \harvardand\ Kim, H.~H.  \harvardyearleft
+  2011\harvardyearright , `{Strength in Numbers: How does data-driven
+  decision-making affect firm performance?}', {\em ICIS 2011 Proceedings}
+  p.~18.
+
+\harvarditem[Buckinx et~al.]{Buckinx, Verstraeten \harvardand\ den
+  Poel}{2007}{Buckinx2007}
+Buckinx, W., Verstraeten, G. \harvardand\ den Poel, D.~V.  \harvardyearleft
+  2007\harvardyearright , `Predicting customer loyalty using the internal
+  transactional database', {\em Expert Systems with Applications} {\bf
+  32}(1),~125 -- 134.
+\newline\harvardurl{http://www.sciencedirect.com/science/article/pii/S0957417405003143}
+
+\harvarditem[Davenport et~al.]{Davenport, Dalle~Mule \harvardand\
+  Lucker}{2011}{Davenport2011}
+Davenport, T., Dalle~Mule, L. \harvardand\ Lucker, J.  \harvardyearleft
+  2011\harvardyearright , `Know what your customers want before they do', {\em
+  Harvard Business Review} .
+
+\harvarditem{Frey \harvardand\ Osborne}{2013}{frey2013}
+Frey, C.~B. \harvardand\ Osborne, M.  \harvardyearleft 2013\harvardyearright ,
+  `The future of employment: How susceptible are jobs to computerisation?',
+  Online PDF.
+\newline\harvardurl{http://www.oxfordmartin.ox.ac.uk/publications/view/1314}
+
+\harvarditem{{Glowny Urzad Statystyczny}}{2011}{GUS2011}
+{Glowny Urzad Statystyczny}  \harvardyearleft 2011\harvardyearright , Narodowy
+  spis ludnosci 2011, Technical report, Glowny Urzad Statystyczny.
+
+\harvarditem[Hastie et~al.]{Hastie, Tibshirani \harvardand\
+  Friedman}{2001}{hastie2001}
+Hastie, T., Tibshirani, R. \harvardand\ Friedman, J.  \harvardyearleft
+  2001\harvardyearright , {\em The Elements of Statistical Learning}, Springer
+  Series in Statistics, Springer New York Inc., New York, NY, USA.
+
+\harvarditem[James et~al.]{James, Witten, Hastie \harvardand\
+  Tibshirani}{2013}{James2013}
+James, G., Witten, D., Hastie, T. \harvardand\ Tibshirani, R.  \harvardyearleft
+  2013\harvardyearright , {\em An Introduction to Statistical Learning with
+  Applications in R}, Springer-Verlag New York.
+
+\harvarditem{Kaminski}{2012}{Kaminski2012}
+Kaminski, B.  \harvardyearleft 2012\harvardyearright , {\em Podejscie
+  wieloagentowe do modelowania rynkow}, Oficyna Wydawnicza Szkoly Glownej
+  Handlowej w Warszawie.
+
+\harvarditem{Kawa}{2010}{Kawa2010}
+Kawa, A.  \harvardyearleft 2010\harvardyearright , `{System wieloagentowy do
+  budowania lancuchow dostaw w branzy komputerowej}', {\em Zarzadzanie
+  Przedsiebiorstwem} {\bf 13}(1),~26--34.
+
+\harvarditem{{McKinsey Global Institute}}{2011}{McKinsey2011}
+{McKinsey Global Institute}  \harvardyearleft 2011\harvardyearright , Big data:
+  The next frontier for innovation, competition, and productivity, Technical
+  report, McKinsey Global Institute.
+
+\harvarditem[Moyaux et~al.]{Moyaux, Chaib-Draa \harvardand\
+  D'Amours}{2006}{Moyaux2006}
+Moyaux, T., Chaib-Draa, B. \harvardand\ D'Amours, S.  \harvardyearleft
+  2006\harvardyearright , `{Supply chain management and multiagent systems: An
+  overview}', {\em Multiagent based Supply Chain Management} {\bf 4},~1--27.
+
+\harvarditem{Porter}{1985}{Porter1985}
+Porter, M.~E.  \harvardyearleft 1985\harvardyearright , {\em Competitive
+  advantage: Creating and sustaining superior performance}, Free Press, New
+  York and London.
+
+\harvarditem{PwC}{2014}{PwC2014}
+PwC  \harvardyearleft 2014\harvardyearright , {CEO Survey 2014}, Technical
+  report.
+
+\harvarditem{Sagan}{2011}{Sagan2011}
+Sagan, A.  \harvardyearleft 2011\harvardyearright , `Modele strukturalne w
+  analizie zachowan konsumenta - ewolucja podejsc', {\em Konsumpcja i rozwoj} .
+
+\harvarditem{Schelling}{1971}{Schelling1971}
+Schelling, T.  \harvardyearleft 1971\harvardyearright , `Dynamic models of
+  segregation', {\em Journal of Mathematical Sociology} .
+
+\harvarditem{Sedlak\&Sedlak}{2013}{Sedlak2013}
+Sedlak\&Sedlak  \harvardyearleft 2013\harvardyearright , Xi ogolnopolskie
+  badanie wynagrodzen 2013, Technical report, Sedlak\&Sedlak.
+
+\harvarditem{{The Economist}}{2010}{Economist2010}
+{The Economist}  \harvardyearleft 2010\harvardyearright , Data, data
+  everywhere, Technical report.
+
+\harvarditem{Wooldridge \harvardand\ Jennings}{1995}{Wooldridge1995}
+Wooldridge, M. \harvardand\ Jennings, N.~R.  \harvardyearleft
+  1995\harvardyearright , `Intelligent agents: theory and practice', {\em The
+  Knowledge Engineering Review} {\bf 10},~115--152.
+
+\end{thebibliography}
