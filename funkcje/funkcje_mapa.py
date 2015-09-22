@@ -16,11 +16,28 @@ def rysujmape(swiat, nazwa):
         for y in range(zalozenia.wymiar_y):
             pixels[x,y] = zalozenia.kolory_typow[swiat.mapa[x][y].typ]
             
-    for k in range(zalozenia.wymiar_x):
-       if k % 2 == 0 : pixels[k,0] = (0,0,0)
-    for k in range(zalozenia.wymiar_y):
-       if k % 2 == 0 : pixels[0,k] = (0,0,0)
+    #for k in range(zalozenia.wymiar_x):
+    #   if k % 2 == 0 : pixels[k,0] = (0,0,0)
+    #for k in range(zalozenia.wymiar_y):
+    #   if k % 2 == 0 : pixels[0,k] = (0,0,0)
        
+    obraz = img.resize(zalozenia.wymiar_obrazka)
+    obraz.save(nazwa + ".png")
+
+def rysujmapefirmy(swiat, nazwa):
+    img = Image.new('RGB', (zalozenia.wymiar_x,zalozenia.wymiar_y), "white")
+    pixels = img.load()
+
+    for x in range(zalozenia.wymiar_x):
+        for y in range(zalozenia.wymiar_y):
+            if (swiat.mapa[x][y].typ in ["Sklep","Magazyn","Droga","Fabryka"]):
+                pixels[x,y] = zalozenia.kolory_typow[swiat.mapa[x][y].typ]
+
+    #for k in range(zalozenia.wymiar_x):
+    #   if k % 2 == 0 : pixels[k,0] = (0,0,0)
+    #for k in range(zalozenia.wymiar_y):
+    #   if k % 2 == 0 : pixels[0,k] = (0,0,0)
+
     obraz = img.resize(zalozenia.wymiar_obrazka)
     obraz.save(nazwa + ".png")
 
@@ -30,6 +47,12 @@ def rysujludnosc(swiat,ludnosc, nazwa):
     pixels = img.load()
     for konsument in ludnosc:
         pixels[konsument.domx,konsument.domy] = tuple(map(operator.add, pixels[konsument.domx,konsument.domy], (-10,-10,-10)))
+
+    for x in range(zalozenia.wymiar_x):
+        for y in range(zalozenia.wymiar_y):
+            if swiat.mapa[x][y].typ=="Sklep":
+                pixels[x,y] = zalozenia.kolory_typow[swiat.mapa[x][y].typ]
+
     obraz = img.resize(zalozenia.wymiar_obrazka)
     obraz.save(nazwa + ".png")
 

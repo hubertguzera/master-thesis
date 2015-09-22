@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  21 SEP 2015 23:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  22 SEP 2015 04:28
 entering extended mode
 **C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/main.tex
 (C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/main.tex
@@ -1162,7 +1162,26 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@cor=\count162
 \c@remark=\count163
 
-(C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.aux)
+(C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.aux
+
+LaTeX Warning: Label `fig:xxx' multiply defined.
+
+
+LaTeX Warning: Label `fig:xxxa' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:xxxa' multiply defined.
+
+
+LaTeX Warning: Label `fig:xxxb' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:xxxb' multiply defined.
+
+
+LaTeX Warning: Label `fig:xxx' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
 LaTeX Font Info:    ... okay on input line 96.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
@@ -1177,8 +1196,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
 LaTeX Font Info:    ... okay on input line 96.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 96.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 96.
@@ -1262,7 +1280,7 @@ LaTeX Info: Redefining \nameref on input line 96.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<logo.JPG, id=138, 1003.49907pt x 506.6428pt>
+<logo.JPG, id=134, 1003.49907pt x 506.6428pt>
 File: logo.JPG Graphic file (type jpg)
  <use logo.JPG>
 Package pdftex.def Info: logo.JPG used on input line 102.
@@ -1299,7 +1317,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 171.
  [7
 
-] <pictures/siec.png, id=240, 536.75531pt x 283.0575pt>
+] <pictures/siec.png, id=235, 536.75531pt x 283.0575pt>
 File: pictures/siec.png Graphic file (type png)
 
 <use pictures/siec.png>
@@ -1336,7 +1354,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--300
  []
 
 [14] [15]
-<pictures/diagramoptymalizacyny.png, id=363, 725.71124pt x 364.36125pt>
+<pictures/diagramoptymalizacyny.png, id=358, 725.71124pt x 364.36125pt>
 File: pictures/diagramoptymalizacyny.png Graphic file (type png)
 
 <use pictures/diagramoptymalizacyny.png>
@@ -1361,7 +1379,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
-[19] <pictures/Struktura.png, id=413, 766.865pt x 775.89874pt>
+[19] <pictures/Struktura.png, id=408, 766.865pt x 775.89874pt>
 File: pictures/Struktura.png Graphic file (type png)
 
 <use pictures/Struktura.png>
@@ -1390,14 +1408,14 @@ Overfull \hbox (26.02383pt too wide) in paragraph at lines 530--531
 [][] 
  []
 
-<pictures/tworzeniedrog.png, id=441, 795.97375pt x 475.7775pt>
+<pictures/tworzeniedrog.png, id=436, 795.97375pt x 475.7775pt>
 File: pictures/tworzeniedrog.png Graphic file (type png)
 
 <use pictures/tworzeniedrog.png>
 Package pdftex.def Info: pictures/tworzeniedrog.png used on input line 534.
 (pdftex.def)             Requested size: 426.79135pt x 255.10107pt.
 
-<../mapy/po_lokalizacji_sklepow.png, id=442, 1003.75pt x 1003.75pt>
+<../mapy/po_lokalizacji_sklepow.png, id=437, 1003.75pt x 1003.75pt>
 File: ../mapy/po_lokalizacji_sklepow.png Graphic file (type png)
 
 <use ../mapy/po_lokalizacji_sklepow.png>
@@ -1421,14 +1439,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 583--584
 [26]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 607.
- [27] <pictures/wiek.png, id=517, 481.8pt x 481.8pt>
+ [27] <pictures/wiek.png, id=512, 481.8pt x 481.8pt>
 File: pictures/wiek.png Graphic file (type png)
 
 <use pictures/wiek.png>
 Package pdftex.def Info: pictures/wiek.png used on input line 621.
 (pdftex.def)             Requested size: 426.79135pt x 426.801pt.
 
-<pictures/wyksztalcenie.png, id=518, 481.8pt x 481.8pt>
+<pictures/wyksztalcenie.png, id=513, 481.8pt x 481.8pt>
 File: pictures/wyksztalcenie.png Graphic file (type png)
 
 <use pictures/wyksztalcenie.png>
@@ -1436,41 +1454,81 @@ Package pdftex.def Info: pictures/wyksztalcenie.png used on input line 628.
 (pdftex.def)             Requested size: 426.79135pt x 426.801pt.
  [28 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/wiek.p
 ng>] [29 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/wy
-ksztalcenie.png>] [30] [31] [32] [33] [34
-
-]
+ksztalcenie.png>] [30] [31] [32] [33]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 742.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 732.
 
-<./figure-1.pdf, id=583, 505.89pt x 505.89pt>
-File: ./figure-1.pdf Graphic file (type pdf)
- <use ./figure-1.pdf>
-Package pdftex.def Info: ./figure-1.pdf used on input line 763.
+<../mapy/typy.png, id=578, 1003.75pt x 1003.75pt>
+File: ../mapy/typy.png Graphic file (type png)
+ <use ../mapy/typy.png>
+Package pdftex.def Info: ../mapy/typy.png used on input line 755.
+(pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
+
+<../mapy/ludnosc.png, id=579, 1003.75pt x 1003.75pt>
+File: ../mapy/ludnosc.png Graphic file (type png)
+ <use ../mapy/ludnosc.png>
+Package pdftex.def Info: ../mapy/ludnosc.png used on input line 761.
+(pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
+
+[34
+
+] <pictures/ludnosc.png, id=597, 481.8pt x 481.8pt>
+File: pictures/ludnosc.png Graphic file (type png)
+
+<use pictures/ludnosc.png>
+Package pdftex.def Info: pictures/ludnosc.png used on input line 818.
+(pdftex.def)             Requested size: 426.79135pt x 426.801pt.
+ <../mapy/firma.png, id=600, 1003.75pt x 1003.75pt>
+File: ../mapy/firma.png Graphic file (type png)
+
+<use ../mapy/firma.png>
+Package pdftex.def Info: ../mapy/firma.png used on input line 830.
+(pdftex.def)             Requested size: 426.79135pt x 426.79488pt.
+ [35 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/typy.png (PNG co
+py)> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/ludnosc.png (PNG
+ copy)>] [36 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/picture
+s/ludnosc.png>] [37 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/f
+irma.png (PNG copy)>]
+<pictures/prog.png, id=623, 481.8pt x 481.8pt>
+File: pictures/prog.png Graphic file (type png)
+ <use pictures/prog.png>
+Package pdftex.def Info: pictures/prog.png used on input line 878.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
+
+Underfull \hbox (badness 1122) in paragraph at lines 912--912
+[]\T1/ptm/m/n/10.95 (b) |Ma-cierz po-my-ªek dla kla-sy-fi-ka-cji k-
+ []
+
+[38 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/prog.pn
+g>] [39] [40] <./figure-1.pdf, id=641, 505.89pt x 505.89pt>
 File: ./figure-1.pdf Graphic file (type pdf)
 
 <use ./figure-1.pdf>
-Package pdftex.def Info: ./figure-1.pdf used on input line 774.
+Package pdftex.def Info: ./figure-1.pdf used on input line 961.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
- <figure-2.pdf, id=584, 226.8475pt x 226.8475pt>
+File: ./figure-1.pdf Graphic file (type pdf)
+ <use ./figure-1.pdf>
+Package pdftex.def Info: ./figure-1.pdf used on input line 972.
+(pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
+
+<figure-2.pdf, id=642, 226.8475pt x 226.8475pt>
 File: figure-2.pdf Graphic file (type pdf)
-
-<use figure-2.pdf>
-Package pdftex.def Info: figure-2.pdf used on input line 780.
+ <use figure-2.pdf>
+Package pdftex.def Info: figure-2.pdf used on input line 978.
 (pdftex.def)             Requested size: 192.0548pt x 192.0563pt.
- [35
+ [41
 
- <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/figure-1.pdf>] [36 
-<C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/figure-2.pdf>] [37
+ <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/figure-1.pdf>] [42 
+<C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/figure-2.pdf>] [43
 
 ]
-(C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.bbl [38
+(C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.bbl [44
 
 ])
-[39] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.lot)
+[45] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.lot)
 \tf@lot=\write6
 
-[40
+[46
 
 ] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.lof
 Underfull \hbox (badness 4316) in paragraph at lines 8--8
@@ -1480,52 +1538,66 @@ ej wy-ksztaª-ce-nie
 
 )
 \tf@lof=\write7
- [41
+ [47
 
-] [42
+] [48
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1026.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1026.
  (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 828.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 828.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1026.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1026.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4009031B6AAC26126A1FC42071129E0E;2530.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 828.
+(rerunfilecheck)             Checksum: 458AF57C7424F6872D56750D50350E79;2419.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1026.
  ) 
 Here is how much of TeX's memory you used:
- 24007 strings out of 493921
- 438522 string characters out of 3144873
- 515012 words of memory out of 3000000
- 26667 multiletter control sequences out of 15000+200000
+ 24060 strings out of 493921
+ 439402 string characters out of 3144873
+ 515708 words of memory out of 3000000
+ 26697 multiletter control sequences out of 15000+200000
  53084 words of font info for 78 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,8n,67p,1568b,1828s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/c
-ourier/ucrb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/uc
-rr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (42 pages, 727284 bytes).
+ 55i,16n,67p,1568b,1828s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.43} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.42} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.41} has been referenced but does not exis
+t, replaced by a fixed one
+
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/cou
+rier/ucrb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr
+8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (48 pages, 769262 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 184 named destinations out of 1000 (max. 500000)
- 327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 831 PDF objects out of 1000 (max. 8388607)
+ 203 named destinations out of 1000 (max. 500000)
+ 344 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-a = [0.2,0.3]
+a = [1,2]
 
-print  index(max(a)
-
+if 1 in a:
+    print "tak"

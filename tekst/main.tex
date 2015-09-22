@@ -237,7 +237,7 @@ Trzecim aspektem który trzeba wziąć pod uwagę jest złożoność obliczeniow
 
  Proponowany algorytm będzie brał wszystkie te aspekty pod uwagę, a pierwszy z wymienionych problemów rozwiążemy wykorzystując  \textit{modelowanie predykcyjne}.
 
-\subsubsection{Modelowanie predykcyjne} 
+\subsubsection{Modelowanie predykcyjne} \label{statistical} 
 Jak wskazuje \cite{James2013}, zakładając, że dysponujemy zbiorem $n$ obserwacji $p$ zmiennych, możemy zbadać ich relację ze zmienną wyjaśnianą $y$ i otrzymać \textit{model}, który dla nowych - nieanalizowanych wcześniej - obserwacji $x_1,x_2..x_n$  zwraca przewidywaną wartość zmiennej objaśnianej \^{y}. Różnorodne metody dzięki którym możemy otrzymać zmienną objaśnianą \^{y} \cite{James2013} nazywa \textit{statistical learning}, i zaznacza, że mogą one być wykorzystane do modelowania predykcyjnego, tj. przewidywania przyszłych wydarzeń na podstawie przeszłej historii danych. 
 
 Zastosowanie metod \textit{statistical learning} w przedsiębiorstwach potwierdza \cite{Buckinx2007}, który wskazywał na możliwość prognozowania lojalności klienta na podstawie wewnętrznych danych o transakcjach, oraz \cite{Davenport2011}, który opisuje szereg  \textit{case studies} firm, w których wykorzystuje się istniejące dane o transakcjach do przewidywania przyszłych zakupów klientów. Jednym z podanych przez niego przykładów jest Tesco, które na podstawie zebranych danych przewiduje, jak będzie wyglądał koszyk zakupów klienta podczas następnych zakupów, i odpowiednio wcześnie wysyła mu bony zniżkowe. Również podczas panelu \textit{Strategia B2C w erze Big Data - jak wykorzystać potencjał danych} na XXV Forum Ekonomicznego w Krynicy przedstawicielie polskiego biznesu zwracali uwagę na szerokie wykorzystanie modelowania predykcyjnego również w nasz gospodarce. \footnote{Jednak jak zwracano uwagę, \textit{big data}\ i \textit{modelowanie predykcyjne}\ służą głównie do zyskiwania wiedzy o kliencie i rynku do manualnego przetworzenia \textit{insight}\ , a nie automatyzacji podejmowania decyzji, co rozważamy w tej pracy}
@@ -719,12 +719,210 @@ W programie dane te służą do budowy drzewa klasyfikacyjnego, które - poniewa
 % --- chapter ---------------------------------------------------------
 \clearpage
 \section{Efekty działania algorytmu optymalizacyjnego}
+
 \subsection{Charakterystyka badanego środowiska}
+
+Sprawdzenie działania modelu odbędzie się w losowo wygenerowanym środowisku, które ze względu na konieczność wielokrotnej replikacji obliczeń w różnych warunkach zostało zapisane i będzie stosowane we wszystkich obliczeniach w niniejszym rozdziale. Środowisko zostało wygenerowane przy założeniach widocznych w tabeli \ref{tab:zalozenia}, a wygenerowane mapy zostały przedstawione na rysunkach \ref{symulowanamapa} i \ref{symulowanaludnosc}.
+
+\begin{table}[hbt] 
+  \centering
+
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Przykład prostej tablicy]{Właściwości generowanego świata. \textit{Źródło:} opracowanie własne.}
+  \label{tab:zalozenia}
+
+\vspace*{2ex}
+  \begin{tabular}{lccc}
+    Właściwość        & Założenie \\ \hline
+    Populacja & $10 000$\\
+    Wymiar $x$ & $100$\\
+    Wymiar $y$ & $100$\\ 
+    Udział dróg & $0.3$\\ 
+    Gęstość zakrętów dróg & $0.05$\\  
+    Udział budynków mieszkalnych & $0.6$\\  
+    Udział biurowców \footnote{Biurowce są dla konsumentów miejscem pracy, do których podróżują codziennie} & $0.2$\\  
+    Udział przestrzeni komercyjnej \footnote{Przestrzeń komercyjna to miejsca, w którym można założyć sklep, fabrykę bądź magazyn, tak więc razem tworzą zbiór miejsc gdzie przedsiębiorstwo może losowo wygenerować swoją jednostkę}& $0.2$\\  \hline
+    Ilość fabryk & 3\\ 
+    Ilość magazynów & 3\\ 
+    Ilość ilość sklepów & 6\\ 
+  \end{tabular}
+\end{table}
+
+\begin{figure}[hbt]
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{../mapy/typy.png}
+    \caption{Mapa typów lokacji na mapie}
+    \label{symulowanamapa}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{../mapy/ludnosc.png}
+    \caption{Histogram występowania konsumentów na mapie.}
+    \label{symulowanaludnosc}
+  \end{subfigure}
+  
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Krótka nazwa II]{Mapa wygenerowanych macierzy lokalizacji w modelu}\label{fig:xxx}
+\end{figure}
+
+\paragraph{Konsumenci}\mbox{}\\
+Cechy konsumentów zostały wygenerowane zgodnie z rozkładami zawartymi w Narodowym Spisie Ludności (\cite{GUS2011}) oraz XI Ogólnopolskim Badaniu Wynagrodzień \cite{Sedlak2013} w celu zapewnienia spójności z rzeczywistą strukturą społeczną. Wynikająca z tego histogramy cech klientów zostały zaprezentowane na \ref{ludnosc}. Poza zaprezentowanymi na histogramach danymi demograficznymi agenci posiadają trzy zainteresowania, których rozkład zaprezentowany został w tabeli \ref{tab:zainteresowania}. 
+
+W przeciwieństwie do danych demograficznych, są one niezależne, a każda z nich posiadała identyczną szansę na wylosowanie. Celem tego było wprowadzenie do modelu zmiennych, których nie byłyby skorelowane z innymi, a ponieważ mają wpływ na wybory klientów i nie są zapisywane w historii transakcji, utrudniają przewidywanie sprzedaży.
+
+\begin{table}[hbt] 
+  \centering
+
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Przykład prostej tablicy]{Rozkład zmiennych zainteresowań agentów. \textit{Źródło:} opracowanie własne.}
+  \label{tab:zainteresowania}
+
+\vspace*{2ex}
+  \begin{tabular}{lccc}
+  \hline
+ & Ilość \\ 
+  \hline
+Moda & 1234.00 \\ 
+  Gotowanie & 1246.00 \\ 
+  Finanse & 1265.00 \\ 
+  Kultura & 1213.00 \\ 
+  Historia & 1189.00 \\ 
+  Koncerty & 1222.00 \\ 
+  Motoryzacja & 1219.00 \\ 
+  Kosmetyki & 1241.00 \\ 
+  Malarstwo & 1260.00 \\ 
+  Ogrodnictwo & 1289.00 \\ 
+  Gry & 1358.00 \\ 
+  Sport & 1255.00 \\ 
+  Boks & 1286.00 \\ 
+  Fotografia & 1233.00 \\ 
+  Kultura alternatywna & 1252.00 \\ 
+  Nightlife & 1231.00 \\ 
+  Teatr & 1229.00 \\ 
+  Ksiazka & 1264.00 \\ 
+  Historia polski & 1243.00 \\ 
+  Natura & 1233.00 \\ 
+  Piwowarstwo & 1202.00 \\ 
+  Muzyka klasyczna & 1293.00 \\ 
+  Ksiazki & 1233.00 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[hbt]
+  \centering
+    \includegraphics[width=\textwidth]{pictures/ludnosc.png}
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+  \caption[Krótka nazwa X]{Histogramy cech agentów. \textit{Źródło:} opracowanie własne}\label{ludnosc}
+\end{figure}
+
+\paragraph{Przedsiębiorstwo}\mbox{}\\
+Symulowane przedsiębiorstwo składa się z zaprezentowanej w tabeli \ref{tab:zalozenia} ilości jednostek --- 3 fabryk, 3 magazynów i 6 sklepów, które wspólnie tworzą  $3\choose 1 $ $ \times $ $3\choose 1 $ $ \times $ $6\choose 1 $ = 108 możliwych kombinacji łańcuchów dostaw. Lokacje poszczególnych jednostek zostały zaprezentowane na rysunku \ref{mapafirma}.
+
+\begin{figure}[hbt]
+  \centering
+
+
+    \includegraphics[width=\textwidth]{../mapy/firma.png}
+
+
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Krótka nazwa X]{Mapa z zaznaczonymi jednostkami przedsiębiorstwa. \textit{Źródło:} opracowanie własne}\label{mapafirma}
+\end{figure}
+
+\paragraph{Produkty}\mbox{}\\
+Zakładamy, że na rynku obecnych jest 7 marek piwa, z których jedno należy do symulowanego przez nas przedsiębiorstwa (produkt o nazwie \textbf{Symulowane}). Każde z piw zdefiniowane jest 7 zmiennymi marketingowymi, z których \textit{cena, smak, opakowanie i marketing} to liczby całkowite w skalie $1-5$, a \textit{premium, budzetowe, lager oraz smakowe} to zmienne binarne. Cechy produktów zaprezentowane zostały w tabeli \ref{tab:produkty}. 
+
+\begin{table}[hbt] 
+  \centering
+
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Przykład prostej tablicy]{Cechy symulowanych produktów. \textit{Źródło:} opracowanie własne.}
+  \label{tab:produkty}
+
+\vspace*{2ex}
+  \begin{tabular}{rrrrrrrrr}
+  \hline
+ & Cena & Smak & Opakowanie & P & B & L & S & Marketing \footnote{Zmienne binarne zostały oznaczone literami, P = premium, B = Budżetowe, L=Lager, S=Smakowe}\\ 
+  \hline
+\textbf{Symulowane} &   1 &   4 &   3 &   1 &   0 &   1 &   0 &   1 \\ 
+  Lebskie &   4 &   3 &   4 &   0 &   1 &   1 &   0 &   4 \\ 
+  Baltyckie &   1 &   4 &   5 &   1 &   0 &   0 &   1 &   3 \\ 
+  Opolskie &   4 &   4 &   4 &   1 &   0 &   1 &   0 &   1 \\ 
+  Mocne &   4 &   5 &   4 &   1 &   0 &   0 &   1 &   5 \\ 
+  Pyszne &   5 &   1 &   3 &   1 &   0 &   1 &   0 &   2 \\ 
+  Babskie &   5 &   4 &   5 &   0 &   0 &   1 &   0 &   3 \\ 
+   \hline
+\end{tabular}
+\end{table} 
+
 \subsection{Przewidywanie decyzji konsumentów}
+
+Przewidywanie decyzji konsumentów odbywa się zgodnie z założeniami przedstawionymi w rozdziale \ref{statistical}. Jednak ponieważ w modelu stosowane jest pewne uproszczenie, polegające na braku symulacji efektów zewnętrznych, a decyzje klientów o przyjściu do sklepu są losowe w ramach zamkniętej puli miejsc, do przewidywania liczby klientów odwiedzających sklep w chwili $t+1$ stosowana jest średnia (ponieważ brak jest zmiennych objaśniających które mogłyby zostać wykorzystane w modelu). Mogłoby to zostać zaaplikowane poprzez wprowadzenie zmiennych losowych typu \textit{pogoda, temperatura, dzień tygodnia}, jednak wprowadzałoby to niepotrzebną złożoność do modelu, a nie wpływa to bezpośrednio na cel badania. 
+
+Jednocześnie, dalsze prognozowanie odbywa się zgodnie z przyjętym podejściem --- tak więc dysponując liczbą klientów w chwili $t+1$ wiemy, ilu konsumentów musimy wylosować na podstawie prawdopodobieństw warunkowych cech zapisanych w historii transakcji. Następne, dla każdego z tak wylosowanych klientów prognozujemy prawdopodobieństwo wybrania każdego z produktów dostępnych w sklepie, otrzymująć jego \textit{decyzję konsumencką}. Estymacja może zostać dokonana metodą regresji logistycznej bądź klasyfikacji \textit{k-means}, w zależności od wyboru użytkownika. Suma decyzji konsumenckich wskazujących symulowany produkt będzie wolumenem sprzedaży w $t+1$. 
+
+Wyniki prognozowanej sprzedaży w stosunku do zrealizowanej sprzedaży w $t+1$ przedstawiony został na wykresie \ref{fig:prognoza}, z kolei porównanie trafności prognoz każdej z metod zostało zaprezentowane w macierzy pomyłek (\textit{confusion matrix}) w tabeli 
+
+
+\begin{figure}[hbt]
+  \centering
+
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{pictures/prog.png}
+  \end{subfigure}
+
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Krótka nazwa X]{Przykładowy pojedynczy wykres. \textit{Źródło:} opracowanie własne}\label{fig:prognoza}
+\end{figure}
+
+
+\begin{figure}[hbt]
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+
+\begin{tabular}{rrr}
+  \hline
+ & 0 & 1 \\ 
+  \hline
+0 & 892 & 222 \\ 
+  1 & 303 & 375 \\ 
+   \hline
+\end{tabular}
+    \caption{Macierz pomyłek dla regresji logistycznej}
+    \label{fig:xxxa}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.45\textwidth}
+\begin{tabular}{rrr}
+  \hline
+ & 0 & 1 \\ 
+  \hline
+0 & 967 & 147 \\ 
+  1 & 498 & 180 \\ 
+   \hline
+\end{tabular}
+    \caption{Macierz pomyłek dla klasyfikacji k-means}
+    \label{fig:xxxb}
+  \end{subfigure}
+  
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Krótka nazwa II]{Przykładowy wykres. Wykresy podpisujemy, a więc ten opis znajduje się pod wykresem. \textit{Źródło:} opracowanie własne}\label{fig:xxx}
+\end{figure}
+
+
+
 \subsection{Wyniki przedsiębiorstwa przy braku optymalizacji}
 \subsection{Optymalizacja przy stałych cenach i braku efektu skali}
 \subsection{Optymalizacja przy stałych cenach i istnieniu efektu skali}
-\subsection{Optymalizacja przy zmiennych cenach i istnieniu efektu skali}
 
 
 

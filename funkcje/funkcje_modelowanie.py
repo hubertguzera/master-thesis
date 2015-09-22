@@ -2,6 +2,7 @@ import itertools,random
 import zalozenia
 import numpy as np
 from funkcje import funkcje_pomocnicze as f_p
+from funkcje import funkcje_raportowanie as f_r
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn import linear_model
 from sklearn.neighbors import KNeighborsClassifier
@@ -17,15 +18,19 @@ class training(object):
         self.training = self.historia[:int(len(self.historia)*zalozenia.udzial_treningowe)]
 
         a = {}
-        for kombinacja in self.kolejnosc:
-            print self.kolejnosc.index(kombinacja),"/",len(self.kolejnosc)
-            training_y = []
-            for i in range(len(self.training)):
-                training_y.append(stworz_konsumenta(self.training,kombinacja))
 
-            a[tuple(kombinacja)]= np.mean(euclidean_distances(f_p.usun_kolumny(self.training,[x for x in range(zalozenia.zakres_prawdopodobienstwa_warunkowego)]), training_y))
+        if zalozenia.sposob_wyboru_zmiennych == 2:
+            for kombinacja in self.kolejnosc:
+                print self.kolejnosc.index(kombinacja),"/",len(self.kolejnosc)
+                training_y = []
+                for i in range(len(self.training)):
+                    training_y.append(stworz_konsumenta(self.training,kombinacja))
 
-        self.kolejnosc = a.keys()[0]
+                a[tuple(kombinacja)]= np.mean(euclidean_distances(f_p.usun_kolumny(self.training,[x for x in range(zalozenia.zakres_prawdopodobienstwa_warunkowego)]), training_y))
+
+            self.kolejnosc = a.keys()[0]
+        else:
+            self.kolejnosc = self.kolejnosc[0]
         for key in a:
             if a[key]<a[self.kolejnosc]:
                 self.kolejnosc = key
@@ -53,6 +58,13 @@ class training(object):
 
         self.km = KNeighborsClassifier(n_neighbors=a.index(max(a))+1)
         self.km.fit(self.historia_x,self.historia_y)
+
+        f_r.zapis_przewidywania("rezultaty/przewidywania.csv",0,czysc=True)
+        i = 0
+        for element in self.historia_x:
+            f_r.zapis_przewidywania("rezultaty/przewidywania.csv",[self.historia_y[i],self.lg.predict(element)[0],self.km.predict(element)[0]])
+            i+=1
+
 
 
 

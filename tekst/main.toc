@@ -27,13 +27,15 @@
 \contentsline {subsection}{\numberline {3.6}Symulowanie decyzji konsumenckich}{33}{subsection.3.6}
 \contentsline {section}{\numberline {4}Efekty dzia\IeC {\l }ania algorytmu optymalizacyjnego}{34}{section.4}
 \contentsline {subsection}{\numberline {4.1}Charakterystyka badanego \IeC {\'s}rodowiska}{34}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Przewidywanie decyzji konsument\IeC {\'o}w}{34}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Wyniki przedsi\IeC {\k e}biorstwa przy braku optymalizacji}{34}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Optymalizacja przy sta\IeC {\l }ych cenach i braku efektu skali}{34}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Optymalizacja przy sta\IeC {\l }ych cenach i istnieniu efektu skali}{34}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Optymalizacja przy zmiennych cenach i istnieniu efektu skali}{34}{subsection.4.6}
-\contentsline {section}{\numberline {5}Rysunki i tablice}{35}{section.5}
-\contentsline {section}{\numberline {A}Dodatek: Wa\IeC {\.z}ne rzeczy do dodania}{37}{appendix.A}
-\contentsline {section}{Lista tablic}{40}{section*.17}
-\contentsline {section}{Lista rysunk\IeC {\'o}w}{41}{section*.18}
-\contentsline {section}{Streszczenie}{42}{section*.19}
+\contentsline {paragraph}{Konsumenci}{34}{section*.16}
+\contentsline {paragraph}{Przedsi\IeC {\k e}biorstwo}{35}{section*.19}
+\contentsline {paragraph}{Produkty}{35}{section*.21}
+\contentsline {subsection}{\numberline {4.2}Przewidywanie decyzji konsument\IeC {\'o}w}{36}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Wyniki przedsi\IeC {\k e}biorstwa przy braku optymalizacji}{38}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Optymalizacja przy sta\IeC {\l }ych cenach i braku efektu skali}{38}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Optymalizacja przy sta\IeC {\l }ych cenach i istnieniu efektu skali}{38}{subsection.4.5}
+\contentsline {section}{\numberline {5}Rysunki i tablice}{41}{section.5}
+\contentsline {section}{\numberline {A}Dodatek: Wa\IeC {\.z}ne rzeczy do dodania}{43}{appendix.A}
+\contentsline {section}{Lista tablic}{46}{section*.28}
+\contentsline {section}{Lista rysunk\IeC {\'o}w}{47}{section*.29}
+\contentsline {section}{Streszczenie}{48}{section*.30}

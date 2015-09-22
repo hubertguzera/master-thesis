@@ -1,5 +1,6 @@
 import random
 import sympy
+import zalozenia
 
 def konwertuj_wyksztalcenie(wyksztalcenie):
    mozliwosci = {"Podstawowe":1,"Zawodowe":2,"Srednie":3,"Wyzsze":4,"Brak":0}

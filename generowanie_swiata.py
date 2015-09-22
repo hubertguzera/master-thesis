@@ -75,6 +75,7 @@ class lokalizacja(swiat):
         
 class konsument(object):
     def __init__(self, swiat):
+        print "Tworze konsumenta"
         self.plec = f_l.losuj_rozklad(zalozenia.plec_rozklad)
         self.wiek = int(f_l.losuj_rozklad(zalozenia.wiek_rozklad))
 

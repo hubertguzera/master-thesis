@@ -40,6 +40,7 @@ class rynek(object):
                   sklep.klienci = []
                   sklep.sklad = {}
                   sklep.sprzedaz = {}
+                  sklep.oblozenie = 0
                   sklep.klienci_historycznie.append([])
             for fabryka in self.symulowana_firma.fabryki:
                 fabryka.oblozenie = 0
@@ -162,7 +163,6 @@ class sklep(firma):
             for element in rynek.symulowana_firma.trasy.trasy:
                 if element.elementy[2].lokalizacja==self.lokalizacja:
                     b.append(element)
-            print b
             trasa = random.choice(b)
         rynek.symulowana_firma.trasy.dodaj_do_trasy(symulowany_towar,trasa)
 
@@ -208,9 +208,12 @@ class trasy(firma):
 
     def dodaj_do_trasy(self,ilosc,trasa):
         for key in self.trasy:
-            if key.elementy==trasa:
+
+            if key==trasa:
+
                 key.oblozenie += ilosc
                 for item in key.elementy:
+
                     item.oblozenie += ilosc
 
 
@@ -222,12 +225,6 @@ class trasa(trasy):
         self.symbol = self.symbol = sympy.symbols("t" + str(x+1))
 
 
-    def dodaj_do_trasy(self,ilosc,trasa):
-        for key in self.trasy:
-            if key==tuple(trasa):
-                self.trasy[key] += ilosc
-                for item in key:
-                    item.oblozenie += ilosc
 
 class sciezka(trasy):
     def __init__(self,poczatek,koniec,swiat,x):
@@ -246,6 +243,9 @@ def tworz_swiat_i_rynek():
     symulowany_rynek = rynek(symulowany_swiat)
     #print symulowany_swiat.nodes
     pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
+    f_m.rysujmape(symulowany_rynek.swiat,"mapy/typy")
+    f_m.rysujludnosc(symulowany_rynek.swiat, symulowany_rynek.swiat.ludnosc,"mapy/ludnosc")
+    f_m.rysujmapefirmy(symulowany_rynek.swiat,"mapy/firma")
 
 #tworz_swiat_i_rynek()
 

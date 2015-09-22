@@ -1,4 +1,7 @@
 import sympy,math
+import zalozenia
+
+skok_dostawa = 3
 
 def funkcja_do_optymalizacji(firma,stala_cena=True):
      expr = 0
@@ -50,9 +53,13 @@ def punkty_stacjonarne(firma,prognozowana):
     return sympy.solve(pierwsze_pochodne(podstaw(funkcja_do_optymalizacji(firma),prognozowana),firma.trasy.trasy))
 
 def dostawy_optymalne(firma,rynek):
-    kombinacje = firma.trasy.trasy
-
+    print "Startuje"
+    kombinacje = []
+    for element in firma.trasy.trasy:
+        kombinacje.append(element)
+    print kombinacje, firma.trasy.trasy
     while kombinacje:
+        print len(kombinacje)
         a = {}
         for trasa in kombinacje:
             funkcja = podstaw(funkcja_do_optymalizacji(firma),dotychczasowa_sprzedaz(firma))
@@ -66,12 +73,11 @@ def dostawy_optymalne(firma,rynek):
             for key in a:
                 if a[max]<a[key]:
                     max = key
-
-            trasa = max.elementy
-            sklep = trasa[2]
-
+            trasa = max
+            sklep = max.elementy[2]
+            print sklep.oblozenie, sklep.przewidywana_sprzedaz
             if sklep.oblozenie < sklep.przewidywana_sprzedaz:
-                sklep.dostawa_towaru(rynek,trasa,symulowany_towar=1,inne_towary=0)
+                sklep.dostawa_towaru(rynek,trasa,symulowany_towar=skok_dostawa,inne_towary=0)
             else:
                 kombinacje.remove(max)
 
