@@ -1,7 +1,7 @@
 import sympy,math
 import zalozenia
 
-skok_dostawa = 3
+skok_dostawa = 1
 
 def funkcja_do_optymalizacji(firma,stala_cena=True):
      expr = 0
@@ -63,7 +63,7 @@ def dostawy_optymalne(firma,rynek):
         a = {}
         for trasa in kombinacje:
             funkcja = podstaw(funkcja_do_optymalizacji(firma),dotychczasowa_sprzedaz(firma))
-
+            print sympy.diff(funkcja,trasa.symbol).subs(trasa.symbol,1), funkcja
             if sympy.diff(funkcja,trasa.symbol).subs(trasa.symbol,1) > 0:
                 a[trasa] = sympy.diff(funkcja,trasa.symbol).subs(trasa.symbol,1)
             else:

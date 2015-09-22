@@ -6,7 +6,7 @@ populacja = 750
 wymiar_x = 25
 wymiar_y = 25
 lokalizacja_rozklad_typ= {"Dom":0.6,"Praca":0.2,"Przestrzen komercyjna":0.2}
-udzial_drog = 0.3
+udzial_drog = 0.25
 gestosc_zakretow = 0.05
 
 
@@ -33,14 +33,14 @@ ilosc_sklepow = 4
 koszt_fabryka = 1
 koszt_magazyny = 1
 koszt_sklepy = 1
-koszt_sciezka = 0.05
+koszt_sciezka = 0.005
 
 skala_fabryka = 1
 skala_magazyny = 1
 skala_sklepy = 1
 skala_sciezka = 1
 
-produkt_cena = 20
+produkt_cena = 7
 
 #Konkurencja
 prawdopodobienstwo_zakupu_piwa = 1
@@ -53,7 +53,7 @@ udzial_treningowe = 0.2
 zakres_prawdopodobienstwa_warunkowego = 5
 znane_cechy = [0,1,2,3,4,29]
 ilosc_iteracji_prognoz = 10
-sposob = 2 # 1 dla LG, 2 dla K-N
+sposob = 1 # 1 dla LG, 2 dla K-N
 sposob_wyboru_zmiennych = 1 #1 dla simple, 2 dla exhaustive
 
 skok_dostawa = 3

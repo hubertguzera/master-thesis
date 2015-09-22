@@ -722,7 +722,9 @@ W programie dane te służą do budowy drzewa klasyfikacyjnego, które - poniewa
 
 \subsection{Charakterystyka badanego środowiska}
 
-Sprawdzenie działania modelu odbędzie się w losowo wygenerowanym środowisku, które ze względu na konieczność wielokrotnej replikacji obliczeń w różnych warunkach zostało zapisane i będzie stosowane we wszystkich obliczeniach w niniejszym rozdziale. Środowisko zostało wygenerowane przy założeniach widocznych w tabeli \ref{tab:zalozenia}, a wygenerowane mapy zostały przedstawione na rysunkach \ref{symulowanamapa} i \ref{symulowanaludnosc}.
+Sprawdzenie działania modelu odbędzie się w losowo wygenerowanym środowisku, które ze względu na konieczność wielokrotnej replikacji obliczeń w różnych warunkach zostało zapisane i będzie stosowane we wszystkich obliczeniach w niniejszym rozdziale.
+
+ Środowisko zostało wygenerowane przy założeniach widocznych w tabeli \ref{tab:zalozenia}, a powstałe w rezultacie mapy zostały przedstawione na rysunkach \ref{symulowanamapa} i \ref{symulowanaludnosc}.
 
 \begin{table}[hbt] 
   \centering
@@ -746,6 +748,7 @@ Sprawdzenie działania modelu odbędzie się w losowo wygenerowanym środowisku,
     Ilość fabryk & 3\\ 
     Ilość magazynów & 3\\ 
     Ilość ilość sklepów & 6\\ 
+    Cena produktu & 7\\ 
   \end{tabular}
 \end{table}
 
@@ -769,9 +772,9 @@ Sprawdzenie działania modelu odbędzie się w losowo wygenerowanym środowisku,
 \end{figure}
 
 \paragraph{Konsumenci}\mbox{}\\
-Cechy konsumentów zostały wygenerowane zgodnie z rozkładami zawartymi w Narodowym Spisie Ludności (\cite{GUS2011}) oraz XI Ogólnopolskim Badaniu Wynagrodzień \cite{Sedlak2013} w celu zapewnienia spójności z rzeczywistą strukturą społeczną. Wynikająca z tego histogramy cech klientów zostały zaprezentowane na \ref{ludnosc}. Poza zaprezentowanymi na histogramach danymi demograficznymi agenci posiadają trzy zainteresowania, których rozkład zaprezentowany został w tabeli \ref{tab:zainteresowania}. 
+Cechy konsumentów zostały wygenerowane zgodnie z rozkładami zawartymi w Narodowym Spisie Ludności (\cite{GUS2011}) oraz XI Ogólnopolskim Badaniu Wynagrodzień \cite{Sedlak2013} w celu zapewnienia spójności z rzeczywistą strukturą społeczną. Wynikająca z tego histogramy cech klientów zostały zaprezentowane na \ref{ludnosc}. 
 
-W przeciwieństwie do danych demograficznych, są one niezależne, a każda z nich posiadała identyczną szansę na wylosowanie. Celem tego było wprowadzenie do modelu zmiennych, których nie byłyby skorelowane z innymi, a ponieważ mają wpływ na wybory klientów i nie są zapisywane w historii transakcji, utrudniają przewidywanie sprzedaży.
+Poza zaprezentowanymi na histogramach danymi demograficznymi agenci posiadają trzy zainteresowania, których rozkład zaprezentowany został w tabeli \ref{tab:zainteresowania}. W przeciwieństwie do danych demograficznych, są one niezależne, a każda z nich posiadała identyczną szansę na wylosowanie. Celem tego było wprowadzenie do modelu zmiennych, których nie byłyby skorelowane z innymi, a ponieważ mają wpływ na wybory klientów i nie są zapisywane w historii transakcji, utrudniają przewidywanie sprzedaży.
 
 \begin{table}[hbt] 
   \centering
@@ -883,11 +886,15 @@ Wyniki prognozowanej sprzedaży w stosunku do zrealizowanej sprzedaży w $t+1$ p
   \caption[Krótka nazwa X]{Przykładowy pojedynczy wykres. \textit{Źródło:} opracowanie własne}\label{fig:prognoza}
 \end{figure}
 
-
-\begin{figure}[hbt]
+\begin{table}[hbt]
   \centering
-  \begin{subfigure}[t]{0.45\textwidth}
 
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Przykład prostej tablicy]{Macierz pomyłek dla klasyfikacji k-means. \textit{Źródło:} opracowanie własne.}
+  \label{tab:exceptional-table}
+
+\vspace*{2ex}
 \begin{tabular}{rrr}
   \hline
  & 0 & 1 \\ 
@@ -896,11 +903,18 @@ Wyniki prognozowanej sprzedaży w stosunku do zrealizowanej sprzedaży w $t+1$ p
   1 & 303 & 375 \\ 
    \hline
 \end{tabular}
-    \caption{Macierz pomyłek dla regresji logistycznej}
-    \label{fig:xxxa}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[t]{0.45\textwidth}
+\end{table}
+
+
+\begin{table}[hbt]
+  \centering
+
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Przykład prostej tablicy]{Macierz pomyłek dla regresji logistycznej. \textit{Źródło:} opracowanie własne.}
+  \label{tab:exceptional-table}
+
+\vspace*{2ex}
 \begin{tabular}{rrr}
   \hline
  & 0 & 1 \\ 
@@ -909,75 +923,34 @@ Wyniki prognozowanej sprzedaży w stosunku do zrealizowanej sprzedaży w $t+1$ p
   1 & 498 & 180 \\ 
    \hline
 \end{tabular}
-    \caption{Macierz pomyłek dla klasyfikacji k-means}
-    \label{fig:xxxb}
-  \end{subfigure}
-  
-  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
-
-  \caption[Krótka nazwa II]{Przykładowy wykres. Wykresy podpisujemy, a więc ten opis znajduje się pod wykresem. \textit{Źródło:} opracowanie własne}\label{fig:xxx}
-\end{figure}
+\end{table}
 
 
 
 \subsection{Wyniki przedsiębiorstwa przy braku optymalizacji}
-\subsection{Optymalizacja przy stałych cenach i braku efektu skali}
-\subsection{Optymalizacja przy stałych cenach i istnieniu efektu skali}
 
+W celu uzyskania punktu odniesienia, na początek model zostaje uruchomiony bez implementacji algorytmu optymalizacyjnego na $t=20$ jednostek czasu. Decyzje przedsiebiorstwa są w tym czasie podejmowane na podstawie predefiniowanych zasad, które zakładają 
 
+	\begin{itemize}
+		\item zamówienia równe łącznej sprzedaży w $t_0$ --- rundzie próbnej, w której sprawdzana jest maksymalna chłonność rynku, a jej wyniki nie są zapisywane --- równo podzielone pomiędzy sklepy
+		\item obojętność przedsiębiorstwa wobec tras dostaw, które są wybierane losowo sposród wszystkich zawierających sklep docelowy
+		\item zakładamy, że nie istnieją efekty skali, a cena produktu jest z góry ustalona i stała. 
+	\end{itemize}
 
-% --- chapter ---------------------------------------------------------
-\clearpage
-\section{Rysunki i tablice}
-
-Zarówno rysunki jak i tablice używają podobnej koncepcji osadzania w dokumencie. Aby osadzić tablicę używa się otoczenia  \verb+table+. Poniżej jest przykład prostej tablicy.
-
-\begin{table}[hbt]
-  \centering
-
-  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
-
-  \caption[Przykład prostej tablicy]{Przykład prostej tablicy. Ten tekst będzie automatycznie zawijany. \textit{Źródło:} opracowanie własne.}
-  \label{tab:exceptional-table}
-
-\vspace*{2ex}
-
-  \begin{tabular}{lccc}
-    Name        & property 1 & property 2 & property 3 \\ \hline
-    Michael     & 23         & 34         & --         \\
-    John        & 34         & --         & 28         \\
-    Mr. Niceguy & 123        & 231        & 312        \\ \hline
-  \end{tabular}
-\end{table}
-
-Tablica~\ref{tab:exceptional-table} jest przykładem bardzo prostej tablicy ale możliwe jest znacznie więcej rzeczy, w razie konieczność służę pomocą.
-
-Aby osadzić rysunek to w pierwszej kolejności trzeba mieć ten rysunek w pliku. W katalogu są dwa przykładowe rysunki. Następujący przykład korzysta z tych rysunków i jest przykładem wykorzystania otoczenia \verb+figure+.
-
-\begin{figure}[hbt]
-  \centering
-
-  \begin{subfigure}[t]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{./figure-1}
-  \end{subfigure}
-
-  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
-
-  \caption[Krótka nazwa X]{Przykładowy pojedynczy wykres. \textit{Źródło:} opracowanie własne}\label{fig:xxx1}
-\end{figure}
+Wyniki przedsiębiorstwa w tak zdefiniowanej rundzie próbnej zaprezentowane zostały na wykresach \ref{brak1}, \ref{brak2} i \ref{brak3}. Widoczne są na nich względnie stabilne wyniki firmy, a trasy średnio odnotuwują zysk, jednak jak widoczne jest wyraźnie na \ref{brak3}, wiele z tras jest deficytowych, co trudno jest zauważyć przy ogólnym pozytywnym wyniku finansowym firmy.  
 
 \begin{figure}[hbt]
   \centering
   \begin{subfigure}[t]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{./figure-1}
+    \includegraphics[width=\textwidth]{pictures/brak_algorytmu/wyniki.png}
     \caption{To jest pierwszy podpis. Ten podpis będzie również zawijany ale będzie to powodowało odpowiednie dopasowanie wysokości.}
-    \label{fig:xxxa}
+    \label{fig:brak1}
   \end{subfigure}
   \hfill
   \begin{subfigure}[t]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{figure-2}
+    \includegraphics[width=\textwidth]{pictures/brak_algorytmu/trasy.png}
     \caption{Układ równowag stabilnych}
-    \label{fig:xxxb}
+    \label{fig:brak2}
   \end{subfigure}
   
   \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
@@ -985,7 +958,37 @@ Aby osadzić rysunek to w pierwszej kolejności trzeba mieć ten rysunek w pliku
   \caption[Krótka nazwa II]{Przykładowy wykres. Wykresy podpisujemy, a więc ten opis znajduje się pod wykresem. \textit{Źródło:} opracowanie własne}\label{fig:xxx}
 \end{figure}
 
-Odwołanie się do wykresu działa podobnie jak do równania: rysunek~\ref{fig:xxx1}. Możemy również odwoływać się do podwykresów:~\ref{fig:xxxa} lub \ref{fig:xxxb}. Zarówno tablice (tabele) jak i rysunki (wykresy) są automatycznie układane przez \LaTeX{} i nie pozycjinujemy ich sami.
+\begin{figure}[hbt]
+  \centering
+    \includegraphics[width=\textwidth]{pictures/brak_algorytmu/trasy2.png}
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+  \caption[Krótka nazwa X]{Przykładowy pojedynczy wykres. \textit{Źródło:} opracowanie własne}\label{fig:brak3}
+\end{figure}
+
+
+\subsection{Optymalizacja przy stałych cenach i braku efektu skali}
+
+\begin{figure}[hbt]
+  \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{pictures/brak_algorytmu/wyniki.png}
+    \caption{To jest pierwszy podpis. Ten podpis będzie również zawijany ale będzie to powodowało odpowiednie dopasowanie wysokości.}
+    \label{fig:brak1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{pictures/brak_algorytmu/trasy.png}
+    \caption{Układ równowag stabilnych}
+    \label{fig:brak2}
+  \end{subfigure}
+  
+  \captionsetup{margin=10pt,font=small,labelfont=bf,width=.8\textwidth}
+
+  \caption[Krótka nazwa II]{Przykładowy wykres. Wykresy podpisujemy, a więc ten opis znajduje się pod wykresem. \textit{Źródło:} opracowanie własne}\label{fig:xxx}
+\end{figure}
+
+
+\subsection{Optymalizacja przy stałych cenach i istnieniu efektu skali}
 
 
 % --- appendices ------------------------------------------------------
@@ -995,7 +998,6 @@ Odwołanie się do wykresu działa podobnie jak do równania: rysunek~\ref{fig:x
 \clearpage
 \section{Dodatek: Ważne rzeczy do dodania}
 
-Tutaj można włożyć długie tablice, kod wykorzystane w pracy lub inne elementy, które nie powinny zakłócać czytania tekstu.
 
 
 % --- bibliography ----------------------------------------------------
@@ -1020,7 +1022,6 @@ Tutaj można włożyć długie tablice, kod wykorzystane w pracy lub inne elemen
 \addcontentsline{toc}{section}{Streszczenie}
 \section*{Streszczenie}
 
-Tutaj zamieszczają Państwo streszczenie pracy. Streszczenie powinno być długości około pół strony.
 
 
 \end{document}

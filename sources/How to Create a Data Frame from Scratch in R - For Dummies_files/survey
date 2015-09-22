@@ -1,0 +1,5 @@
+_402={timingStart:1442908233973,timingTrStart:(new Date).getTime()};
+_402_Show=function(){_402.show();};
+_402.show=function(){};
+if(!window._402nosurvey){document.write('\x3Cscript'+' type=\"text/javascript\"'+' src=\"'+'//survey.g.doubleclick.net/insights/consumersurveys/static/387246998778522472/prompt_embed_static.js'+'\"'+'\x3E\x3C/script\x3E');}
+if(!window._402nosurvey){document.write('\x3Cscript'+' type=\"text/javascript\"'+' src=\"'+'//survey.g.doubleclick.net/prompt?site=_bce27aauo2cdfd5j47zwbdealy&t=1&url=http%3A%2F%2Fwww.dummies.com%2Fhow-to%2Fcontent%2Fhow-to-create-a-data-frame-from-scratch-in-r.html&cid=everything'+'&random='+_402.timingTrStart+'&ref='+encodeURIComponent(document.referrer.substr(0,500))+'\"'+'\x3E\x3C/script\x3E');}

@@ -43,7 +43,7 @@ def zapis_koszty(plik,rynek,czysc=False):
         czysc_plik(plik)
         dodaj_do_pliku(plik,["Tura","Symbol","Koszt","Efekt skali","Oblozenie","Koszt w turze"])
     else:
-        for element in firma.fabryki + firma.sklepy + firma.magazyny:
+        for element in firma.fabryki + firma.sklepy + firma.magazyny + firma.trasy.drogi:
             rekord = [rynek.tura,element.symbol,element.koszt,element.efekt_skala,element.oblozenie,element.koszt*element.oblozenie**element.efekt_skala]
             print rekord
             dodaj_do_pliku(plik,rekord)
@@ -63,9 +63,38 @@ def zapis_przychody(plik,rynek,czysc=False):
             print rekord
             dodaj_do_pliku(plik,rekord)
 
+def zapis_zysk(plik,rynek,czysc=False):
+    firma = rynek.symulowana_firma
+    if czysc:
+        czysc_plik(plik)
+        dodaj_do_pliku(plik,["Tura","Zysk"])
+    else:
+        zysk = float(0)
+        for element in firma.sklepy:
+            if "Symulowane" in element.sprzedaz:
+                zysk += firma.cena*element.sprzedaz["Symulowane"]
+        for element in firma.fabryki + firma.sklepy + firma.magazyny + firma.trasy.drogi:
+            zysk -= element.koszt*element.oblozenie**element.efekt_skala
+        dodaj_do_pliku(plik,[rynek.tura,zysk])
+
 def zapis_przewidywania(plik,wartosc,czysc=False):
     if czysc:
         czysc_plik(plik)
         dodaj_do_pliku(plik,["Prawdziwy","LM","K-Mean"])
     else:
         dodaj_do_pliku(plik,wartosc)
+
+def zapis_trasy(plik,rynek,czysc=False):
+    firma = rynek.symulowana_firma
+    if czysc:
+        czysc_plik(plik)
+        dodaj_do_pliku(plik,["Tura","Symbol","Przychod","Koszt","Zysk"])
+    else:
+        for trasa in firma.trasy.trasy:
+            koszt = 0
+            przychod = 0
+            for element in trasa.elementy:
+                    koszt += element.koszt * element.oblozenie ** element.efekt_skala
+            if "Symulowane" in trasa.elementy[2].sprzedaz:
+                    przychod = firma.cena*trasa.elementy[2].sprzedaz["Symulowane"]
+            dodaj_do_pliku(plik,[rynek.tura, trasa.symbol,przychod, koszt, przychod - koszt])

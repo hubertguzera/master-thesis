@@ -1,0 +1,1646 @@
+/* Change to Bookstore link in header - nb 11/15/11 */
+#header #store-link {
+    display: block;
+    float: right;
+    color: #000000;
+    line-height: 43px;
+    padding: 15px 7px 12px;
+    margin-left: 40px; 
+}
+
+/* Mobile App Styleguide Page */
+#app-styleguide {
+     margin-top: 20px;
+ }
+
+#app-styleguide .display{
+     float: left; 
+     margin-right: 30px; 
+     width: 250px;
+ }
+
+#app-styleguide .description{
+     float: left; 
+     margin: 0 20px 0 0; 
+     width: 600px;
+ }
+
+#app-styleguide h2{
+    padding: 30px  0 10px 0; 
+ }
+
+#app-styleguide .assets{
+    margin: 10px  0 10px 30px; 
+ }
+
+
+/* Change to Bookstore link in header - nb 11/15/11 */
+#header #store-link {
+    display: block;
+    float: right;
+    color: #000000;
+    line-height: 43px;
+    padding: 15px 7px 12px;
+    margin-left: 40px; 
+}
+
+/* Homepage Slideshow typography adjustments, 8/1/11 */
+.multi-feature-carousel .feature .bottom-banner h4,
+#main-content .feature-container-header h2 { font-family:  Arial, sans-serif; }
+.multi-feature-carousel .feature .bottom-banner h4,
+.multi-feature-carousel .feature .bottom-banner p {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Dummies Editions - added style - nb 7/12/11 */
+.dummies-editions p{
+	float: left;
+	clear: both;
+	margin: 15px 0 0 0;
+	padding: 0;
+	width: 160px;
+	_width: 150px;
+	}
+
+/* Dummies 20th Anniversary - nb 2/22/11 */
+#homepage #header{ 	
+	height: 132px;
+	background: url(http://media.wiley.com/assets/3203/60/hp-header-bg-20th.gif) no-repeat bottom left !important;
+	position: relative;
+	}
+
+#homepage #header .logo{
+	position: absolute;
+	left: 0 !important;
+	top: 12px;
+	}
+
+#anniversary-logo{
+	float: left;
+	position: relative;
+	bottom: -20px; left: 0;
+	width: 98px;
+	height: 90px;
+	padding:  0;
+	}
+
+/* Dummies 20th Anniversary - nb 2/28/11 */
+#dummies_anniversary_feature h2{
+	margin: 0;
+	font-size: 1.33em;
+	color: #fbf900;
+	font-style: italic;
+	padding: 10px 15px 5px;
+	background: #1b1b1b url(http://media.wiley.com/spa_assets/site/dummies2/include/images/bg/leftnav-header-bg.gif) repeat-x bottom left;
+	}
+
+#dummies_anniversary_feature .topic-content .article-listing .article{ width: 590px; }
+
+#promo .anniversary-promo img{ float: left; }
+
+#promo .anniversary-promo .content{ margin-left: 95px; }
+
+
+
+/* Dummies Month - nb 2/15/11 */
+#dummies_month {
+	width: 630px; margin:0; padding: 0;
+	}
+
+#rebate_header_mobile{
+	display: none;
+	}
+	
+#dummies_month .rebate {
+	background: #fff url('http://media.wiley.com/spa_assets/site/dummies2/include/images/bg/generic-gradient-bg.gif') repeat-x top left; border: 1px solid #ccc; margin: 0; padding: 0;
+	}	
+
+#dummies_month .wrapper {
+	margin: 20px 20px 0 20px; padding: 0;
+	} 	
+	
+#dummies_month .rebate p {
+	font-size: 1.18em; font-weight: bold;
+	}	
+
+#dummies_month .download {
+	margin: 15px;
+	}	
+
+#dummies_month .details {
+	margin: 10px 0 10px 20px; padding: 0;
+	}		
+	
+#dummies_month .fineprint {
+	float: left; width: 300px; margin: 10px 20px 0 0;
+	}	
+	
+#dummies_month .fineprint p{
+	font-size: 0.86em; line-height: 100%; margin: 8px; 0 0 0; padding: 0;
+	}	
+	
+#dummies_month .retailers {
+	float: right; width: 253px; margin: 0; padding: 0; position: relative; bottom: 0; right: 0;
+	}
+
+#dummies_month .article-tools{
+	margin: 0;
+	text-align: right;
+	padding: 0;
+	_padding-bottom: 10px;
+	display: inline;
+	float: right;
+	font-family: verdana;
+	font-size: 0.83em;
+	}
+	
+#dummies_month .article-tools-clear{
+	clear: both;
+	margin: 0 0 10px 0;	
+	border-bottom: none;
+	}	
+
+#dummies_month .article-tools li{
+	margin: 0;
+	padding: 0 5px;
+	float: left;
+	list-style: none;
+	border-right: none;		
+	}
+
+#dummies_month #all-titles{
+	margin: 15px 20px;		
+	}
+
+#dummies_month #all-titles-mobile{
+	display:none;		
+	}
+
+/* NavBar Ad - nb 10/12/10 */
+.navbar{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #cccccc; 
+    border-bottom: none; 
+	}
+
+/* nb added 5/6 */
+.disclaimer{ font-size: 0.83em; }
+
+/* nb added leaderboard caption 6/4 */
+/* for ad alert txt */	
+.leaderboard .ad-caption{
+	margin: -10px 0 0 0;
+	padding: 0;
+	color: #999;
+	text-align: center;
+	font-family: verdana;
+	font-size: 0.65em;
+	font-weight: normal;
+	}
+
+/* Fix for DF bestselling-products */
+.DF.bestselling-products h4 {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 8px 0;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 12px;
+}
+
+/* Content links */
+.article-content a {
+     font-weight: bold;
+     text-decoration: underline;
+}
+
+.article-content a:hover { text-decoration: none; }
+
+.article-content a.tooltip-link { 
+     font-weight: normal;
+     text-decoration: none;
+}
+
+/* Mobile Landing Page */
+#apps-page .app-display{
+     float: left; 
+     margin-right: 25px; 
+     width: 106px;
+ }
+#apps-page .app-description{
+     float: left; 
+     margin: 0 20px 0 0; 
+     width: 475px;
+ }
+
+#android-apps-page .app-display{
+     float: left; 
+     margin-right: 25px; 
+     width: 126px;
+ }
+#android-apps-page .app-description{
+     float: left; 
+     margin: 0 20px 0 0; 
+     width: 455px;
+ }
+
+#main-content-left {
+	float:left;
+}
+
+#main-content-right {
+	float:right;
+}
+
+#FeaturedAppWrapper {
+	width:600px;
+	background: #fff; 
+	margin: 10px 0;
+	padding:15px;
+}
+
+#FeaturedAppWrapper h2 {
+	background-color:#000000;
+	Color:#FF0;
+	padding:10px;
+	font-style:italic;
+	font-weight:bold;
+}
+
+#FeaturedAppContent {
+	padding:10px;
+	border: 1px solid #999999;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.FeaturedAppIcon {
+	padding-right:15px;
+}
+
+/* 7/29/2011 */
+.leaderboard {
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    z-index: 100000000;
+}
+
+#title #header .logo, #store #header .logo {
+    left: 20px;
+    position: absolute;
+    top: 15px;
+}
+
+#title #header #query, 
+#store #header #query {
+    width: 185px;
+    height: 11px;
+    font-size: 12px;
+}
+
+#title #header label img, 
+#store #header label img {
+    margin-bottom: -1px;
+    margin-left: 0;
+    margin-right: 1px;
+    margin-top: 0;
+}
+
+#title #header .button, 
+#store #header .button {
+    margin-bottom: -9px;
+    margin-left: 1px;
+    margin-right: 0;
+    margin-top: 0;
+}
+.multi-feature-carousel .feature .bottom-banner h3 { font: 19px "Arial", sans-serif; }
+.multi-feature-carousel .feature .bottom-banner h4 { font: 17px "Arial", sans-serif; }
+.multi-feature-carousel .feature .bottom-banner h5 { font: 15px "Arial", sans-serif; }
+/*Dummies eLearning Exit Page - nb 8/24/11 */
+#eLearning { margin-bottom: 40px; }
+
+#eLearning p {
+    font-size: 1.5em; 
+    color:#e3002d;
+    line-height: 1.4em;
+}
+
+/*Dummies Rebate Center- nb 9/1/11 */
+#rebate_center h2 {
+    margin-bottom: 10px;
+}
+
+#rebate_center h3 {
+    margin-top: 15px;
+}
+
+.interstitial .productDetail-btb {
+    width: 300px; 
+    margin: 10px 0;
+    float: right;
+}
+
+.interstitial .productDetail-btb ul { 
+    width: 150px;
+    list-style: none; 
+    overflow: hidden; 
+    margin: 0; 
+    padding: 1em 0; 
+    display: inline-block;
+}
+
+.interstitial .productDetail-btb ul li a { 
+    width: 150px;
+    float: none;
+}
+/*Dummies Month Indigo - nb 2/10/12 */
+#Indigo-dummiesmonth #banner {
+	margin-bottom: 20px;
+}
+
+#Indigo-dummiesmonth tr.titlename {
+	margin-bottom: 20px;
+}
+
+#Indigo-dummiesmonth .bookCopyIndigo {
+	font-size:12px;
+	font-style:italic;	
+}
+
+#Indigo-dummiesmonth .bookCoverIndigo {
+	padding-right:30px;
+}
+
+#Indigo-dummiesmonth .bookTableRowIndigo {
+	vertical-align:bottom;
+}
+
+#Indigo-dummiesmonth .offer{
+	margin: 20px 20px 0 0;	
+}
+
+/*Dummies eLearning Kits - JS 2/28/12 */
+
+#elearning-container{
+	border-style:solid none none;
+	border-top-color:#333;
+	border-top-width:1px;
+	width:958px;}
+
+#elearning-head {
+	background-image: url(http://media.wiley.com/assets/7019/98/e-laerning-kit-header.jpg);
+   background-position: right top;
+    background-repeat: no-repeat;
+    height: 475px;
+    padding: 10px 0 0;;
+}
+
+#elearning-head .elearning-head-intro{
+	float:left;
+	margin:50px 0 0 30px;
+	width:480px;}
+
+#elearning-head .elearning-head-content{
+	float:left;
+	margin:300px 0 0 30px;
+	padding:0;
+	width:370px;}
+
+#elearning-head h1{
+	font-size:24px;
+	line-height:34px;}
+
+#elearning-head p{
+	font-size:14px;
+	margin:20px 0;}
+
+#elearning-title-container{
+	border-color:#000;
+	border-style:solid;
+	border-width:20px 1px;
+	margin:0 0 0 15px;
+	width:930px;}
+
+#elearning-title-container .elearning-title{
+	border-bottom-color:#666;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	float:left;
+	height:221px;
+	margin:0 15px 0 0;
+	width:450px;}
+
+#elearning-title-container .elearning-title-last{
+	float:left;
+	height:221px;
+	margin:0 15px 0 0;
+	padding:0 0 15px;
+	width:450px;}
+
+#elearning-title-container .elearning-title-cover{
+	float:left;
+	margin:15px 15px 0;
+	width:150px;}
+
+#elearning-title-container .elearning-title-content{
+	float:left;
+	height:150px;
+	margin:15px 15px 0 0;
+	width:255px;}
+
+#elearning-title-container .elearning-title-buy{
+	float:right;
+	font-weight:700;
+	margin:0 15px 0 0;
+	text-align:right;
+	width:112px;}
+
+#dummies_month .promo{
+	background: #fff; 
+	border: 1px solid #ccc; 
+	margin: 0; 
+	padding: 0;
+}	
+
+/* Ingram Errors */
+.content-copy { margin-bottom: 10px; }
+.button-help {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-image: -moz-linear-gradient(top, #2c7aca, #0f5ba8);
+    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0,#2c7aca), color-stop(1,#0f5ba8));
+    background-color: #0f5ba8;
+color: #ffffff !important;
+}
+
+/* How Washington Works Pages -- nb 9/20/12 */
+#washington-works-description{
+    margin: 20px 0 20px 0; 
+}
+#washington-works-title{
+    margin: 20px 0 20px 0; 
+    border-bottom: 1px solid #e3e3e3;
+}
+#washington-works-video{
+    margin-left: 10px; 
+}
+#washington-works-infographic{
+    margin:20px 20px 0 35px;
+}
+/* Licensing Partner Static Feature - nb 8/27/12 */
+#topic-landing .licensing-partner h3{
+    font-size: 1.33em;
+    margin: 10px 10px 0 10px;
+}
+
+#topic-landing .licensing-partner{ padding-bottom: 10px; }
+    
+#topic-landing .licensing-partner .thumbnail{ 
+    float: left;
+    border: 1px solid #ccc;
+    margin: 0 10px 5px 0;
+}
+    
+#topic-landing .licensing-partner .details{ margin: 0 10px 10px; }    
+    
+#topic-landing .licensing-partner p{ 
+    font-family:verdana;
+    line-height: 140%;
+}   
+
+/* Sidebar eLearning Courses - nb 7/6/12 */
+#sidebar .elearning-courses a:link,
+#sidebar .elearning-courses a:visited{
+    color: #000;
+    font-weight: normal;
+}
+    
+#sidebar .elearning-courses a:hover{ 
+    color: #0d56a2; 
+    text-decoration: none;
+}
+    
+ #sidebar .elearning-courses{
+    padding: 0;
+    margin: 0;
+    width: 202px;
+    font-size: 1.33em;
+}
+    
+ #sidebar .elearning-courses li{
+    margin: 0;
+    padding: 0 0 10px 0;
+    list-style: none;       
+}
+
+#sidebar .elearning-courses h4{
+    padding: 2px 6px 2px 10px;
+    background: #1b1b1b url(http://media.wiley.com/spa_assets/R16B044/site/dummies2/include/images/bg/leftnav-header-bg.gif) repeat-x bottom left;
+    color: #fbf900;
+}
+
+#sidebar .elearning-courses ul{
+    margin: 0;
+    padding: 5px 0 0 0;
+    background: #fff url(http://media.wiley.com/spa_assets/R16B044/site/dummies2/include/images/bg/generic-gradient-bg.gif) repeat-x top left;
+}   
+  
+#sidebar .elearning-courses ul li{
+    margin: 0;
+    padding: 3px 6px 1px 10px;
+    color: #000;
+    font-weight: bold;
+    background: none;
+}  
+    
+#sidebar .elearning-courses b{ font-weight: normal; }    
+#sidebar .elearning-courses ul li{ padding-bottom: 15px; }  
+
+/* Split Related Feature with Outbrain Widget - nb 2/17/12 */
+.related-content-split{ 
+    width: 310px; 
+    float: left;
+    margin-right: 10px;
+}	
+	
+.outbrain-widget-split{
+    width: 310px;
+    float: right;
+}
+
+.outbrain-organic-widget-split{ 
+    width: 310px; 
+    float: left;
+    margin-right: 10px;
+}	
+	
+.outbrain-paid-widget-split{
+    width: 310px;
+    float: right;
+}
+
+
+#contenttype-html .TechnicalStuff, #contenttype-html .Remember, #contenttype-html .Tip, #contenttype-html .Warning, #contenttype-html .CheatSheet {
+    margin-left: 0;
+}
+
+/* Topic Page Carousels - nb 10/18/12 */
+#topic-carousel .multi-feature-carousel {
+    position: relative;
+    width: 415px;
+    height: 230px;
+    margin-bottom: 5px;
+    background-color: #f7f7f7;
+}
+    
+#topic-carousel .multi-feature-carousel .feature{ 
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#topic-carousel .multi-feature-carousel .feature a { color: #51b5f8; }
+
+#topic-carousel .multi-feature-carousel .feature .bottom-banner {
+    padding: 10px 15px;
+    width: 385px;
+    height: 20px;
+    background: url(http://media.wiley.com/spa_assets/R16B047/site/dummies2/include/images/bg/mask-70.png) repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#topic-carousel .multi-feature-carousel .feature .bottom-banner h3,
+#topic-carousel .multi-feature-carousel .feature .bottom-banner h4,
+#topic-carousel .multi-feature-carousel .feature .bottom-banner h5 { color: #ffffff; }
+ 
+#topic-carousel .multi-feature-carousel .feature .bottom-banner h3 { font: 18px "Arial", sans-serif; }
+#topic-carousel .multi-feature-carousel .feature .bottom-banner h4 { font: 16px "Arial", sans-serif; }
+#topic-carousel .multi-feature-carousel .feature .bottom-banner h5 { font: 14px "Arial", sans-serif; }
+
+#topic-carousel .multi-feature-carousel .feature .bottom-banner h3 a, 
+#topic-carousel .multi-feature-carousel .feature .bottom-banner h4 a { color: #ffffff; text-decoration: none; }
+
+#topic-carousel .multi-feature-carousel .feature .bottom-banner p { margin: 0; }
+    
+#topic-carousel .multi-feature-carousel-navigation {
+    width: 411px;
+    margin: 0 0 20px 2px;
+    padding: 0 0 0 3px;
+    list-style: none;
+    background-color: #f7f7f7;
+    border-bottom: 4px solid #001318;
+}
+    
+#topic-carousel .multi-feature-carousel-navigation li { 
+    margin: 0;
+    padding: 0 7px 5px 0;
+    display: block;
+    float: left;
+}
+
+#topic-carousel .multi-feature-carousel-navigation li.last { 
+    margin: 0;
+    padding: 0 0 5px 0;
+    display: block;
+    float: left;
+}
+
+
+#topic-carousel .multi-feature-carousel-navigation a {
+    display: block;
+    width: 97px;
+    height: 63px;
+    overflow: hidden;
+}
+
+#topic-carousel .multi-feature-carousel-navigation a img {
+    display: block;
+    height: 63px;
+    width: 147px;
+    margin: 0 -25px;
+}
+
+#topic-carousel .multi-feature-carousel-navigation a.active {
+    width: 93px;
+    height: 59px;
+    border: 4px solid #2b7dcf;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    margin: -2px;
+}
+
+#topic-carousel .multi-feature-carousel-navigation a.active img {
+    margin: -2px -27px;
+}
+/* Thanksgiving and Holiday Landing Pages - nb 11/5/12 */
+#thanksgiving h2 {
+    margin: 20px 0 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#thanksgiving h3,
+#holiday h3 {
+    /*margin: 5px 10px 10px 10px;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: normal;*/
+    margin: 0;
+    font-size: 1.33em;
+    color: #fbf900;
+    font-style: italic;
+    padding: 10px 15px 5px;
+    background: #1b1b1b url(http://media.wiley.com/spa_assets/R16B048/site/dummies2/include/images/bg/leftnav-header-bg.gif) repeat-x bottom left;
+}
+
+#thanksgiving h4,
+#holiday h4 {
+    margin: 10px 10px 15px 15px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#thanksgiving .feature-box,
+#holiday .feature-box {
+    margin: 5px;
+    padding-left: 0;
+}
+
+#thanksgiving .feature-container .main-featured-article{
+    float:left;
+    width:200px;
+    margin-right:8px;
+}
+
+#thanksgiving .feature-container .main-featured-article-last{
+    float:left;
+    width:200px;
+    margin-right:0;
+}
+
+#thanksgiving .feature-container .main-featured-article p,
+#thanksgiving .feature-container .main-featured-article-last p,
+#thanksgiving .gradient-feature .featured-article p,
+#thanksgiving .gradient-feature .featured-article-last p,
+#holiday .gradient-feature .featured-article p,
+#holiday .gradient-feature .featured-article-last p{
+    margin:10px 0 0 0;
+    line-height: 1.5em;
+}
+
+
+#thanksgiving .gradient-feature,
+#holiday .gradient-feature{ 
+    margin: 20px 0 0 0;
+    padding:2px 0;
+    background: #fff url(http://media.wiley.com/spa_assets/R16B048/site/dummies2/include/images/bg/generic-gradient-bg.gif) repeat-x top left; 
+} 
+	
+#thanksgiving .gradient-feature .featured-article,
+#holiday .gradient-feature .featured-article{ 	
+    float:left;
+    width:150px;
+    margin-right:5px;
+} 
+	
+#thanksgiving .gradient-feature .featured-article-last,
+#holiday .gradient-feature .featured-article-last{ 	
+    float:left;
+    width:150px;
+    margin-right:0;
+} 	
+
+/* Paid Video Access Page */
+#video-access {
+     margin:0 0 0 -5px;
+}
+
+/*ASVAB FOR DUMMIES*/
+.asvab-wrap {
+  width: 959px;
+  height: 800px;
+  margin: 0 0 0 -10px;
+  background-color: #fff;
+  background-image: url(http://media.wiley.com/assets/7146/33/bg_main_959x502.png);
+  background-repeat: no-repeat;
+}
+.asvab-col1 {
+	width: 418px;
+	height: 600px;
+	float: left;
+	margin: 50px 0 0 0;
+}
+.asvab-col1 a {
+	color: #0f5ba9;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: bold;
+  	font-size: 13px;
+	margin: 0 0 0 190px;
+	position: relative;
+	top: -22px;
+}
+.asvab-col2 {
+	width: 344px;
+	height: 600px;
+	position: relative;
+	left: -36px;
+	float: left;
+	margin: 80px 0 0 0;
+}
+.asvab-p1 {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: bold;
+  	font-size: 26px;
+	line-height: 28px;
+	position: relative;
+	left: -10px;
+	padding: 40px 0 0 60px;
+}
+.asvab-ul {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: normal;
+  	font-size: 16px;
+	padding: 10px 0 0 60px;
+	margin: 0 0 0 6px;
+}
+.asvab-ul li {
+	margin: 0 0 8px 0;
+}
+.asvab-book1 {
+	width: 172px;
+	height: 206px;
+	float: left;
+margin-left: -20px;
+}
+.asvab-book2 {
+
+
+
+	width: 172px;
+	height: 206px;
+	float: left;
+margin-left: 5px;
+}
+.asvab-book1 a {
+	color: #0f5ba9;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: bold;
+  	font-size: 12px;
+	margin: 0;
+	position: relative;
+	right: -30px;
+}
+.asvab-book2 a {
+	color: #0f5ba9;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: bold;
+  	font-size: 12px;
+	margin: 0;
+	position: relative;
+	left: -14px;
+}
+.asvab-book1 img {
+	position: relative;
+	left: -8px;
+}
+.asvab-book2 img {
+	position: relative;
+	left: -50px;
+}
+.asvab-col3 {
+	width: 195px;
+	height: 1085px;
+	margin: 0;
+	float: left;
+	position: relative;
+	left: -50px;
+ 	background-image: url(http://media.wiley.com/assets/7185/34/strip_216x1085.png);
+	background-repeat: no-repeat;
+}
+.asvab-p2 {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: bold;
+  	font-size: 14px;
+	margin-bottom: 10px;
+	text-align: center;
+	padding: 70px 0 0 0;
+}
+.asvab-p3 {
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: bold;
+  	font-size: 12px;
+	text-align: center;
+	position: relative;
+	top: -6px;
+}
+.asvab-col3 a {
+	color: #0f5ba9;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+.asvab-col3 a img {
+	color: #0f5ba9;
+	font-family: Arial, Helvetica, sans-serif;
+  	font-weight: bold;
+	margin: 0 0 0 40px;
+	padding: 0;
+}
+
+/*ASVAB LIGHTBOX*/
+.asvab2-wrap {
+	width: 610px;
+	padding: 0 0 0 6px;	
+}
+.asvab2-image {
+	float: left;
+	position: relative;
+	right: -16px;
+}
+.asvab2-title {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 26px;
+	padding: 0;
+	margin: 10px 0 10px 0;
+}
+.asvab2-author {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 0;
+	margin: 0 0 4px 0;
+}
+.asvab2-author a {
+	color: #01a350;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 0;
+	margin: 0 0 4px 0;
+	text-decoration: none;
+}
+.asvab2-author a:hover {
+	text-decoration: underline;
+}
+.asvab2-isbn {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 14px;
+	padding: 0;
+	margin: 0 0 16px 0;
+}
+.asvab2-blurb {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+.asvab2-buys {
+	margin: 8px 0 60px 0;
+	clear: both;
+}
+.asvab2-buypack {
+	float: left;
+	width: 130px;
+}	
+.asvab2-buypack a {
+	color: #01a350;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 24px;
+	padding: 0;
+	margin: 0 2px 0 0;
+	text-decoration: none;
+}
+.asvab2-buypack a:hover {
+	text-decoration: underline;	
+}
+.asvab2-buypack a img {
+	position: relative;
+	bottom: -8px;
+}
+.asvab2-list {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 0;
+	margin: 0 0 10px 30px;
+}
+.asvab2-list li {
+	margin: 0 0 4px 0;
+}
+
+/* FATHER'S DAY FOR DUMMIES */
+.fathers-wrap {
+  width: 958px;
+  height: 900px;
+  margin: 0 0 0 -10px;
+  background-color: #fff;
+  background-image: url(http://media.wiley.com/assets/7148/64/bg_main_958x533.png);
+  background-repeat: no-repeat;
+}
+.fathers-title {
+	width: 959px;
+	margin: 160px 0 0 0;
+	padding: 0;
+	color: #000;
+	text-align: center;
+	line-height: 53px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 22px !important;
+	background-color: #FF0;
+}
+.fathers-cell1 {
+	float: left;
+	width: 440px;
+	height: 214px;
+	border: 1px solid #000;
+	background-color: #fff;	
+	margin: 28px 0 0 25px;
+	padding: 0;
+	
+	box-shadow: 4px 4px 4px #ccc;
+}
+.fathers-cell1 img {
+	float: left;
+	margin: 10px 0 10px 12px;
+	width: 134px;
+	height: 160px;	
+}
+.fathers-cell2 {
+	float: left;
+	width: 290px;
+	height: 214px;
+	border: 1px solid #000;
+	background-color: #fff;	
+	margin: 28px 0 0 20px;
+	padding: 0;
+	
+	box-shadow: 4px 4px 4px #ccc;
+}
+.fathers-cell2 img {
+	float: left;
+	margin: 10px 0 10px 11px;
+	width: 134px;
+	height: 160px;	
+}
+.fathers-celltitle {
+	clear: both;
+	width: 100%;
+	height: 34px;
+	line-height: 36px;
+	background-color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-weight: bold;
+	font-size: 19px !important;
+	display: block;
+	text-align: center;
+}
+.fathers-seeall1 {
+	width: 440px;
+	height: 26px;
+	line-height: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0073b9;
+	font-weight: bold;
+	font-size: 14px !important;
+	text-align: center;
+	float: left;	
+	margin: 0 0 0 25px;
+}
+.fathers-seeall2 {
+	width: 290px;
+	height: 26px;
+	line-height: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0073b9;
+	font-weight: bold;
+	font-size: 14px !important;
+	text-align: center;
+	float: left;	
+	margin: 0 0 0 20px;
+}
+.fathers2-wrap {
+  width: 784px;
+  height: 900px;
+  margin: 0 0 0 -19px;
+  background-color: #fff;
+  background-image: url(http://media.wiley.com/assets/7148/63/bg_category_784x436.png);
+  background-repeat: no-repeat;
+}
+.fathers2-title {
+	width: 784px;
+	margin: 160px 0 0 0;
+	padding: 0;
+	color: #000;
+	text-align: center;
+	line-height: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 20px !important;
+	background-color: #FF0;
+}
+.fathers2-content {
+  margin: 30px 0 0 38px;
+  padding: 0;
+}
+.fathers2-half {
+  float: left;
+  width: 345px;	
+  margin: 20px 0 20px 0;
+}
+#fathers2-halfbuff {
+	margin-right: 18px;	
+}
+.fathers2-whole {
+	float: left;
+	width: 708px;	
+	margin: 20px 0 20px 0;
+}
+.fathers2-quarter {
+	float: left;
+	width: 174px;	
+	margin: 20px 0 20px 0;
+}
+.fathers2-threequarter {
+	float: left;
+	width: 516px;	
+	margin: 20px 0 20px 0;
+}
+#fathers2-last {
+  margin-bottom: 40px;	
+}
+.fathers2-cat1 {
+  width: 337px;
+  height: 38px;
+  color: #fff;
+  text-align: left;
+  line-height: 38px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding: 0 0 0 8px;
+  margin: 0 0 6px 0;
+  background-image: url(http://media.wiley.com/assets/7138/09/cat_bg.png);
+  background-repeat: repeat-x;
+}
+.fathers2-cat2 {
+  width: 700px;
+  height: 38px;
+  color: #fff;
+  text-align: left;
+  line-height: 38px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding: 0 0 0 8px;
+  margin: 0 0 6px 0;
+  background-image: url(http://media.wiley.com/assets/7138/09/cat_bg.png);
+  background-repeat: repeat-x;
+}
+.fathers2-cat3 {
+  width: 508px;
+  height: 38px;
+  color: #fff;
+  text-align: left;
+  line-height: 38px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding: 0 0 0 8px;
+  margin: 0 0 6px 0;
+  background-image: url(http://media.wiley.com/assets/7138/09/cat_bg.png);
+  background-repeat: repeat-x;
+}
+.fathers2-cat4 {
+  width: 170px;
+  height: 38px;
+  color: #fff;
+  text-align: left;
+  line-height: 38px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding: 0 0 0 8px;
+  margin: 0 0 6px 0;
+  background-image: url(http://media.wiley.com/assets/7138/09/cat_bg.png);
+  background-repeat: repeat-x;
+}
+.fathers2-package {
+  float: left;
+  width: 172px;	
+}
+.fathers2-package a {
+  color: #0f5ba9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+}
+.fathers3-wrap {
+	width: 610px;
+	padding: 0 0 0 6px;	
+}
+.fathers3-image {
+	float: left;
+	position: relative;
+	right: -16px;
+}
+.fathers3-title {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 26px;
+	padding: 0;
+	margin: 10px 0 10px 0;
+}
+.fathers3-author {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 0;
+	margin: 0 0 4px 0;
+}
+.fathers3-author a {
+	color: #01a350;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 0;
+	margin: 0 0 4px 0;
+	text-decoration: none;
+}
+.fathers3-author a:hover {
+	text-decoration: underline;
+}
+.fathers3-isbn {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 14px;
+	padding: 0;
+	margin: 0 0 16px 0;
+}
+.fathers3-blurb {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+.fathers3-buys {
+	margin: 8px 0 60px 0;
+	clear: both;
+}
+.fathers3-buypack {
+	float: left;
+	width: 130px;
+}	
+.fathers3-buypack a {
+	color: #01a350;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 24px;
+	padding: 0;
+	margin: 0 2px 0 0;
+	text-decoration: none;
+}
+.fathers3-buypack a:hover {
+	text-decoration: underline;	
+}
+.fathers3-buypack a img {
+	position: relative;
+	bottom: -8px;
+}
+.fathers3-list {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 0;
+	margin: 0 0 10px 30px;
+}
+.fathers3-list li {
+	margin: 0 0 4px 0;
+}
+
+/* LIGHTBOX */
+.promo-lighbox-wrap li {
+	font-size:14px;
+}
+.promo-lighbox-wrap {
+    padding: 15px;
+    width: 770px;
+}
+.promo-buypack {
+    float: left;
+    width: 121px;
+}
+.promo-buypack a {
+    color: #01A350;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0 2px 0 0;
+    padding: 0;
+    text-decoration: none;
+}
+.promo-image {
+	float:left;
+	padding:0 0 10px 0;
+	position:relative;
+}
+
+/*Generic Lightboxes*/
+.generic-lightbox-wrap {
+	width: 610px;
+	padding: 0 0 50px 6px;	
+}
+.generic-lightbox-image {
+	float: left;
+	position: relative;
+	right: -16px;
+	padding: 0 35px 0 0;
+}
+.generic-lightbox-title {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 26px;
+	padding: 0;
+	margin: 10px 0 10px 0;
+}
+.generic-lightbox-author {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 0;
+	margin: 0 0 4px 0;
+}
+.generic-lightbox-author a {
+	color: #01a350;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 0;
+	margin: 0 0 4px 0;
+	text-decoration: none;
+}
+.generic-lightbox-author a:hover {
+	text-decoration: underline;
+}
+.generic-lightbox-isbn {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 14px;
+	padding: 0;
+	margin: 0 0 16px 0;
+}
+.generic-lightbox-blurb {
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+.generic-lightbox-buys {
+	margin: 8px 0 60px 0;
+	clear: both;
+}
+.generic-lightbox-buypack {
+	float: left;
+	width: 130px;
+}	
+.generic-lightbox-buypack a {
+	color: #01a350;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 24px;
+	padding: 0;
+	margin: 0 2px 0 0;
+	text-decoration: none;
+}
+.generic-lightbox-buypack a:hover {
+	text-decoration: underline;	
+}
+.generic-lightbox-buypack a img {
+	position: relative;
+	bottom: -8px;
+}
+.generic-lightbox-wrap ul {
+	color: #000;
+	font:normal 14px/16px Arial, Helvetica, sans-serif !important;
+	padding: 0;
+	margin: 0 0 10px 30px;
+}
+.generic-lightbox-wrap li {
+	margin: 0 0 4px 0;
+	font:normal 14px/16px Arial, Helvetica, sans-serif !important;
+}
+
+/* Holiday Tech Gift Guide 2013 - kb 11/1/13 */
+.tech-wrap {
+        width: 758px;
+        margin: 0 0 0 -19px;
+}
+.tech-section {
+	width: 670px;
+	margin: 0 0 60px 57px;	
+}
+.tech-title {
+	width: 660px;
+	height: 30px;
+	background-color: #000;	
+	color: #ffff00;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+	padding: 0 0 0 10px;
+	margin: 0;
+}
+.tech-gray1 {
+	width: 670px;
+	height: 189px;
+	background-image: url(http://media.wiley.com/assets/7083/83/gray1.png);
+	background-repeat: no-repeat;
+}
+.tech-gray2 {
+	width: 670px;
+	height: 378px;
+	background-image: url(http://media.wiley.com/assets/7083/84/gray2.png);
+	background-repeat: no-repeat;
+}
+.tech-gray3 {
+	width: 670px;
+	height: 567px;
+	background-image: url(http://media.wiley.com/assets/7083/85/gray3.png);
+	background-repeat: no-repeat;
+}
+.tech-gray4 {
+	width: 670px;
+	height: 675px;
+	background-image: url(http://media.wiley.com/assets/7083/86/gray4.png);
+	background-repeat: no-repeat;
+}
+.tech-package {
+	float: left;
+	height: 180px;
+	margin: 20px 0 0 36px;
+}
+.tech-buy {
+	margin: 2px 0 20px 11px;	
+}
+.tech-buy a {
+	color: #0d56a8;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.tech-top {
+  clear: both;
+  font-weight: bold;
+  padding: 10px 10px 0 0;
+  margin: 0;
+  text-align: right;
+}
+
+/* NEW HOMEPAGE - nb 12/9/13 */
+#home-page #main-content .home-split-left{float:left;width:300px;margin-right:20px;}
+#home-page #main-content .home-split-right{float:left;width:300px;}  
+  
+#home-page #home-topics{background:url(http://media.wiley.com/assets/7214/82/browse-topics.png) no-repeat left top;border:none;width:958px;margin:0;padding:0;}
+#home-page #home-topics h2{font:italic bold 21px "Myriad Pro", arial, sans-serif;position:relative;left: 16px;top:15px;}
+#home-page #home-topics .topic-list{float:left;margin:44px 0 0 20px;width:182px;}
+
+#home-page #home-topics .topics{list-style:none;margin:0;padding:7px 0 1px;font-size:13px;font-weight:bold;}
+#home-page #home-topics .topics li{list-style:none;margin:0;}
+#home-page #home-topics .topics li a{display:block;height:22px;line-height:22px;padding:0 0 0 -2px;background:url(http://media.wiley.com/assets/7214/92/home-topics-hover.png) no-repeat left top;text-decoration:none;position:relative;font-weight:bold;white-space:nowrap;}
+#home-page #home-topics .topics li a:hover{height:24px;margin-bottom:-2px;background-position:left bottom;z-index:1;}
+
+#home-page #homepage-content{border-bottom:1px solid #ccc;margin-bottom:20px;padding:18px 11px;width:936px;}
+#home-page #homepage-content .product-type{float:left;margin:0 43px;width:148px;}
+#home-page #homepage-content .product-type .product-icon{margin:0 45px 8px 45px;}
+#home-page #homepage-content .product-type h2 {font-size:18px;font-weight:bold;text-align:center;}
+#home-page #homepage-content .product-type .product-description{font-size:12px;font-weight:bold;line-height:150%;margin:12px 0;text-align:center;color:#383737;}
+#home-page #homepage-content .product-type .product-button{margin:0;}
+#home-page .placement .caption{color:#5a5a5a;font-family:verdana;font-size:0.83em;font-weight:normal;margin-bottom:10px;text-align:left;text-transform:uppercase;}
+
+#home-page .feature-container{border:none !important;}
+#home-page #main-content .feature-container-header{padding:5px 20px 0 0;min-height:26px;background:#fff;text-align:center;}
+#home-page #main-content .feature-container-header h2,
+#home-page #main-content .feature-container-header h3,
+#home-page #main-content .feature-container-header h4{line-height:100%;font-style:normal;display:block;text-align:left;vertical-align:middle;}
+#home-page #main-content .feature-container-header h2{font-size:18px;color:#01458a;font-family:arial,sans-serif;margin-bottom:0;}
+#home-page #main-content .feature-container-header h4{color:#5a5a5a;font-family:verdana;font-size:0.83em;font-weight:normal;margin:0 0 10px 0;text-transform:uppercase;}
+#home-page #main-content .feature-box{margin:10px 10px 20px;padding-left:20px;}
+#home-page #main-content .feature-box ul,#main-content .feature-box ol{margin:8px 0;}
+#home-page #main-content .feature-box h2,#main-content .feature-box .product-title{font-size:15px;margin-bottom:8px;}
+#home-page #main-content .feature-box li{margin-left:0;color:#7c7c7c;}
+#home-page #main-content .feature-box .feature-box-header{display:none;}
+#home-page #main-content .feature-box .product-listing{border:0;padding:0;}
+#home-page #main-content .feature-box .product-description{margin-top:0;margin-bottom:0;}
+#home-page #main-content .feature-box .more{display:none;}
+
+/* PRODUCTS NAVBAR - nb 12/9/13 */
+#products-navbar-wrapper{background-color:#fff;border-right:1px solid #d9d9d9;border-left:1px solid #d9d9d9;width:958px;margin:0;padding:4px 0 8px 0;}
+#products-navbar{background:#fff url(http://media.wiley.com/assets/7215/00/bg-navbar-products.png) repeat-x left top;border-bottom:2px solid #d9d9d9;width:958px;margin:0;padding:12px 0;}
+#products-navbar #product-test-banks{float:left;width:234px;height:36px;border-right:1px solid #d9d9d9;margin-left:12px;}
+#products-navbar #product-elearning{float:left;width:234px;height:36px;margin-left:8px;border-right:1px solid #d9d9d9;}
+#products-navbar #product-mobile-apps{float:left;width:229px;height:36px;margin-left:8px;border-right:1px solid #d9d9d9;}
+#products-navbar #product-store{float:left;width:208px;height:36px;margin-left:8px;margin-right:12px;}
+#products-navbar .icon{float:left;width:36px;margin-right:6px;}
+#products-navbar .product-info{float:left;margin:0;padding:0;}
+#products-navbar .title{color:#666666;font-size:12px;font-weight:bold;margin-top:-2px;}
+#products-navbar .button{margin-top:2px;}
+
+/* Added styles for custom topic landing page - nb 4/30/14 */
+.topic-featured-resource {
+   line-height: 1.3em;
+   font-family: verdana;
+}
+.topic-featured-resource .resource {
+   border-bottom: 1px solid #ddd;
+   overflow: hidden;
+   padding: 10px 12px 20px;
+   width: auto;
+}
+.topic-featured-resource img { 
+   border: none; 
+   float: left; 
+   margin: 5px 0 15px 0; 
+   width: 150px; 
+}
+.topic-featured-resource .details { 
+   float: right; 
+   width: 235px; 
+}
+.topic-featured-resource .resource ul { 
+   margin: 0; 
+   padding: 0; 
+}
+.topic-featured-resource .resource li { 
+   margin: 5px 0 5px 20px; 
+   padding-left: 0; 
+}
+.product-type-icon { 
+   vertical-align:text-bottom; 
+}
+
+/* New Ad Styles */
+.ad-placement{margin-bottom:0;}
+
+.ad-caption{color:#999;text-align:center;font-family:verdana;font-size:.83em;font-weight:normal;}
+
+.ad-rectangle {
+   margin-bottom:0;
+}
+.ad-rectangle .ad-caption {
+   color:#999;
+   font-family:verdana;
+   font-size:.83em;
+   font-weight:normal;
+   margin-right:45px;
+   text-align:right;
+}
+#container-skyscraper {
+   display:none;
+   position:relative;
+   margin:0;
+   padding:0;
+}
+/* if screen size gets wider than 1350 */
+@media screen and (min-width:1350px){
+   #container-skyscraper {
+    display:inline;
+   }
+}
+.ad-skyscraper {
+   position:absolute;
+   top:78px;
+   left:-190px;
+}
+.ad-skyscraper .ad-caption {
+   color:#999;
+   font-family:verdana;
+   font-size:.65em;
+   font-weight:normal;
+   text-align:center;
+}
+#position2 .ad-caption {
+   font-family:verdana;
+   font-size:.83em;
+}
+
+/*NEW OUTBRAIN WIDGET*/
+.FB.outbrain-organic h4,
+.FB.outbrain-paid h4{
+    border:none !important;
+    font-size:19px;
+    font-weight:bold;
+}
+.outbrain-organic .logo{
+    padding-right:10px;
+    vertical-align:middle;
+}
+.outbrain-organic .OUTBRAIN ul{
+    color:#ffff02;
+    font-size:19px !important;
+    margin:0 0 0 20px;
+    padding:0;
+}
+.outbrain-organic .OUTBRAIN li{
+    margin:0;
+    padding:0 0 10px 0;
+}
+
+.outbrain-organic .OUTBRAIN li a{
+    color:#0380b7;
+    font-size:14px;
+    font-weight:bold;
+}
+.outbrain-paid .AR_4.ob-strip-layout .ob-rec-text,
+.outbrain-paid .AR_4.ob-strip-layout .ob-rec-source{
+    color:#0380b7;
+}
+
+.imageCredit{text-align:right}
+
+#topnav{z-index:800 !important}
+
+/* Featured Content Topic Landing Page - 8/3/15 nb */
+#main-content-2col{float:left;width:730px;margin:5px 0 0 0;}
+#main-content-2col .featured-content-container{border-bottom:1px solid #ddd;; margin:0 0 10px;}
+#main-content-2col .featured-content-container h2{background:none !important; border-bottom:2px solid #ddd;; color:#000; font-family:Roboto; font-size:1.75em; font-style:normal; font-weight:700; margin:0 0 15px; padding:0 0 10px 0; text-transform:uppercase;}
+#main-content-2col .featured-content-container h3{font-size:1.33em; margin-top:10px;}
+#main-content-2col .featured-content{float:left; width:335px; margin:10px 60px 20px 0;}
+#main-content-2col .featured-content-last{float:left; width:335px; margin:10px 0 20px 0;}
+#main-content-2col .view-all{text-align:right;margin-bottom:30px;padding:10px 5px;font-size:1.33em;font-weight:bold;border-bottom:4px solid #ddd;}

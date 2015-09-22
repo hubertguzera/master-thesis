@@ -58,7 +58,8 @@ class swiat(object):
         print "Prawie gotowe"
         for czlowiek in self.ludnosc:
             czlowiek.znajomi = [random.randrange(zalozenia.populacja) for x in range(3)]
-        print "Gotowe!"
+        "Wypisuje sklepy"
+
 
 
 
@@ -100,6 +101,8 @@ class konsument(object):
             self.pracay = random.randrange(0,zalozenia.wymiar_y)
             if swiat.mapa[self.pracax][self.pracay].typ == "Praca":
                 break
+
+        self.mozliwe_sklepy = []
             
     def macierz_cech(self):
             return f_p.wypisz_cechy_klienta(self.wiek,self.plec,self.wyksztalcenie,self.zarobki,self.zainteresowania)
@@ -121,6 +124,24 @@ class konsument(object):
             if sklepy : sklepy = random.choice(sklepy)
         return sklepy
 
+    def wypisz_mozliwe_sklep(self, swiat):
+        sklepy=[]
+        if self.wiek > 17 and random.random()<zalozenia.szansa_na_zakupy:
+            a = []
+            start=(self.pracax,self.pracay)
+            koniec=swiat.nodes[(self.domx,self.domy)][0]
+            a.append([start,koniec])
+            for i in range(3):
+                start=(self.domx,self.domy)
+                znajomy = swiat.ludnosc[self.znajomi[i]]
+                koniec=swiat.nodes[(znajomy.domx,znajomy.domy)][0]
+                a.append([start,koniec])
+            trasa = []
+            for element in a:
+                trasa = trasa + f_m.szukaj_drogi(swiat.nodes,element[0],element[1],nowy=True)
+            for punkt in trasa:
+                sklepy = sklepy + f_m.wypisz_sasiadujace(punkt,swiat,"Sklep")
+        return sklepy
         
 def generowanie_swiata():
     wybor = raw_input("Wybierz 1 dla zapisu, 2 dla odczytu: ")

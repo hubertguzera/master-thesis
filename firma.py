@@ -8,6 +8,7 @@ from funkcje import funkcje_analizadanych as f_a
 from funkcje import funkcje_firma as f_f
 from funkcje import funkcje_pomocnicze as f_p
 from funkcje import funkcje_mapa as f_m
+from funkcje import funkcje_raportowanie as f_r
 
 class rynek(object):
       def __init__(self,swiat):
@@ -49,6 +50,9 @@ class rynek(object):
             for trasa in self.symulowana_firma.trasy.trasy:
                 trasa.oblozenie = 0
                 trasa.udzial = 0
+            for sciezka in self.symulowana_firma.trasy.drogi:
+                sciezka.oblozenie = 0
+
 
 
 
@@ -65,8 +69,14 @@ class firma(object):
       def klienci_w_sklepach(self,swiat,tura=0): #zmienic nazwe funkcji
           print "Przyporzadkowuje klientow do sklepu..."
           for sklep in self.sklepy : sklep.klienci = []
+          i= 0
           for czlowiek in swiat.ludnosc:
-            odwiedzone = czlowiek.odwiedzony_sklep(swiat)
+            i+=1
+            #odwiedzone = czlowiek.odwiedzony_sklep(swiat)
+            if czlowiek.mozliwe_sklepy:
+                odwiedzone = random.choice(czlowiek.mozliwe_sklepy)
+            else:
+                odwiedzone = []
             for sklep in self.sklepy:
                 if sklep.lokalizacja == odwiedzone:
                     sklep.klienci.append(czlowiek.macierz_cech())
@@ -198,7 +208,6 @@ class trasy(firma):
             k+=1
         k=0
         for item in f_f.kombinacja_wszytkich_lokalizacji([firma.fabryki , firma.magazyny, firma.sklepy]):
-
             for droga in self.drogi:
                 if (droga.poczatek == item[0] and droga.koniec == item[1]) or (droga.poczatek == item[1] and droga.koniec == item[2]):
                     item.append(droga)
@@ -234,18 +243,22 @@ class sciezka(trasy):
         self.oblozenie = 0
         self.symbol = sympy.symbols("r" + str(x+1))
         self.koszt = 0
-        self.efekt_skali = 0
+        self.efekt_skala = 0
 
 def tworz_swiat_i_rynek():
     symulowany_swiat = swiat()
     pickle.dump(symulowany_swiat ,open("Swiat.p","wb"))
     symulowany_swiat = pickle.load(open("Swiat.p","rb"))
     symulowany_rynek = rynek(symulowany_swiat)
+    for czlowiek in symulowany_rynek.swiat.ludnosc:
+        czlowiek.mozliwe_sklepy = czlowiek.wypisz_mozliwe_sklep(symulowany_rynek.swiat)
     #print symulowany_swiat.nodes
     pickle.dump(symulowany_rynek,open("Rynek.p","wb"))
     f_m.rysujmape(symulowany_rynek.swiat,"mapy/typy")
     f_m.rysujludnosc(symulowany_rynek.swiat, symulowany_rynek.swiat.ludnosc,"mapy/ludnosc")
     f_m.rysujmapefirmy(symulowany_rynek.swiat,"mapy/firma")
+    f_r.zapis_ludnosc("rezultaty/ludnosc.csv",symulowany_rynek.swiat)
+    f_r.zapis_produkty("rezultaty/produkty.csv",symulowany_rynek)
 
 #tworz_swiat_i_rynek()
 

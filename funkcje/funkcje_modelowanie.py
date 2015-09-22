@@ -62,7 +62,10 @@ class training(object):
         f_r.zapis_przewidywania("rezultaty/przewidywania.csv",0,czysc=True)
         i = 0
         for element in self.historia_x:
+            print element
+            print self.lg.predict_proba(element)[0]
             f_r.zapis_przewidywania("rezultaty/przewidywania.csv",[self.historia_y[i],self.lg.predict(element)[0],self.km.predict(element)[0]])
+
             i+=1
 
 
