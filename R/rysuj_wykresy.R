@@ -54,11 +54,9 @@ produkty <- read.csv("rezultaty/produkty.csv")
 print(xtable(produkty))
 dev.off()
 
-przewidywania <- read.csv("rezultaty/przewidywania.csv")
-
 #Prognozy
 
-prognoza <- read.csv("rezultaty/jeden/prognoza.csv")
+prognoza <- read.csv("rezultaty/prognoza.csv")
 prognoza <- aggregate(prognoza[3:4], by=list(prognoza$Tura), FUN="sum")
 png("tekst/pictures/prog.png")
 plot(prognoza$Przewidywane, col="blue", ylim=c(0,as.integer(max(prognoza)*1.25)), xaxt = 'n',xlab="Tura", ylab="Iloœæ produktów", main = 'Prognoza sprzeda¿y i rzeczywista sprzeda¿ produktów')
@@ -68,97 +66,14 @@ points(prognoza$Sprzedaz, col="green")
 lines(prognoza$Sprzedaz, col="green")
 dev.off()
 
-#Wyniki firmy bez optymalizacji
-
-koszty <- read.csv("rezultaty/zero/koszty.csv")
-koszty <- aggregate(koszty[6], by=list(koszty$Tura), FUN="sum")
-przychody <- read.csv("rezultaty/zero/przychody.csv")
-przychody <- aggregate(przychody[5], by=list(przychody$Tura), FUN="sum")
-zysk <- read.csv("rezultaty/zero/zysk.csv")
-trasy <- read.csv("rezultaty/zero/trasy.csv")
-trasy <- aggregate(trasy[c(3,4,5)], by=list(trasy$Tura), FUN="mean")
-
-
-png("tekst/pictures/brak_algorytmu/wyniki.png")
-plot(koszty$Koszt.w.turze, col="red", ylim=c(0,as.integer(max(przychody)*1.25)), xaxt = 'n',xlab="Tura", ylab="PLN", main = 'Wyniki symulacji bez optymalizacji')
-axis(1, at=1:nrow(koszty),koszty$Tura)
-lines(koszty$Koszt.w.turze, col="red")
-points(przychody$Przychod, col="green")
-lines(przychody$Przychod, col="green")
-points(zysk$Zysk, col="blue")
-lines(zysk$Zysk, col="blue")
-dev.off()
-
-
-png("tekst/pictures/brak_algorytmu/trasy.png")
-plot(trasy$Koszt, col="red", ylim=c(as.integer(min(trasy)-1.25),as.integer(max(trasy)*1.25)), xaxt = 'n',xlab="Tura", ylab="PLN", main = 'Œrednie wyniki tras')
-axis(1, at=1:nrow(trasy),trasy$Tura)
-lines(trasy$Koszt, col="red")
-points(trasy$Przychod, col="green")
-lines(trasy$Przychod, col="green")
-points(trasy$Zysk, col="blue")
-lines(trasy$Zysk, col="blue")
-
-dev.off()
-trasy <- read.csv("rezultaty/jeden/trasy.csv")
-png("tekst/pictures/brak_algorytmu/trasy2.png")
-ggplot(data = trasy, aes(x = trasy$Tura, y=trasy$Zysk, color = trasy$Symbol)) + ggtitle("Zysk per trasa")+xlab("Zysk") + ylab("Tura")+ geom_line(aes(group=trasy$Symbol)) +geom_point() + theme_bw() + geom_hline(linetype="dashed",aes(yintercept=0))
-dev.off()
-
-#Wyniki firmy z optymalizacji
-koszty <- read.csv("rezultaty/jeden/koszty.csv")
-koszty <- aggregate(koszty[6], by=list(koszty$Tura), FUN="sum")
-przychody <- read.csv("rezultaty/jeden/przychody.csv")
-przychody <- aggregate(przychody[5], by=list(przychody$Tura), FUN="sum")
-zysk <- read.csv("rezultaty/jeden/zysk.csv")
-trasy <- read.csv("rezultaty/jeden/trasy.csv")
-trasy <- aggregate(trasy[c(3,4,5)], by=list(trasy$Tura), FUN="mean")
-
-
-
-
-png("tekst/pictures/algorytm_brak_skali/wyniki.png")
-plot(koszty$Koszt.w.turze, col="red", ylim=c(0,as.integer(max(przychody)*1.25)), xaxt = 'n',xlab="Tura", ylab="PLN", main = 'Wyniki symulacji bez optymalizacji')
-axis(1, at=1:nrow(koszty),koszty$Tura)
-abline(v = 15, lty = 2)
-
-sredni_zysk = c(1:30)
-sredni_zysk[c(1:16)] = mean(zysk$Zysk[c(1:16)]) 
-sredni_zysk[c(16:30)] = mean(zysk$Zysk[c(16:25)]) 
-sredni_zysk
-
-lines(sredni_zysk,lty = 3,col="purple" )
-lines(koszty$Koszt.w.turze, col="red")
-points(przychody$Przychod, col="green")
-lines(przychody$Przychod, col="green")
-points(zysk$Zysk, col="blue")
-lines(zysk$Zysk, col="blue")
-dev.off()
-
-
-
-png("tekst/pictures/algorytm_brak_skali/trasy.png")
-plot(trasy$Koszt, col="red", ylim=c(as.integer(min(trasy)-1.25),as.integer(max(trasy)*1.25)), xaxt = 'n',xlab="Tura", ylab="PLN", main = 'Œrednie wyniki tras')
-axis(1, at=1:nrow(trasy),trasy$Tura)
-lines(trasy$Koszt, col="red")
-points(trasy$Przychod, col="green")
-lines(trasy$Przychod, col="green")
-points(trasy$Zysk, col="blue")
-lines(trasy$Zysk, col="blue")
-
-dev.off()
-trasy <- read.csv("rezultaty/jeden/trasy.csv")
-png("tekst/pictures/algorytm_brak_skali/trasy2.png")
-ggplot(data = trasy, aes(x = trasy$Tura, y=trasy$Zysk, color = trasy$Symbol)) + ggtitle("Zysk per trasa")+xlab("Zysk") + ylab("Tura")+ geom_line(aes(group=trasy$Symbol)) +geom_point() + theme_bw() + geom_hline(linetype="dashed",aes(yintercept=0))
-dev.off()
 
 #Wyniki firmy z optymalizacji 2
-koszty <- read.csv("rezultaty/dwa/koszty.csv")
+koszty <- read.csv("rezultaty/koszty.csv")
 koszty <- aggregate(koszty[6], by=list(koszty$Tura), FUN="sum")
-przychody <- read.csv("rezultaty/dwa/przychody.csv")
+przychody <- read.csv("rezultaty/przychody.csv")
 przychody <- aggregate(przychody[5], by=list(przychody$Tura), FUN="sum")
-zysk <- read.csv("rezultaty/dwa/zysk.csv")
-trasy <- read.csv("rezultaty/dwa/trasy.csv")
+zysk <- read.csv("rezultaty/zysk.csv")
+trasy <- read.csv("rezultaty/trasy.csv")
 trasy <- aggregate(trasy[c(3,4,5)], by=list(trasy$Tura), FUN="mean")
 
 
@@ -194,7 +109,7 @@ points(trasy$Zysk, col="blue")
 lines(trasy$Zysk, col="blue")
 
 dev.off()
-trasy <- read.csv("rezultaty/dwa/trasy.csv")
+trasy <- read.csv("rezultaty/trasy.csv")
 png("tekst/pictures/algorytm_skala/trasy2.png")
 ggplot(data = trasy, aes(x = trasy$Tura, y=trasy$Zysk, color = trasy$Symbol)) + ggtitle("Zysk per trasa")+xlab("Zysk") + ylab("Tura")+ geom_line(aes(group=trasy$Symbol)) +geom_point() + theme_bw() + geom_hline(linetype="dashed",aes(yintercept=0))
 dev.off()

@@ -128,7 +128,7 @@ class fabryka(firma):
         self.oblozenie = 0
         self.symbol = sympy.symbols("f" + str(x+1))
         self.koszt = 0
-        self.efekt_skali = 0
+        self.efekt_skala = 0
 
 class magazyn(firma):
     def __init__(self,swiat, x):
@@ -138,7 +138,7 @@ class magazyn(firma):
         self.oblozenie = 0
         self.symbol = sympy.symbols("m" + str(x+1))
         self.koszt = 0
-        self.efekt_skali = 0
+        self.efekt_skala = 0
 
 class sklep(firma):
     def __init__(self,swiat,x):
@@ -152,7 +152,7 @@ class sklep(firma):
         self.oblozenie = 0
         self.symbol = sympy.symbols("s" + str(x+1))
         self.koszt = 0
-        self.efekt_skali = 0
+        self.efekt_skala = 0
         self.przewidywana_sprzedaz = 0
 
     def dostawa_towaru(self, rynek, trasa=None,symulowany_towar = 30,inne_towary=30):
@@ -174,6 +174,12 @@ class sklep(firma):
                 if element.elementy[2].lokalizacja==self.lokalizacja:
                     b.append(element)
             trasa = random.choice(b)
+        if trasa=="Krotka":
+            d = {}
+            for element in rynek.symulowana_firma.trasy.trasy:
+                if element.elementy[2].lokalizacja==self.lokalizacja:
+                    d[element] = element.elementy[3].koszt + element.elementy[4].koszt
+            trasa = min(d.items(), key=lambda x: x[1])[0]
         rynek.symulowana_firma.trasy.dodaj_do_trasy(symulowany_towar,trasa)
 
     def sprzedaz_w_sklepie(self,towar):
@@ -217,12 +223,9 @@ class trasy(firma):
 
     def dodaj_do_trasy(self,ilosc,trasa):
         for key in self.trasy:
-
             if key==trasa:
-
                 key.oblozenie += ilosc
                 for item in key.elementy:
-
                     item.oblozenie += ilosc
 
 

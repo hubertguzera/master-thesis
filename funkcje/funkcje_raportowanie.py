@@ -88,13 +88,25 @@ def zapis_trasy(plik,rynek,czysc=False):
     firma = rynek.symulowana_firma
     if czysc:
         czysc_plik(plik)
-        dodaj_do_pliku(plik,["Tura","Symbol","Przychod","Koszt","Zysk"])
+        dodaj_do_pliku(plik,["Tura","Symbol","Oblozenie"])
     else:
         for trasa in firma.trasy.trasy:
-            koszt = 0
-            przychod = 0
-            for element in trasa.elementy:
-                    koszt += element.koszt * element.oblozenie ** element.efekt_skala
-            if "Symulowane" in trasa.elementy[2].sprzedaz:
-                    przychod = firma.cena*trasa.elementy[2].sprzedaz["Symulowane"]
-            dodaj_do_pliku(plik,[rynek.tura, trasa.symbol,przychod, koszt, przychod - koszt])
+            dodaj_do_pliku(plik,[rynek.tura, trasa.symbol,trasa.oblozenie])
+
+def zapis_oblozenie(plik,rynek,czysc=False):
+    firma = rynek.symulowana_firma
+    if czysc:
+        czysc_plik(plik)
+        dodaj_do_pliku(plik,["Tura","Symbol","Oblozenie"])
+    else:
+        for element in firma.sklepy+firma.magazyny+firma.fabryki
+            dodaj_do_pliku(plik,[rynek.tura, element.symbol,element.oblozenie])
+
+def zapis_krawedzie(plik,rynek,czysc=False):
+    firma = rynek.symulowana_firma
+    if czysc:
+        czysc_plik(plik)
+        dodaj_do_pliku(plik,["Tura","Symbol","Oblozenie"])
+    else:
+        for element in firma.sklepy+firma.magazyny+firma.fabryki
+            dodaj_do_pliku(plik,[rynek.tura, trasa.symbol,trasa.oblozenie])

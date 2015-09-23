@@ -52,7 +52,7 @@ niedozwolone_nazwy = []
 udzial_treningowe = 0.2
 zakres_prawdopodobienstwa_warunkowego = 5
 znane_cechy = [0,1,2,3,4,29]
-ilosc_iteracji_prognoz = 10
+ilosc_iteracji_prognoz = 2
 sposob = 1 # 1 dla LG, 2 dla K-N
 sposob_wyboru_zmiennych = 1 #1 dla simple, 2 dla exhaustive
 
