@@ -150,7 +150,7 @@ Warszawa 2015
 
 Wal-Mart, amerykański gigant handlowy, co godzinę umieszcza w swoich bazach danych 2.5 petabajtów danych, pochodzących z blisko miliona transakcji (\cite{Economist2010}). I nie jest wyjątkiem --- przeciętna ilość danych przechowywanych przez przedsiębiorstwa w Stanach Zjednoczonych jest większa niż zbiory Biblioteki Kongresu (szacowane na 235 terabajtów (\cite{McKinsey2011}). W erze informacji większość z naszych działań trafia na serwery tej bądź innej firmy, w formie historii transakcji, koordynatu GPS czy zdjęcia. 
 
-Często informacje te zbierane są przypadkiem --- ze względu na prowadzenie rachunkowości, specyfikę świadczonych usług, lub też względy archiwizacyjne. Jednak wydobycie z nich \textit{wiedzy} może stanowić źródło znaczącej przewagi konkurencyjnej.  Jak wskazują \cite{Brynjolfsson2011}, przedsiębiorstwa podejmujące decyzje na podstawie analizy dużych zbiorów danych (\textit{data driven decision making}) osiągają efektywność o 5-6 proc. większą niż grupa porównawcza. Mają także większy zwrot z kapitału i wycenę rynkową --- jednym słowem, radzą sobie lepiej. Nic więc dziwnego, że coraz częściej \textit{data analytics} staje się priorytetem wśród dużych spółek. Skalę popularności \textit{business intelligence} unaocznia badanie \cite{PwC2014}, według którego 44 proc. prezesów zarządu planuje oparcie rozwoju firmy o inwestycje w tej dziedzinie. 
+Często informacje te zbierane są przypadkiem --- ze względu na prowadzenie rachunkowości, specyfikę świadczonych usług, lub też względy archiwizacyjne. Jednak wydobycie z nich \textit{wiedzy} może stanowić źródło znaczącej przewagi konkurencyjnej.  Jak wskazują \cite{Brynjolfsson2011}, przedsiębiorstwa podejmujące decyzje na podstawie analizy dużych zbiorów danych (\textit{ang. data driven decision making}) osiągają efektywność o 5-6 proc. większą niż grupa porównawcza. Mają także większy zwrot z kapitału i wycenę rynkową --- jednym słowem, radzą sobie lepiej. Nic więc dziwnego, że coraz częściej metody analizy danych \textit{ang. data analytics} stają się priorytetem wśród dużych spółek. Skalę popularności analityki biznesowej \textit{ang. business intelligence} unaocznia badanie \cite{PwC2014}, według którego 44 proc. prezesów zarządu planuje oparcie rozwoju firmy o inwestycje w tej dziedzinie. 
 
 Ale dzisiejsze zastosowania \textit{big data} to tylko preludium do tego, co czeka nas w przyszłości. Trwający równolegle trend robotyzacyjny spowoduje, że w ciągu 20 lat w przedsiębiorstwie zamiast kierowców możemy zarządzać flotą autonomicznych pojazdów, a magazynierów zastąpią roboty. Fakt, że Google i Daimler już testują takie auta nie pozwala na nazwanie tego science-fiction. Według Carla Freya i Michela Osborne'a z Uniwersytetu w Oxfordzie \cite{frey2013}, blisko 47 proc. miejsc pracy jest zagrożonych komputeryzacją. Większość z nich to zawody wykonujące rutynowe, mechaniczne czynności, ale postęp technologiczny powoduje, że na tej liście znajdują się też prace wymagające umiejętności kognitywnych i wnioskowania --- jak pracownicy biurowi, analitycy czy operatorzy. 
 
@@ -158,7 +158,7 @@ Jeśli więc z jednej strony mamy do czynienia z flotą autonomicznych pojazdów
 
 W teorii, ze względu na możliwość przeprowadzania złożonych obliczeń i analizy gigabajtów danych, decyzje te będą trafniejsze i poprawią efektywność przedsiębiorstwa. 
 
-Niniejsza praca ma na celu skonfrontowanie tej hipotezy. Po pierwsze, poprzez zaproponowanie jednego z wielu możliwych algorytmów optymalizacji działania przedsiębiorstwa poprzez wykorzystanie istniejących technik \textit{modelowania predykcyjnego}. Po drugie przez sprawdzenie, jak tak podejmowane decyzje będą wpływać na funkcjonowanie przedsiębiorstwa i czy będzie ono funkcjonować efektywniej, niż gdyby zastosować w nim dotychczasowe praktyki biznesowe.
+Niniejsza praca ma na celu skonfrontowanie tej hipotezy. Po pierwsze, poprzez zaproponowanie jednego z wielu możliwych algorytmów optymalizacji działania przedsiębiorstwa poprzez wykorzystanie istniejących technik modelowania predykcyjnego (\textit{ang. predictive analytics}). Po drugie przez sprawdzenie, jak tak podejmowane decyzje będą wpływać na funkcjonowanie przedsiębiorstwa i czy będzie ono funkcjonować efektywniej, niż gdyby zastosować w nim dotychczasowe praktyki biznesowe.
 
 
 % --- chapter ---------------------------------------------------------
@@ -170,16 +170,9 @@ Praca ma na celu zaproponowanie algorytmu optymalizacji podejmowania decyzji w p
 
 \subsection{Koncepcja pracy}
 
-Przyjmując, że optymalizowane przedsiębiorstwo z sektora szybko zbywalnych towarór konsumpcyjnych (\textit{fast moving consumer goods, FMCG)} zajmuje się zarówno produkcją, jak i dystrybucją towarów do sklepów detalicznych, na podstawie historycznych danych o transakcjach i zastosowania modelowania predyktywnego prognozowany będzie krótkoterminowy wolumen sprzedaży w każdym z prowadzonych sklepów. Otrzymana wiedza zostanie wykorzystana do optymalizacji procesów logistycznych, co rozumiane jest przez zbudowania takich tras dostaw i alokację wśród nich wolumenów produktów, żeby zysk firmy był jak największy. 
+Rozważane w pracy przedsiębiorstwo należy do sektora szybko zbywalnych towarór konsumpcyjnych (\textit{ang. fast moving consumer goods, FMCG)} i zajmuje się zarówno produkcją, jak i dystrybucją towarów do sklepów detalicznych. Na podstawie historycznych danych o transakcjach i zastosowania modelowania predyktywnego prognozowany będzie krótkoterminowy wolumen sprzedaży w każdym z prowadzonych sklepów. Otrzymana wiedza zostanie wykorzystana do optymalizacji procesów logistycznych, co rozumiane jest przez zbudowania takich tras dostaw i alokację wśród nich wolumenów produktów, żeby zysk firmy był jak największy. 
 
-W celu zaprezentowania wyniku działania powstałego w ten sposób algorytmu, zostanie zbudowany model wieloagentowy symulujący rynek i zachowania klientów. Z jego pomocą sprawdzimy funkcjonowanie algorytmu w trzech przypadkach załozeń: 
-
-\begin{enumerate} 
-	\item cena produktu jest stała, a w łańcuchu produkcyjnym nie występują efekty skali,
-	\item cena produktu jest stała, a w łańcuchu produkcyjnym występują efekty skali,
-	\item cena produktu jest decyzją przedsiębiorstwa, a w łańcuchu produkcyjnym występują efekty skali.
-\end{enumerate}
-
+W celu zaprezentowania wyniku działania powstałego w ten sposób algorytmu, zostanie zbudowany model wieloagentowy symulujący rynek i zachowania klientów. Z jego pomocą sprawdzimy wpływ działania algorytmu na decyzje firmy oraz jej wyniki finansowe i operacyjne.
 
 \subsection{Podstawy teoretyczne} \label{teoria}
 \subsubsection{Przedsiębiorstwo jako system wieloagentowy} 
@@ -217,26 +210,6 @@ Zdefiniowanie jako agentów poszczególnych jednostkek przedsiębiorstwa jest pr
 
 przez które kolejno będzie musiał przejść produkt zanim będzie mógł być zakupiony przez klienta. Rozpatrując ten system w proponowanym przez \cite{Kawa2010} kontekście teorii grafów oznacza to, że w przedsiębiorstwie istnieć będzie $m$ łańcuchów dostaw $d$, których ilość będzie równa  $n\choose 1 $ $ \times $ $k\choose 1 $ $ \times $ $i\choose 1 $ kombinacji połączeń pomiędzy jednostkami przedsiębiorstwa. Jak zauważa \cite{Kawa2010}, każde z tych połączeń będzie miało swoją maksymalną przepustowość oraz koszt $k_d = f(d)$, zależny od łańcucha i będący sumą kosztów ponoszonych na każdym z ogniw łańcucha wartości. Na krańcach grafu może dojść do sprzedaży towaru i przychodu dla całego systemu --- jednak zaopatrzenie sklepu w zbyt dużą ilość towaru doprowadzi do jego zmarnowania i strat. 
 
-\subsubsection{Zadanie optymalizacyjne} 
-Optymalizując działanie przedsiębiorstwa będziemy dążyć do tego, żeby dla danego poziomu produkcji $x$ i zbioru \textit{produktów} $PR = \{pr_1,pr_2,pr_3..pr_x\} $ ze zbioru możliwych sterowań (możliwych tras dostawy) $<d_1,d_2,d_3..d_m>$ dla każdego z produktów wybrać trasy maksymalizujące wyrażenie
-
-\begin{equation} \label{eq:teoria1}
-\max \sum\limits_{pr=1}^x  zysk (p,d) = p \times q - k_d \\
-\end{equation}
-
-\begin{center}
- gdzie $k_d = f(d)$, $p$ to cena, $d$ to wybrana droga \\
- a $q$ to sprzedaż zapisana jako zmienna binarna
-\end{center}
-
-Ponieważ kluczowym elementem powyższego równania jest zmienna $q$ i to, czy przyjmie wartość 1 czy 0 \footnote{Zmienna przyjmuje wartość 1 jeśli towar znalazł nabywcę i 0 jeśli nie został sprzedany, tak więc dla niesprzedanych towarów przedsiębiorstwo odnotuje koszty bez przychodów.} to zadanie optymalizacyjne byłoby względnie proste, gdybyśmy mieli doskonałą informację na temat poziomu sprzedaży w każdym ze sklepów w chwili $ t + 1 $. Na taką wiedzę nie możemy liczyć ani w tej pracy, ani w w rzeczywistości, dlatego rozwiązaniem proponowanym w niniejszej pracy jest zastosowanie modelowania predykcyjnego (\textit{predictive analytics}), w celu prognozowania liczby klientów i ich wyborów w każdym ze sklepów w najbliższych okresach czasu. \footnote{Obecnie w przedsiębiorstwach rzadko stosuje się zaawansowane sposoby prognozowania sprzedaży (\textit{predictive analytics}), a zarządzanie dostawami odbywa się raczej metodą manualnego uzupełniania zapasów.} 
-
-Ponadto, jak warto zauważyć, nie możemy liczyć na to, że funkcja kosztu $k_d$ będzie liniowa. Wspominana przez \cite{Kawa2010} maksymalna przepustowość każdego z łańcuchów, która w przedsiębiorstwie będzie spowodowana ograniczonymi mocami produkcyjnymi, może spowodować, że funkcja kosztu będzie funkcją wypukłą \footnote{Wyprodukowanie każdego kolejnego produktu ponad moc produkcyjną będzie wymagało nadgodzin, dodatkowej przestrzeni magazynowej, pomocy poddostawców - a każde z tych wydarzeń będzie generowało dodatkowe koszty.}. W niektórych przypadkach mogą istnieć także korzyści skali, które spowodują, że funkcja będzie funkcją wklęsłą, a całkiem realne jest istnienie obu tych efektów  \footnote{Korzyści skali odczuwalne do pewnego optymalnego poziomu produkcji, powyżej którego brak mocy produkcyjnych powoduje  powiększanie się kosztów krańcowych.}, przez co musimy zakładać, że $f(d)$ może być dowolną funkcją nieliniową.
-
-Trzecim aspektem który trzeba wziąć pod uwagę jest złożoność obliczeniowa. Nawet dla prostego układu, lecz wolumenu produkcji ponad 1000 sztuk sprawdzenie zysku w przypadku wszystkich kombinacji alokacji wymaga olbrzymiej ilości iteracji. Mimo znaczącego wzrostu mocy komputerów w ostatnich latach, wolumeny produkcji w dużych przedsiębiorstwach oraz złożoność tras logistycznych sprawia, że to podejście jest kompletnie niepraktyczne i należy szukać alternatywnych podejść, upraszczających problem.
-
- Proponowany algorytm będzie brał wszystkie te aspekty pod uwagę, a pierwszy z wymienionych problemów rozwiążemy wykorzystując  \textit{modelowanie predykcyjne}.
-
 \subsubsection{Modelowanie predykcyjne} \label{statistical} 
 Jak wskazuje \cite{James2013}, zakładając, że dysponujemy zbiorem $n$ obserwacji $p$ zmiennych, możemy zbadać ich relację ze zmienną wyjaśnianą $y$ i otrzymać \textit{model}, który dla nowych - nieanalizowanych wcześniej - obserwacji $x_1,x_2..x_n$  zwraca przewidywaną wartość zmiennej objaśnianej \^{y}. Różnorodne metody dzięki którym możemy otrzymać zmienną objaśnianą \^{y} \cite{James2013} nazywa \textit{statistical learning}, i zaznacza, że mogą one być wykorzystane do modelowania predykcyjnego, tj. przewidywania przyszłych wydarzeń na podstawie przeszłej historii danych. 
 
@@ -273,6 +246,26 @@ Jak wskazuje \cite{James2013}, zmienna objaśniana może przyjąć różne dzied
 
 
 \newpage
+
+\subsubsection{Zadanie optymalizacyjne} 
+Optymalizując działanie przedsiębiorstwa będziemy dążyć do tego, żeby dla danego poziomu produkcji $x$ i zbioru \textit{produktów} $PR = \{pr_1,pr_2,pr_3..pr_x\} $ ze zbioru możliwych sterowań (możliwych tras dostawy) $<d_1,d_2,d_3..d_m>$ dla każdego z produktów wybrać trasy maksymalizujące wyrażenie
+
+\begin{equation} \label{eq:teoria1}
+\max \sum\limits_{pr=1}^x  zysk (p,d) = p \times q - k_d \\
+\end{equation}
+
+\begin{center}
+ gdzie $k_d = f(d)$, $p$ to cena, $d$ to wybrana droga \\
+ a $q$ to sprzedaż zapisana jako zmienna binarna
+\end{center}
+
+Ponieważ kluczowym elementem powyższego równania jest zmienna $q$ i to, czy przyjmie wartość 1 czy 0 \footnote{Zmienna przyjmuje wartość 1 jeśli towar znalazł nabywcę i 0 jeśli nie został sprzedany, tak więc dla niesprzedanych towarów przedsiębiorstwo odnotuje koszty bez przychodów.} to zadanie optymalizacyjne byłoby względnie proste, gdybyśmy mieli doskonałą informację na temat poziomu sprzedaży w każdym ze sklepów w chwili $ t + 1 $. Na taką wiedzę nie możemy liczyć ani w tej pracy, ani w w rzeczywistości, dlatego rozwiązaniem proponowanym w niniejszej pracy jest zastosowanie modelowania predykcyjnego (\textit{predictive analytics}), w celu prognozowania liczby klientów i ich wyborów w każdym ze sklepów w najbliższych okresach czasu. \footnote{Obecnie w przedsiębiorstwach rzadko stosuje się zaawansowane sposoby prognozowania sprzedaży (\textit{predictive analytics}), a zarządzanie dostawami odbywa się raczej metodą manualnego uzupełniania zapasów.} 
+
+Ponadto, jak warto zauważyć, nie możemy liczyć na to, że funkcja kosztu $k_d$ będzie liniowa. Wspominana przez \cite{Kawa2010} maksymalna przepustowość każdego z łańcuchów, która w przedsiębiorstwie będzie spowodowana ograniczonymi mocami produkcyjnymi, może spowodować, że funkcja kosztu będzie funkcją wypukłą \footnote{Wyprodukowanie każdego kolejnego produktu ponad moc produkcyjną będzie wymagało nadgodzin, dodatkowej przestrzeni magazynowej, pomocy poddostawców - a każde z tych wydarzeń będzie generowało dodatkowe koszty.}. W niektórych przypadkach mogą istnieć także korzyści skali, które spowodują, że funkcja będzie funkcją wklęsłą, a całkiem realne jest istnienie obu tych efektów  \footnote{Korzyści skali odczuwalne do pewnego optymalnego poziomu produkcji, powyżej którego brak mocy produkcyjnych powoduje  powiększanie się kosztów krańcowych.}, przez co musimy zakładać, że $f(d)$ może być dowolną funkcją nieliniową.
+
+Trzecim aspektem który trzeba wziąć pod uwagę jest złożoność obliczeniowa. Nawet dla prostego układu, lecz wolumenu produkcji ponad 1000 sztuk sprawdzenie zysku w przypadku wszystkich kombinacji alokacji wymaga olbrzymiej ilości iteracji. Mimo znaczącego wzrostu mocy komputerów w ostatnich latach, wolumeny produkcji w dużych przedsiębiorstwach oraz złożoność tras logistycznych sprawia, że to podejście jest kompletnie niepraktyczne i należy szukać alternatywnych podejść, upraszczających problem.
+
+ Proponowany algorytm będzie brał wszystkie te aspekty pod uwagę, a pierwszy z wymienionych problemów rozwiążemy wykorzystując  \textit{modelowanie predykcyjne}.
 
 \subsection{Proponowany algorytm optymalizacyjny} 
 Znając przewidywaną sprzedaż na krańcach grafu, proponowany w niniejszej pracy algorytm rozwiązania powyższego problemu opiera się na obserwacji, że równanie \ref{eq:teoria1} będzie równoważne zapisowi sumującemu po możliwych kombinacjach łańcucha, zamiast dla każdego produktu z osobna. Nie tylko znacząco zmniejszy to liczbę potrzebnych iteracji obliczeń \footnote{Ze względu na bardzo duży wolumen produkcji w opisywanej branży FMCG, mało prawdopodobne jest, aby liczba kombinacji tras dostaw była większa od liczby produktów, ale nawet wówczas istnieje możliwość rozważania tylko predefiniowanego zestawu tras), ale także umożliwi dalsze obliczenia upraszczające problem.}

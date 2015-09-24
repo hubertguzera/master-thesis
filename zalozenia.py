@@ -2,9 +2,9 @@ from funkcje import funkcje_zalozenia
 import sympy
 #Swiat
 
-populacja = 750
-wymiar_x = 25
-wymiar_y = 25
+populacja = 2500
+wymiar_x = 60
+wymiar_y = 60
 lokalizacja_rozklad_typ= {"Dom":0.6,"Praca":0.2,"Przestrzen komercyjna":0.2}
 udzial_drog = 0.25
 gestosc_zakretow = 0.05
@@ -30,9 +30,9 @@ ilosc_fabryk = 2
 ilosc_magazyn = 2
 ilosc_sklepow = 4
 
-koszt_fabryka = 1
-koszt_magazyny = 1
-koszt_sklepy = 1
+koszt_fabryka = 1.3
+koszt_magazyny = 1.2
+koszt_sklepy = 1.1
 koszt_sciezka = 0.005
 
 skala_fabryka = 1
@@ -49,10 +49,10 @@ mozliwe_nazwy = ["Mocne","Baltyckie","Lebskie","Slaskie","Pszczeniczne","Pyszne"
 niedozwolone_nazwy = []
 
 #modelowanie
-udzial_treningowe = 0.2
+udzial_treningowe = 0.3
 zakres_prawdopodobienstwa_warunkowego = 5
 znane_cechy = [0,1,2,3,4,29]
-ilosc_iteracji_prognoz = 2
+ilosc_iteracji_prognoz = 3
 sposob = 1 # 1 dla LG, 2 dla K-N
 sposob_wyboru_zmiennych = 1 #1 dla simple, 2 dla exhaustive
 

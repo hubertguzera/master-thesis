@@ -41,10 +41,10 @@ def zapis_koszty(plik,rynek,czysc=False):
     firma = rynek.symulowana_firma
     if czysc:
         czysc_plik(plik)
-        dodaj_do_pliku(plik,["Tura","Symbol","Koszt","Efekt skali","Oblozenie","Koszt w turze"])
+        dodaj_do_pliku(plik,["Tura","Symbol","Koszt","Oblozenie","Koszt w turze"])
     else:
         for element in firma.fabryki + firma.sklepy + firma.magazyny + firma.trasy.drogi:
-            rekord = [rynek.tura,element.symbol,element.koszt,element.efekt_skala,element.oblozenie,element.koszt*element.oblozenie**element.efekt_skala]
+            rekord = [rynek.tura,element.symbol,element.koszt,element.oblozenie,element.koszt.subs(element.symbol,element.oblozenie).evalf()]
             print rekord
             dodaj_do_pliku(plik,rekord)
 
@@ -74,7 +74,7 @@ def zapis_zysk(plik,rynek,czysc=False):
             if "Symulowane" in element.sprzedaz:
                 zysk += firma.cena*element.sprzedaz["Symulowane"]
         for element in firma.fabryki + firma.sklepy + firma.magazyny + firma.trasy.drogi:
-            zysk -= element.koszt*element.oblozenie**element.efekt_skala
+            zysk -= element.koszt.subs(element.symbol,element.oblozenie).evalf()
         dodaj_do_pliku(plik,[rynek.tura,zysk])
 
 def zapis_przewidywania(plik,wartosc,czysc=False):
@@ -93,20 +93,17 @@ def zapis_trasy(plik,rynek,czysc=False):
         for trasa in firma.trasy.trasy:
             dodaj_do_pliku(plik,[rynek.tura, trasa.symbol,trasa.oblozenie])
 
-def zapis_oblozenie(plik,rynek,czysc=False):
-    firma = rynek.symulowana_firma
+def zapis_decyzje(plik,wpis,rynek,czysc=False):
     if czysc:
         czysc_plik(plik)
-        dodaj_do_pliku(plik,["Tura","Symbol","Oblozenie"])
+        dodaj_do_pliku(plik,["Tura","Wiek","Kobieta","Mezczyzna","Wyksztalcenie","Zarobki","Okazja","Moda","Gotowanie","Finanse","Kultura","Historia","Koncerty","Motoryzacja","Kosmetyki","Malarstwo","Ogrodnictwo","Gry","Sport","Boks","Fotografia","Kultura alternatywna","Nightlife","Teatr","Ksiazka","Historia polski","Natura","Piwowarstwo","Muzyka klasyczna","Ksiazki","Wybor"])
     else:
-        for element in firma.sklepy+firma.magazyny+firma.fabryki
-            dodaj_do_pliku(plik,[rynek.tura, element.symbol,element.oblozenie])
+        dodaj_do_pliku(plik,[rynek.tura] + wpis)
 
-def zapis_krawedzie(plik,rynek,czysc=False):
-    firma = rynek.symulowana_firma
+
+def zapis_pojedynczej_prognozy(plik,wpis,rynek,czysc=False):
     if czysc:
         czysc_plik(plik)
-        dodaj_do_pliku(plik,["Tura","Symbol","Oblozenie"])
+        dodaj_do_pliku(plik,["Tura","Symbol","Iteracja","Prognoza"])
     else:
-        for element in firma.sklepy+firma.magazyny+firma.fabryki
-            dodaj_do_pliku(plik,[rynek.tura, trasa.symbol,trasa.oblozenie])
+        dodaj_do_pliku(plik,[rynek.tura] + wpis)

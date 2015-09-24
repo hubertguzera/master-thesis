@@ -9,7 +9,7 @@ def funkcja_do_optymalizacji(firma):
      for sklep in firma.sklepy:
         expr = expr + (znajdz_oblozenie(firma,sklep)) * firma.cena
      for element in firma.magazyny+firma.sklepy+firma.fabryki+firma.trasy.drogi:
-         expr = expr - element.koszt * (znajdz_oblozenie(firma,element)) ** element.efekt_skala
+         expr = expr - element.koszt.subs(element.symbol,znajdz_oblozenie(firma,element))
      return expr
 
 def znajdz_oblozenie(firma,edge):

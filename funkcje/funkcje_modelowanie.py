@@ -6,6 +6,7 @@ from funkcje import funkcje_raportowanie as f_r
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn import linear_model
 from sklearn.neighbors import KNeighborsClassifier
+import pickle
 
 import numpy as np
 
@@ -48,6 +49,7 @@ class training(object):
 
         self.lg = linear_model.LogisticRegression()
 
+
         self.lg.fit(self.historia_x,self.historia_y)
         a= []
 
@@ -63,8 +65,10 @@ class training(object):
         i = 0
         for element in self.historia_x:
             f_r.zapis_przewidywania("rezultaty/przewidywania.csv",[self.historia_y[i],self.lg.predict(element)[0],self.km.predict(element)[0]])
-
             i+=1
+
+        pickle.dump(self.lg,open("lg.p","wb"))
+        pickle.dump(self.km,open("km.p","wb"))
 
 
 
@@ -153,7 +157,7 @@ def stworz_grupe(historia_sklepu,training):
         grupa.append(stworz_konsumenta(lacz_historie(historia_sklepu),training.kolejnosc))
     return grupa
 
-def prognozuj_sprzedaz(historia_sklepu,training):
+def prognozuj_sprzedaz(historia_sklepu,training,rynek):
     if zalozenia.sposob == 1:
         model = training.lg
     else:
@@ -164,4 +168,5 @@ def prognozuj_sprzedaz(historia_sklepu,training):
     for i in range(zalozenia.ilosc_iteracji_prognoz):
         for item in model.predict_proba(stworz_grupe(historia_sklepu,training)):
             prognoza[i] += f_p.losuj_proba(item)
+        f_r.zapis_pojedynczej_prognozy("rezultaty/czesci_prognoz.csv",prognoza[i],rynek,czysc=True)
     return np.mean(prognoza)

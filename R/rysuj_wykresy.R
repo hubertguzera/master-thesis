@@ -69,18 +69,17 @@ dev.off()
 
 #Wyniki firmy z optymalizacji 2
 koszty <- read.csv("rezultaty/koszty.csv")
-koszty <- aggregate(koszty[6], by=list(koszty$Tura), FUN="sum")
+koszty <- aggregate(koszty[5], by=list(koszty$Tura), FUN="sum")
 przychody <- read.csv("rezultaty/przychody.csv")
 przychody <- aggregate(przychody[5], by=list(przychody$Tura), FUN="sum")
 zysk <- read.csv("rezultaty/zysk.csv")
 trasy <- read.csv("rezultaty/trasy.csv")
-trasy <- aggregate(trasy[c(3,4,5)], by=list(trasy$Tura), FUN="mean")
 
 
 
 
 png("tekst/pictures/algorytm_skala/wyniki.png")
-plot(koszty$Koszt.w.turze, col="red", ylim=c(0,as.integer(max(przychody)*1.25)), xaxt = 'n',xlab="Tura", ylab="PLN", main = 'Wyniki symulacji bez optymalizacji')
+plot(koszty$Koszt.w.turze, col="red", ylim=c(as.integer(-max(koszty)*1.25),as.integer(max(przychody)*1.25)), xaxt = 'n',xlab="Tura", ylab="PLN", main = 'Wyniki symulacji bez optymalizacji')
 axis(1, at=1:nrow(koszty),koszty$Tura)
 abline(v = 15, lty = 2)
 
@@ -98,18 +97,12 @@ lines(zysk$Zysk, col="blue")
 dev.off()
 
 
-
-png("tekst/pictures/algorytm_skala/trasy.png")
-plot(trasy$Koszt, col="red", ylim=c(as.integer(min(trasy)-1.25),as.integer(max(trasy)*1.25)), xaxt = 'n',xlab="Tura", ylab="PLN", main = 'Œrednie wyniki tras')
-axis(1, at=1:nrow(trasy),trasy$Tura)
-lines(trasy$Koszt, col="red")
-points(trasy$Przychod, col="green")
-lines(trasy$Przychod, col="green")
-points(trasy$Zysk, col="blue")
-lines(trasy$Zysk, col="blue")
-
+library(ggplot2)
 dev.off()
 trasy <- read.csv("rezultaty/trasy.csv")
 png("tekst/pictures/algorytm_skala/trasy2.png")
-ggplot(data = trasy, aes(x = trasy$Tura, y=trasy$Zysk, color = trasy$Symbol)) + ggtitle("Zysk per trasa")+xlab("Zysk") + ylab("Tura")+ geom_line(aes(group=trasy$Symbol)) +geom_point() + theme_bw() + geom_hline(linetype="dashed",aes(yintercept=0))
+ggplot(data = trasy, aes(x = trasy$Tura, y=trasy$Oblozenie, color = trasy$Symbol))+scale_colour_discrete(guide = FALSE) + ggtitle("Zysk per trasa")+xlab("Zysk") + ylab("Tura")+ geom_line(aes(group=trasy$Symbol)) +geom_point() + theme_bw() + geom_hline(linetype="dashed",aes(yintercept=0))
 dev.off()
+
+
+decyzje <- read.csv("rezultaty/decyzje.csv")

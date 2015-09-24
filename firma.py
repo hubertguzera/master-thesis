@@ -33,6 +33,7 @@ class rynek(object):
                           wybor = f_f.prawdopodobienstwo_zakupu_piwa(tabela_y)
                           if sklep.sprzedaz_w_sklepie(wybor) or k==4:
                                 sklep.klienci_historycznie[self.tura].append(klient+[wybor])
+                                f_r.zapis_decyzje("rezultaty/decyzje.csv",klient+[wybor],self)
                                 break
       def nowa_tura(self):
           #zapisywanie statystyk po turze?
@@ -85,40 +86,17 @@ class firma(object):
 
       def przypisz_koszty(self,losowe=False,skala=False,min_cen=0.8,max_cena=1.3,min_skala=0.9,max_skala=1.1):
           for item in self.fabryki:
-              if  not(losowe):
-                  item.koszt = zalozenia.koszt_fabryka
-                  item.efekt_skala = zalozenia.skala_fabryka
-              else:
-                  item.koszt = random.uniform(min_cen, max_cena)
-                  item.efekt_skala = random.uniform(min_skala, max_skala)
+              item.koszt = zalozenia.koszt_fabryka * item.symbol ** zalozenia.skala_fabryka
+
           for item in self.sklepy:
-              if not(losowe):
-                  item.koszt = zalozenia.koszt_sklepy
-                  item.efekt_skala = zalozenia.skala_sklepy
-              else:
-                  item.koszt = random.uniform(min_cen, max_cena)
-                  item.efekt_skala = random.uniform(min_skala, max_skala)
+              item.koszt = zalozenia.koszt_sklepy * item.symbol ** zalozenia.skala_sklepy
+
           for item in self.magazyny:
-              if not(losowe):
-                  item.koszt = zalozenia.koszt_magazyny
-                  item.efekt_skala = zalozenia.skala_magazyny
-              else:
-                  item.koszt = random.uniform(min_cen, max_cena)
-                  item.efekt_skala = random.uniform(min_skala, max_skala)
-          for item in self.magazyny:
-              if not(losowe):
-                  item.koszt = zalozenia.koszt_magazyny
-                  item.efekt_skala = zalozenia.skala_magazyny
-              else:
-                  item.koszt = random.uniform(min_cen, max_cena)
-                  item.efekt_skala = random.uniform(min_skala, max_skala)
+              item.koszt = zalozenia.koszt_magazyny * item.symbol ** zalozenia.skala_magazyny
+
           for item in self.trasy.drogi:
-              if not(losowe):
-                  item.koszt = zalozenia.koszt_sciezka * item.odleglosc
-                  item.efekt_skala = zalozenia.skala_sciezka
-              else:
-                  item.koszt = random.uniform(min_cen, max_cena) * item.odleglosc
-                  item.efekt_skala = random.uniform(min_skala, max_skala)
+              item.koszt = zalozenia.koszt_sciezka * item.odleglosc * item.symbol ** zalozenia.skala_sciezka
+
 
 class fabryka(firma):
     def __init__(self,swiat,x):
@@ -128,7 +106,7 @@ class fabryka(firma):
         self.oblozenie = 0
         self.symbol = sympy.symbols("f" + str(x+1))
         self.koszt = 0
-        self.efekt_skala = 0
+
 
 class magazyn(firma):
     def __init__(self,swiat, x):
@@ -138,7 +116,7 @@ class magazyn(firma):
         self.oblozenie = 0
         self.symbol = sympy.symbols("m" + str(x+1))
         self.koszt = 0
-        self.efekt_skala = 0
+
 
 class sklep(firma):
     def __init__(self,swiat,x):
@@ -152,7 +130,7 @@ class sklep(firma):
         self.oblozenie = 0
         self.symbol = sympy.symbols("s" + str(x+1))
         self.koszt = 0
-        self.efekt_skala = 0
+
         self.przewidywana_sprzedaz = 0
 
     def dostawa_towaru(self, rynek, trasa=None,symulowany_towar = 30,inne_towary=30):
@@ -178,8 +156,10 @@ class sklep(firma):
             d = {}
             for element in rynek.symulowana_firma.trasy.trasy:
                 if element.elementy[2].lokalizacja==self.lokalizacja:
-                    d[element] = element.elementy[3].koszt + element.elementy[4].koszt
+                    d[element] =  element.elementy[4].koszt.subs(element.elementy[4].symbol,1).evalf()
+                    print self.symbol,element.symbol,d[element]
             trasa = min(d.items(), key=lambda x: x[1])[0]
+            print "wybrana", trasa.symbol
         rynek.symulowana_firma.trasy.dodaj_do_trasy(symulowany_towar,trasa)
 
     def sprzedaz_w_sklepie(self,towar):
@@ -246,7 +226,7 @@ class sciezka(trasy):
         self.oblozenie = 0
         self.symbol = sympy.symbols("r" + str(x+1))
         self.koszt = 0
-        self.efekt_skala = 0
+
 
 def tworz_swiat_i_rynek():
     symulowany_swiat = swiat()
