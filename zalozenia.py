@@ -53,7 +53,7 @@ udzial_treningowe = 0.3
 zakres_prawdopodobienstwa_warunkowego = 5
 znane_cechy = [0,1,2,3,4,29]
 ilosc_iteracji_prognoz = 3
-sposob = 1 # 1 dla LG, 2 dla K-N
+sposob = 2 # 1 dla LG, 2 dla K-N
 sposob_wyboru_zmiennych = 1 #1 dla simple, 2 dla exhaustive
 
 skok_dostawa = 3

@@ -1,6 +1,10 @@
 setwd("C:/Users/Hubert/Desktop/master-thesis/master-thesis/")
 getwd()
 
+wykonanie <- read.csv("funkcje/stirling.csv",header=FALSE)
+plot(wykonanie$V1,wykonanie$V3)
+lines(wykonanie$V4, col="red")
+
 #Ludnosc
 ludnosc <- read.csv("rezultaty/ludnosc.csv")
 ludnosc <- ludnosc[,-2]
@@ -103,6 +107,8 @@ trasy <- read.csv("rezultaty/trasy.csv")
 png("tekst/pictures/algorytm_skala/trasy2.png")
 ggplot(data = trasy, aes(x = trasy$Tura, y=trasy$Oblozenie, color = trasy$Symbol))+scale_colour_discrete(guide = FALSE) + ggtitle("Zysk per trasa")+xlab("Zysk") + ylab("Tura")+ geom_line(aes(group=trasy$Symbol)) +geom_point() + theme_bw() + geom_hline(linetype="dashed",aes(yintercept=0))
 dev.off()
-
-
+library(sm)
 decyzje <- read.csv("rezultaty/decyzje.csv")
+decyzje_s <- decyzje[decyzje$Wybor=="Symulowane",]
+plot(density(decyzje$Wiek))
+lines(density(decyzje_s$Wiek), col="blue")

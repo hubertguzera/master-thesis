@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  22 SEP 2015 10:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  25 SEP 2015 10:57
 entering extended mode
 **C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/main.tex
 (C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/main.tex
@@ -1164,25 +1164,31 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 
 (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.aux
 
-LaTeX Warning: Label `fig:xxx' multiply defined.
+LaTeX Warning: Label `eq:przychodsystemu' multiply defined.
 
 
-LaTeX Warning: Label `tab:exceptional-table' multiply defined.
+LaTeX Warning: Label `eq:przychodsystemu' multiply defined.
 
 
-LaTeX Warning: Label `fig:brak1' multiply defined.
+LaTeX Warning: Label `UML:swiat' multiply defined.
 
 
-LaTeX Warning: Label `sub@fig:brak1' multiply defined.
+LaTeX Warning: Label `fig:wyksztalcenie' multiply defined.
 
 
-LaTeX Warning: Label `fig:brak2' multiply defined.
+LaTeX Warning: Label `fig:przychod_koszt' multiply defined.
 
 
-LaTeX Warning: Label `sub@fig:brak2' multiply defined.
+LaTeX Warning: Label `sub@fig:przychod_koszt' multiply defined.
 
 
-LaTeX Warning: Label `fig:xxx' multiply defined.
+LaTeX Warning: Label `fig:zysk' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:zysk' multiply defined.
+
+
+LaTeX Warning: Label `fig:wynikifin' multiply defined.
 
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
@@ -1283,7 +1289,7 @@ LaTeX Info: Redefining \nameref on input line 96.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<logo.JPG, id=130, 1003.49907pt x 506.6428pt>
+<logo.JPG, id=122, 1003.49907pt x 506.6428pt>
 File: logo.JPG Graphic file (type jpg)
  <use logo.JPG>
 Package pdftex.def Info: logo.JPG used on input line 102.
@@ -1320,268 +1326,331 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 171.
  [7
 
-] <pictures/siec.png, id=230, 536.75531pt x 283.0575pt>
+] <pictures/siec.png, id=218, 536.75531pt x 283.0575pt>
 File: pictures/siec.png Graphic file (type png)
 
 <use pictures/siec.png>
-Package pdftex.def Info: pictures/siec.png used on input line 190.
-(pdftex.def)             Requested size: 426.79135pt x 225.0685pt.
+Package pdftex.def Info: pictures/siec.png used on input line 186.
+(pdftex.def)             Requested size: 192.0548pt x 101.27866pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 189.
  [8 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/siec.pn
 g>]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 204.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 203.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 1052) in paragraph at lines 206--207
+Underfull \hbox (badness 1052) in paragraph at lines 205--206
 []\T1/ptm/m/n/12 reaktywno±¢ --- jed-nostki przed-si¦-bior-stwa re-aguj¡ na zmi
 any ryn-kowe oraz
  []
 
-[9]
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 218.
-
-[10] [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
-[]\T1/ptm/m/n/12 Na przy-kªa-dzie przed-si¦-bior-stwa b¦-d¡-cego zbio-rem jed-n
-o-stek $\OML/cmm/m/it/12 <$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+[9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
 
-[14] [15]
-<pictures/diagramoptymalizacyny.png, id=353, 725.71124pt x 364.36125pt>
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
+
+ []
+
+[13] [14] [15]
+
+LaTeX Warning: Reference `fig:algorytm' on page 16 undefined on input line 363.
+
+
+<pictures/diagramoptymalizacyny.png, id=352, 725.71124pt x 364.36125pt>
 File: pictures/diagramoptymalizacyny.png Graphic file (type png)
 
 <use pictures/diagramoptymalizacyny.png>
 Package pdftex.def Info: pictures/diagramoptymalizacyny.png used on input line 
-375.
+367.
 (pdftex.def)             Requested size: 426.79135pt x 214.28743pt.
  [16 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/diagra
-moptymalizacyny.png>] [17
+moptymalizacyny.png>] [17] [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
 
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 
  []
 
-[19] <pictures/Struktura.png, id=403, 766.865pt x 775.89874pt>
+[20]
+
+LaTeX Warning: Reference `chapter:algorithm' on page 21 undefined on input line
+ 443.
+
+
+LaTeX Warning: Reference `fig:struktura' on page 21 undefined on input line 470
+.
+
+[21] <pictures/Struktura.png, id=427, 766.865pt x 775.89874pt>
 File: pictures/Struktura.png Graphic file (type png)
 
 <use pictures/Struktura.png>
-Package pdftex.def Info: pictures/Struktura.png used on input line 460.
-(pdftex.def)             Requested size: 426.79135pt x 431.82466pt.
+Package pdftex.def Info: pictures/Struktura.png used on input line 483.
+(pdftex.def)             Requested size: 405.45047pt x 410.22987pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 467.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 492.
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--469
-
- []
-
-[20] [21 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/St
-ruktura.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 483--484
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
 
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 497--499
+[22 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/Struktu
+ra.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 516--517
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 530--532
 
  []
 
 
-Overfull \hbox (26.02383pt too wide) in paragraph at lines 530--531
-[][] 
+Overfull \hbox (8.39902pt too wide) in paragraph at lines 564--566
+ [][] 
  []
 
-<pictures/tworzeniedrog.png, id=431, 795.97375pt x 475.7775pt>
+<pictures/tworzeniedrog.png, id=455, 795.97375pt x 475.7775pt>
 File: pictures/tworzeniedrog.png Graphic file (type png)
 
 <use pictures/tworzeniedrog.png>
-Package pdftex.def Info: pictures/tworzeniedrog.png used on input line 534.
+Package pdftex.def Info: pictures/tworzeniedrog.png used on input line 571.
 (pdftex.def)             Requested size: 426.79135pt x 255.10107pt.
 
-<../mapy/po_lokalizacji_sklepow.png, id=432, 1003.75pt x 1003.75pt>
+<../mapy/po_lokalizacji_sklepow.png, id=456, 1003.75pt x 1003.75pt>
 File: ../mapy/po_lokalizacji_sklepow.png Graphic file (type png)
 
 <use ../mapy/po_lokalizacji_sklepow.png>
 Package pdftex.def Info: ../mapy/po_lokalizacji_sklepow.png used on input line 
-541.
-(pdftex.def)             Requested size: 426.79135pt x 426.79488pt.
- [23] [24 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/t
-worzeniedrog.png>] [25 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/map
-y/po_lokalizacji_sklepow.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 560.
+581.
+(pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
+ [24]
+
+LaTeX Warning: Reference `fig:wayfinding' on page 25 undefined on input line 59
+5.
+
+[25]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 606.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 561.
-
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 607.
+ [26 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/tworze
+niedrog.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
 
  []
 
-[26]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 607.
- [27] <pictures/wiek.png, id=507, 481.8pt x 481.8pt>
+[27 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/po_lokalizacji_sk
+lepow.png (PNG copy)>]
+
+LaTeX Warning: Reference `tab:zainteresowania' on page 28 undefined on input li
+ne 663.
+
+<pictures/wiek.png, id=502, 481.8pt x 481.8pt>
 File: pictures/wiek.png Graphic file (type png)
+ <use pictures/wiek.png>
+Package pdftex.def Info: pictures/wiek.png used on input line 669.
+(pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<use pictures/wiek.png>
-Package pdftex.def Info: pictures/wiek.png used on input line 621.
-(pdftex.def)             Requested size: 426.79135pt x 426.801pt.
-
-<pictures/wyksztalcenie.png, id=508, 481.8pt x 481.8pt>
+<pictures/wyksztalcenie.png, id=503, 481.8pt x 481.8pt>
 File: pictures/wyksztalcenie.png Graphic file (type png)
 
 <use pictures/wyksztalcenie.png>
-Package pdftex.def Info: pictures/wyksztalcenie.png used on input line 628.
-(pdftex.def)             Requested size: 426.79135pt x 426.801pt.
- [28 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/wiek.p
-ng>] [29 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/wy
-ksztalcenie.png>] [30] [31] [32] [33]
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 734.
+Package pdftex.def Info: pictures/wyksztalcenie.png used on input line 675.
+(pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<../mapy/typy.png, id=573, 1003.75pt x 1003.75pt>
+
+Package caption Warning: \label without proper \caption on input line 694.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `firma' on page 28 undefined on input line 687.
+
+[28] [29] [30 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictur
+es/wiek.png> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/picture
+s/wyksztalcenie.png>]
+Overfull \hbox (330.53503pt too wide) in paragraph at lines 759--771
+ [][] 
+ []
+
+[31]
+
+LaTeX Warning: Reference `fig:struktura' on page 32 undefined on input line 786
+.
+
+[32] [33] [34] <../mapy/typy.png, id=592, 1003.75pt x 1003.75pt>
 File: ../mapy/typy.png Graphic file (type png)
- <use ../mapy/typy.png>
-Package pdftex.def Info: ../mapy/typy.png used on input line 758.
-(pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
 
-<../mapy/ludnosc.png, id=574, 1003.75pt x 1003.75pt>
+<use ../mapy/typy.png>
+Package pdftex.def Info: ../mapy/typy.png used on input line 832.
+(pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
+ <../mapy/ludnosc.png, id=593, 1003.75pt x 1003.75pt>
 File: ../mapy/ludnosc.png Graphic file (type png)
- <use ../mapy/ludnosc.png>
-Package pdftex.def Info: ../mapy/ludnosc.png used on input line 764.
+
+<use ../mapy/ludnosc.png>
+Package pdftex.def Info: ../mapy/ludnosc.png used on input line 838.
 (pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
+ [35
 
-[34
-
-] <pictures/ludnosc.png, id=591, 481.8pt x 481.8pt>
+]
+<pictures/ludnosc.png, id=613, 481.8pt x 481.8pt>
 File: pictures/ludnosc.png Graphic file (type png)
-
-<use pictures/ludnosc.png>
-Package pdftex.def Info: pictures/ludnosc.png used on input line 821.
+ <use pictures/ludnosc.png>
+Package pdftex.def Info: pictures/ludnosc.png used on input line 855.
 (pdftex.def)             Requested size: 426.79135pt x 426.801pt.
- <../mapy/firma.png, id=594, 1003.75pt x 1003.75pt>
+
+<pictures/profile_klientow.png, id=614, 481.8pt x 481.8pt>
+File: pictures/profile_klientow.png Graphic file (type png)
+
+<use pictures/profile_klientow.png>
+Package pdftex.def Info: pictures/profile_klientow.png used on input line 862.
+(pdftex.def)             Requested size: 426.79135pt x 426.801pt.
+
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 869.
+
+<../mapy/firma.png, id=621, 1003.75pt x 1003.75pt>
 File: ../mapy/firma.png Graphic file (type png)
-
-<use ../mapy/firma.png>
-Package pdftex.def Info: ../mapy/firma.png used on input line 833.
+ <use ../mapy/firma.png>
+Package pdftex.def Info: ../mapy/firma.png used on input line 923.
 (pdftex.def)             Requested size: 426.79135pt x 426.79488pt.
- [35 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/typy.png (PNG co
-py)> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/ludnosc.png (PNG
- copy)>] [36 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/picture
-s/ludnosc.png>] [37 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/f
-irma.png (PNG copy)>]
-<pictures/prog.png, id=618, 481.8pt x 481.8pt>
-File: pictures/prog.png Graphic file (type png)
- <use pictures/prog.png>
-Package pdftex.def Info: pictures/prog.png used on input line 881.
+
+[36 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/typy.png (PNG cop
+y)> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/ludnosc.png (PNG 
+copy)>] [37 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures
+/ludnosc.png>] <pictures/sprzedaz_marek.png, id=645, 481.8pt x 481.8pt>
+File: pictures/sprzedaz_marek.png Graphic file (type png)
+
+<use pictures/sprzedaz_marek.png>
+Package pdftex.def Info: pictures/sprzedaz_marek.png used on input line 935.
+(pdftex.def)             Requested size: 426.79135pt x 426.801pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 944.
+
+
+LaTeX Warning: Reference `tab:cechyprodukty' on page 38 undefined on input line
+ 944.
+
+[38]
+
+LaTeX Warning: Reference `fig:prognozy_porowniania' on page 39 undefined on inp
+ut line 975.
+
+
+LaTeX Warning: Reference `fig:przychody_koszty' on page 39 undefined on input l
+ine 975.
+
+[39] <pictures/prognozy_lg_kn.png, id=674, 481.8pt x 481.8pt>
+File: pictures/prognozy_lg_kn.png Graphic file (type png)
+
+<use pictures/prognozy_lg_kn.png>
+Package pdftex.def Info: pictures/prognozy_lg_kn.png used on input line 983.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
+<pictures/rozklad_prognoz.png, id=675, 481.8pt x 481.8pt>
+File: pictures/rozklad_prognoz.png Graphic file (type png)
 
-LaTeX Warning: Reference `brak1' on page 38 undefined on input line 940.
-
-
-LaTeX Warning: Reference `brak2' on page 38 undefined on input line 940.
-
-
-LaTeX Warning: Reference `brak3' on page 38 undefined on input line 940.
-
-
-LaTeX Warning: Reference `brak3' on page 38 undefined on input line 940.
-
-[38 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/prog.pn
-g>] <pictures/brak_algorytmu/wyniki.png, id=625, 481.8pt x 481.8pt>
-File: pictures/brak_algorytmu/wyniki.png Graphic file (type png)
-
-<use pictures/brak_algorytmu/wyniki.png>
-Package pdftex.def Info: pictures/brak_algorytmu/wyniki.png used on input line 
-945.
+<use pictures/rozklad_prognoz.png>
+Package pdftex.def Info: pictures/rozklad_prognoz.png used on input line 994.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<pictures/brak_algorytmu/trasy.png, id=626, 481.8pt x 481.8pt>
-File: pictures/brak_algorytmu/trasy.png Graphic file (type png)
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
 
-<use pictures/brak_algorytmu/trasy.png>
-Package pdftex.def Info: pictures/brak_algorytmu/trasy.png used on input line 9
+ []
+
+[40] <pictures/trasy.png, id=690, 481.8pt x 481.8pt>
+File: pictures/trasy.png Graphic file (type png)
+ <use pictures/trasy.png>
+Package pdftex.def Info: pictures/trasy.png used on input line 1024.
+(pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
+
+ []
+
+[41] <pictures/przychody_koszty_lm.png, id=706, 481.8pt x 481.8pt>
+File: pictures/przychody_koszty_lm.png Graphic file (type png)
+
+<use pictures/przychody_koszty_lm.png>
+Package pdftex.def Info: pictures/przychody_koszty_lm.png used on input line 10
+44.
+(pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
+
+<pictures/przcyhody_koszty_kn.png, id=707, 481.8pt x 481.8pt>
+File: pictures/przcyhody_koszty_kn.png Graphic file (type png)
+
+<use pictures/przcyhody_koszty_kn.png>
+Package pdftex.def Info: pictures/przcyhody_koszty_kn.png used on input line 10
 51.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<pictures/brak_algorytmu/trasy2.png, id=627, 481.8pt x 481.8pt>
-File: pictures/brak_algorytmu/trasy2.png Graphic file (type png)
-
-<use pictures/brak_algorytmu/trasy2.png>
-Package pdftex.def Info: pictures/brak_algorytmu/trasy2.png used on input line 
-963.
-(pdftex.def)             Requested size: 426.79135pt x 426.801pt.
-File: pictures/brak_algorytmu/wyniki.png Graphic file (type png)
-
-<use pictures/brak_algorytmu/wyniki.png>
-Package pdftex.def Info: pictures/brak_algorytmu/wyniki.png used on input line 
-974.
+<pictures/zysk_lm.png, id=708, 481.8pt x 481.8pt>
+File: pictures/zysk_lm.png Graphic file (type png)
+ <use pictures/zysk_lm.png>
+Package pdftex.def Info: pictures/zysk_lm.png used on input line 1064.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
-File: pictures/brak_algorytmu/trasy.png Graphic file (type png)
 
-<use pictures/brak_algorytmu/trasy.png>
-Package pdftex.def Info: pictures/brak_algorytmu/trasy.png used on input line 9
-80.
+<pictures/zysk_km.png, id=709, 481.8pt x 481.8pt>
+File: pictures/zysk_km.png Graphic file (type png)
+ <use pictures/zysk_km.png>
+Package pdftex.def Info: pictures/zysk_km.png used on input line 1071.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
- [39 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/brak_a
-lgorytmu/wyniki.png> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst
-/pictures/brak_algorytmu/trasy.png>]
-[40 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/brak_al
-gorytmu/trasy2.png>] [41] [42] [43] [44
 
-]
-(C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.bbl [45
+[42] [43 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/pr
+ofile_klientow.png>] [44] [45 <C:/Users/Hubert/Desktop/master-thesis/master-the
+sis/mapy/firma.png (PNG copy)>] [46 <C:/Users/Hubert/Desktop/master-thesis/mast
+er-thesis/tekst/pictures/sprzedaz_marek.png>] [47 <C:/Users/Hubert/Desktop/mast
+er-thesis/master-thesis/tekst/pictures/prognozy_lg_kn.png> <C:/Users/Hubert/Des
+ktop/master-thesis/master-thesis/tekst/pictures/rozklad_prognoz.png>] [48 <C:/U
+sers/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/trasy.png> <C:/U
+sers/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/przychody_koszty
+_lm.png> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/pr
+zcyhody_koszty_kn.png>] [49 <C:/Users/Hubert/Desktop/master-thesis/master-thesi
+s/tekst/pictures/zysk_lm.png> <C:/Users/Hubert/Desktop/master-thesis/master-the
+sis/tekst/pictures/zysk_km.png>]
+(C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.bbl [50
 
 ])
-[46] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.lot)
+[51] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.lot)
 \tf@lot=\write6
 
-[47
+[52
 
-] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.lof
-Underfull \hbox (badness 4316) in paragraph at lines 8--8
- [][] [][][]\T1/ptm/m/n/12 Przykªadowy roz-kªad praw-do-po-do-bie«-stwa zmien-n
-ej wy-ksztaª-ce-nie 
- []
-
-)
+] (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.lof)
 \tf@lof=\write7
- [48
 
-] [49
+[53
+
+] [54
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1027.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1027.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1109.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1109.
  (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1027.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1027.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1109.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1109.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 98675A3716E6427B25A369C5B28B23A8;2365.
+(rerunfilecheck)             Checksum: B00F3E2E3F8C9391AFEA0CB98C6B8AE8;2159.
 
 
 LaTeX Warning: There were undefined references.
@@ -1589,23 +1658,32 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1027.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1109.
  ) 
 Here is how much of TeX's memory you used:
- 24068 strings out of 493921
- 439773 string characters out of 3144873
- 515709 words of memory out of 3000000
- 26703 multiletter control sequences out of 15000+200000
- 52785 words of font info for 77 fonts, out of 3000000 for 9000
+ 24126 strings out of 493921
+ 440982 string characters out of 3144873
+ 520182 words of memory out of 3000000
+ 26734 multiletter control sequences out of 15000+200000
+ 55292 words of font info for 82 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,16n,67p,1568b,1828s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.43} has been referenced but does not ex
+ 55i,17n,67p,1564b,1970s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.53} has been referenced but does not ex
 ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.42} has been referenced but does not exis
+pdfTeX warning (dest): name{Hfootnote.52} has been referenced but does not exis
 t, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.41} has been referenced but does not exis
+pdfTeX warning (dest): name{Hfootnote.50} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.49} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.48} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.47} has been referenced but does not exis
 t, replaced by a fixed one
 
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
@@ -1617,21 +1695,19 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/cou
-rier/ucrb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr
-8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (49 pages, 783719 bytes).
+9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
+/courier/ucrb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/
+ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (54 pages, 814673 bytes).
 PDF statistics:
- 818 PDF objects out of 1000 (max. 8388607)
- 204 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 916 PDF objects out of 1000 (max. 8388607)
+ 229 named destinations out of 1000 (max. 500000)
+ 350 words of extra memory for PDF output out of 10000 (max. 10000000)
 

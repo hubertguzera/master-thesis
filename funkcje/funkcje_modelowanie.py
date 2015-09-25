@@ -64,7 +64,7 @@ class training(object):
         f_r.zapis_przewidywania("rezultaty/przewidywania.csv",0,czysc=True)
         i = 0
         for element in self.historia_x:
-            f_r.zapis_przewidywania("rezultaty/przewidywania.csv",[self.historia_y[i],self.lg.predict(element)[0],self.km.predict(element)[0]])
+            f_r.zapis_przewidywania("rezultaty/przewidywania.csv",[self.historia_y[i],self.lg.predict_proba(element)[0],self.km.predict_proba(element)[0]])
             i+=1
 
         pickle.dump(self.lg,open("lg.p","wb"))
@@ -162,9 +162,7 @@ def prognozuj_sprzedaz(historia_sklepu,training,rynek):
         model = training.lg
     else:
         model = training.km
-
     prognoza = [0 for x in range(zalozenia.ilosc_iteracji_prognoz)]
-
     for i in range(zalozenia.ilosc_iteracji_prognoz):
         for item in model.predict_proba(stworz_grupe(historia_sklepu,training)):
             prognoza[i] += f_p.losuj_proba(item)

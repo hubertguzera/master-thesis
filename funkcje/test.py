@@ -1,14 +1,7 @@
-import sympy
 
-a,b = sympy.symbols("a b")
-y = sympy.symbols("y")
 
-expr = 2*a + 2*b
+import pickle
 
-print expr.subs([(a,-2),(y,-2)])
+lg = pickle.load(open("../lg.p","rb"))
 
-print expr.subs([(a,2),(y,2)])>0
-
-d = {"a":200 , "b":300}
-
-print min(d.items(), key=lambda x: x[1])[0]
+print lg.sparsify()

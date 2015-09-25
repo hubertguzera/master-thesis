@@ -1,0 +1,6 @@
+import csv
+ifile = open("rezultaty/przewidywania.csv", "rb")
+reader = csv.reader(ifile)
+a = []
+for row in reader:
+    d[(row[0])] = float(row[1])
