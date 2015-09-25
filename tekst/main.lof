@@ -1,24 +1,23 @@
 \select@language {polish}
-\contentsline {figure}{\numberline {1}{\ignorespaces Przedsi\IeC {\k e}biorstwo jako graf kierunkowy}}{8}{figure.caption.2}
-\contentsline {figure}{\numberline {2}{\ignorespaces Rozwa\IeC {\.z}ane przedsi\IeC {\k e}biorstwo przedstawione jako graf kierunkowy}}{13}{figure.caption.4}
-\contentsline {figure}{\numberline {3}{\ignorespaces Proponowany algorytm optymalizacyjny\relax }}{16}{figure.caption.6}
-\contentsline {figure}{\numberline {4}{\ignorespaces Struktura dzia\IeC {\l }ania programu}}{22}{figure.caption.11}
-\contentsline {figure}{\numberline {5}{\ignorespaces Diagram UML klasy rynek}}{23}{figure.caption.13}
-\contentsline {figure}{\numberline {6}{\ignorespaces Diagram UML klasy swiat, lokalizacja i konsument}}{25}{figure.caption.15}
-\contentsline {figure}{\numberline {7}{\ignorespaces Algorytm generowania \IeC {\'s}wiata w modelu}}{26}{figure.caption.16}
-\contentsline {figure}{\numberline {8}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana mapa}}{27}{figure.caption.17}
-\contentsline {figure}{\numberline {9}{\ignorespaces Algorytm wyszukiwania drogi}}{28}{figure.caption.18}
-\contentsline {figure}{\numberline {10}{\ignorespaces Diagram UML klasy konsument}}{29}{figure.caption.19}
-\contentsline {figure}{\numberline {11}{\ignorespaces Rozk\IeC {\l }ady zmiennych cech klasy konsument}}{30}{figure.caption.20}
-\contentsline {figure}{\numberline {12}{\ignorespaces Diagram UML klasy firma, fabryka, magazyn oraz sklep}}{34}{figure.caption.21}
-\contentsline {figure}{\numberline {13}{\ignorespaces Kr\IeC {\'o}tka nazwa II}}{36}{figure.caption.24}
-\contentsline {figure}{\numberline {14}{\ignorespaces Histogramy cech agent\IeC {\'o}w}}{37}{figure.caption.26}
-\contentsline {figure}{\numberline {15}{\ignorespaces Cechy konsument\IeC {\'o}w marki w por\IeC {\'o}wnaniu do wszystkich agent\IeC {\'o}w}}{43}{figure.caption.27}
-\contentsline {figure}{\numberline {16}{\ignorespaces Modelowane przedsi\IeC {\k e}biorstwo przedstawione jako graf kierunkowy}}{44}{figure.caption.30}
-\contentsline {figure}{\numberline {17}{\ignorespaces Kr\IeC {\'o}tka nazwa X}}{45}{figure.caption.31}
-\contentsline {figure}{\numberline {18}{\ignorespaces Statystyki sprzeda\IeC {\.z}y marek symulowanych w modelu}}{46}{figure.caption.33}
-\contentsline {figure}{\numberline {19}{\ignorespaces Przewidywana i realna sprzeda\IeC {\.z} w modelu}}{47}{figure.caption.35}
-\contentsline {figure}{\numberline {20}{\ignorespaces Rozk\IeC {\l }ad prawdopodobie\IeC {\'n}stwa zakupu w prognozach}}{47}{figure.caption.36}
-\contentsline {figure}{\numberline {21}{\ignorespaces Alokacje wolumen\IeC {\'o}w dostaw w\IeC {\'s}r\IeC {\'o}d mo\IeC {\.z}liwych \IeC {\'s}cie\IeC {\.z}ek}}{48}{figure.caption.38}
-\contentsline {figure}{\numberline {22}{\ignorespaces Wyniki finansowe symulowanego przedsi\IeC {\k e}biorstwa}}{48}{figure.caption.40}
-\contentsline {figure}{\numberline {23}{\ignorespaces Zysk symulowanego przedsi\IeC {\k e}biorstwa}}{49}{figure.caption.41}
+\contentsline {figure}{\numberline {1}{\ignorespaces \IeC {\L }a\IeC {\'n}cuch dostaw w postaci grafu kierunkowego}}{8}{figure.caption.2}
+\contentsline {figure}{\numberline {2}{\ignorespaces Rozwa\IeC {\.z}ane przedsi\IeC {\k e}biorstwo przedstawione jako graf kierunkowy}}{14}{figure.caption.4}
+\contentsline {figure}{\numberline {3}{\ignorespaces Proponowany algorytm optymalizacyjny\relax }}{18}{figure.caption.6}
+\contentsline {figure}{\numberline {4}{\ignorespaces Struktura dzia\IeC {\l }ania programu}}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {5}{\ignorespaces Diagram UML klasy rynek}}{24}{figure.caption.13}
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagram UML klasy swiat, lokalizacja i konsument}}{26}{figure.caption.16}
+\contentsline {figure}{\numberline {7}{\ignorespaces Przyk\IeC {\l }adowa wygenerowana mapa}}{27}{figure.caption.17}
+\contentsline {figure}{\numberline {8}{\ignorespaces Algorytm wyszukiwania drogi}}{27}{figure.caption.18}
+\contentsline {figure}{\numberline {9}{\ignorespaces Diagram UML klasy konsument}}{28}{figure.caption.19}
+\contentsline {figure}{\numberline {10}{\ignorespaces Rozk\IeC {\l }ady zmiennych cech klasy konsument}}{29}{figure.caption.20}
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagram UML klasy firma, fabryka, magazyn oraz sklep}}{34}{figure.caption.21}
+\contentsline {figure}{\numberline {12}{\ignorespaces Wygenerowane mapy \IeC {\'s}rodowiska modelu }}{36}{figure.caption.25}
+\contentsline {figure}{\numberline {13}{\ignorespaces Histogramy cech agent\IeC {\'o}w}}{37}{figure.caption.27}
+\contentsline {figure}{\numberline {14}{\ignorespaces Cechy konsument\IeC {\'o}w marki w por\IeC {\'o}wnaniu do wszystkich agent\IeC {\'o}w}}{43}{figure.caption.28}
+\contentsline {figure}{\numberline {15}{\ignorespaces Modelowane przedsi\IeC {\k e}biorstwo przedstawione jako graf kierunkowy}}{44}{figure.caption.31}
+\contentsline {figure}{\numberline {16}{\ignorespaces Mapa z zaznaczonymi lokalizacjami jednostek przedsi\IeC {\k e}biorstwa}}{45}{figure.caption.32}
+\contentsline {figure}{\numberline {17}{\ignorespaces Statystyki sprzeda\IeC {\.z}y marek symulowanych w modelu}}{46}{figure.caption.34}
+\contentsline {figure}{\numberline {18}{\ignorespaces Przewidywana i realna sprzeda\IeC {\.z} w modelu}}{47}{figure.caption.36}
+\contentsline {figure}{\numberline {19}{\ignorespaces Rozk\IeC {\l }ad prawdopodobie\IeC {\'n}stwa zakupu w prognozach}}{47}{figure.caption.37}
+\contentsline {figure}{\numberline {20}{\ignorespaces Alokacje wolumen\IeC {\'o}w dostaw w\IeC {\'s}r\IeC {\'o}d mo\IeC {\.z}liwych \IeC {\'s}cie\IeC {\.z}ek}}{48}{figure.caption.39}
+\contentsline {figure}{\numberline {21}{\ignorespaces Wyniki finansowe symulowanego przedsi\IeC {\k e}biorstwa}}{48}{figure.caption.41}
+\contentsline {figure}{\numberline {22}{\ignorespaces Zysk symulowanego przedsi\IeC {\k e}biorstwa}}{49}{figure.caption.42}

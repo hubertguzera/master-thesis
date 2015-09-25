@@ -132,6 +132,9 @@ prognozy_2 <- read.csv("rezultaty/skutecznosc_przewidywan.csv",header=FALSE)
 colnames(prognozy_2) <- c("Symbol","Tura","Prawdziwe","KN","LG")
 prognozy_2$Tura <- prognozy_2$Tura +1
 prognozy_2 <- aggregate(prognozy_2[c(3,4,5)], by=list(prognozy_2$Tura), FUN="sum")
+plot(prognozy_2$Prawdziwe,ylim=c(0,200))
+lines(prognozy_2$KN)
+lines(prognozy_2$LG)
 
 png("tekst/pictures/rozklad_prognoz.png")
 skutecznosc <- read.csv("rezultaty/przewidywania2.csv",s=";")

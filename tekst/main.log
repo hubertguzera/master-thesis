@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  25 SEP 2015 10:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.16)  25 SEP 2015 16:47
 entering extended mode
 **C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/main.tex
 (C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/main.tex
@@ -1170,12 +1170,6 @@ LaTeX Warning: Label `eq:przychodsystemu' multiply defined.
 LaTeX Warning: Label `eq:przychodsystemu' multiply defined.
 
 
-LaTeX Warning: Label `UML:swiat' multiply defined.
-
-
-LaTeX Warning: Label `fig:wyksztalcenie' multiply defined.
-
-
 LaTeX Warning: Label `fig:przychod_koszt' multiply defined.
 
 
@@ -1323,100 +1317,94 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 
 ] [6]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 171.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 169.
  [7
 
-] <pictures/siec.png, id=218, 536.75531pt x 283.0575pt>
+] <pictures/siec.png, id=220, 536.75531pt x 283.0575pt>
 File: pictures/siec.png Graphic file (type png)
 
 <use pictures/siec.png>
-Package pdftex.def Info: pictures/siec.png used on input line 186.
-(pdftex.def)             Requested size: 192.0548pt x 101.27866pt.
+Package pdftex.def Info: pictures/siec.png used on input line 184.
+(pdftex.def)             Requested size: 341.43437pt x 180.0548pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 189.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 187.
  [8 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/siec.pn
 g>]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 203.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 201.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 1052) in paragraph at lines 205--206
+Underfull \hbox (badness 1052) in paragraph at lines 203--204
 []\T1/ptm/m/n/12 reaktywno±¢ --- jed-nostki przed-si¦-bior-stwa re-aguj¡ na zmi
 any ryn-kowe oraz
  []
 
-[9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
+[9] [10] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
+
+Underfull \hbox (badness 1596) in paragraph at lines 294--295
+\T1/ptm/m/n/12 le-gaªo na alo-ka-cji wo-lu-me-nów pro-duk-cji na po-szcze-gólne
+ ±cie»ki $\OML/cmm/m/it/12 w \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 W \OT1/cmr/m/n
+/12 =$
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
-[13] [14] [15]
-
-LaTeX Warning: Reference `fig:algorytm' on page 16 undefined on input line 363.
-
-
-<pictures/diagramoptymalizacyny.png, id=352, 725.71124pt x 364.36125pt>
+[14] [15] [16]
+<pictures/diagramoptymalizacyny.png, id=365, 665.48625pt x 335.2525pt>
 File: pictures/diagramoptymalizacyny.png Graphic file (type png)
 
 <use pictures/diagramoptymalizacyny.png>
 Package pdftex.def Info: pictures/diagramoptymalizacyny.png used on input line 
-367.
-(pdftex.def)             Requested size: 426.79135pt x 214.28743pt.
- [16 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/diagra
-moptymalizacyny.png>] [17] [18
+359.
+(pdftex.def)             Requested size: 426.79135pt x 215.00592pt.
+ [17] [18 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/d
+iagramoptymalizacyny.png>] [19
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
-
- []
-
 [20]
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
-LaTeX Warning: Reference `chapter:algorithm' on page 21 undefined on input line
- 443.
+ []
 
+[21]
 
-LaTeX Warning: Reference `fig:struktura' on page 21 undefined on input line 470
-.
+LaTeX Warning: Reference `chapter:algorithm' on page 22 undefined on input line
+ 437.
 
-[21] <pictures/Struktura.png, id=427, 766.865pt x 775.89874pt>
+[22] <pictures/Struktura.png, id=445, 792.9625pt x 364.36125pt>
 File: pictures/Struktura.png Graphic file (type png)
 
 <use pictures/Struktura.png>
-Package pdftex.def Info: pictures/Struktura.png used on input line 483.
-(pdftex.def)             Requested size: 405.45047pt x 410.22987pt.
+Package pdftex.def Info: pictures/Struktura.png used on input line 477.
+(pdftex.def)             Requested size: 405.45047pt x 186.30547pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 492.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 486.
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--494
+Underfull \hbox (badness 10000) in paragraph at lines 486--488
 
  []
 
-[22 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/Struktu
+[23 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/Struktu
 ra.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 516--517
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 530--532
+Underfull \hbox (badness 10000) in paragraph at lines 510--511
 
  []
 
@@ -1425,194 +1413,165 @@ Overfull \hbox (8.39902pt too wide) in paragraph at lines 564--566
  [][] 
  []
 
-<pictures/tworzeniedrog.png, id=455, 795.97375pt x 475.7775pt>
-File: pictures/tworzeniedrog.png Graphic file (type png)
+<pictures/mapatypow.png, id=464, 957.5775pt x 719.68875pt>
+File: pictures/mapatypow.png Graphic file (type png)
 
-<use pictures/tworzeniedrog.png>
-Package pdftex.def Info: pictures/tworzeniedrog.png used on input line 571.
-(pdftex.def)             Requested size: 426.79135pt x 255.10107pt.
-
-<../mapy/po_lokalizacji_sklepow.png, id=456, 1003.75pt x 1003.75pt>
-File: ../mapy/po_lokalizacji_sklepow.png Graphic file (type png)
-
-<use ../mapy/po_lokalizacji_sklepow.png>
-Package pdftex.def Info: ../mapy/po_lokalizacji_sklepow.png used on input line 
-581.
-(pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
+<use pictures/mapatypow.png>
+Package pdftex.def Info: pictures/mapatypow.png used on input line 574.
+(pdftex.def)             Requested size: 192.0548pt x 144.3415pt.
  [24]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 599.
 
-LaTeX Warning: Reference `fig:wayfinding' on page 25 undefined on input line 59
-5.
-
-[25]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 606.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 607.
- [26 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/tworze
-niedrog.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 634--635
-
- []
-
-[27 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/po_lokalizacji_sk
-lepow.png (PNG copy)>]
-
-LaTeX Warning: Reference `tab:zainteresowania' on page 28 undefined on input li
-ne 663.
-
-<pictures/wiek.png, id=502, 481.8pt x 481.8pt>
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 600.
+ [25] [26]
+[27 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/mapatyp
+ow.png (PNG copy)>] <pictures/wiek.png, id=528, 481.8pt x 481.8pt>
 File: pictures/wiek.png Graphic file (type png)
- <use pictures/wiek.png>
-Package pdftex.def Info: pictures/wiek.png used on input line 669.
+
+<use pictures/wiek.png>
+Package pdftex.def Info: pictures/wiek.png used on input line 660.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<pictures/wyksztalcenie.png, id=503, 481.8pt x 481.8pt>
+<pictures/wyksztalcenie.png, id=529, 481.8pt x 481.8pt>
 File: pictures/wyksztalcenie.png Graphic file (type png)
 
 <use pictures/wyksztalcenie.png>
-Package pdftex.def Info: pictures/wyksztalcenie.png used on input line 675.
+Package pdftex.def Info: pictures/wyksztalcenie.png used on input line 666.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
+ [28] [29 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/w
+iek.png> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/wy
+ksztalcenie.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 730--731
 
+ []
 
-Package caption Warning: \label without proper \caption on input line 694.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `firma' on page 28 undefined on input line 687.
-
-[28] [29] [30 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictur
-es/wiek.png> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/picture
-s/wyksztalcenie.png>]
-Overfull \hbox (330.53503pt too wide) in paragraph at lines 759--771
+[30]
+Overfull \hbox (236.88774pt too wide) in paragraph at lines 749--761
  [][] 
  []
 
 [31]
 
-LaTeX Warning: Reference `fig:struktura' on page 32 undefined on input line 786
-.
+LaTeX Warning: Reference `struktura' on page 32 undefined on input line 776.
 
-[32] [33] [34] <../mapy/typy.png, id=592, 1003.75pt x 1003.75pt>
+[32] [33] [34] <../mapy/typy.png, id=610, 1003.75pt x 1003.75pt>
 File: ../mapy/typy.png Graphic file (type png)
 
 <use ../mapy/typy.png>
-Package pdftex.def Info: ../mapy/typy.png used on input line 832.
+Package pdftex.def Info: ../mapy/typy.png used on input line 824.
 (pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
- <../mapy/ludnosc.png, id=593, 1003.75pt x 1003.75pt>
+ <../mapy/ludnosc.png, id=611, 1003.75pt x 1003.75pt>
 File: ../mapy/ludnosc.png Graphic file (type png)
 
 <use ../mapy/ludnosc.png>
-Package pdftex.def Info: ../mapy/ludnosc.png used on input line 838.
+Package pdftex.def Info: ../mapy/ludnosc.png used on input line 830.
 (pdftex.def)             Requested size: 192.0548pt x 192.04697pt.
  [35
 
 ]
-<pictures/ludnosc.png, id=613, 481.8pt x 481.8pt>
+<pictures/ludnosc.png, id=629, 481.8pt x 481.8pt>
 File: pictures/ludnosc.png Graphic file (type png)
  <use pictures/ludnosc.png>
-Package pdftex.def Info: pictures/ludnosc.png used on input line 855.
+Package pdftex.def Info: pictures/ludnosc.png used on input line 847.
 (pdftex.def)             Requested size: 426.79135pt x 426.801pt.
 
-<pictures/profile_klientow.png, id=614, 481.8pt x 481.8pt>
+<pictures/profile_klientow.png, id=630, 481.8pt x 481.8pt>
 File: pictures/profile_klientow.png Graphic file (type png)
 
 <use pictures/profile_klientow.png>
-Package pdftex.def Info: pictures/profile_klientow.png used on input line 862.
+Package pdftex.def Info: pictures/profile_klientow.png used on input line 854.
 (pdftex.def)             Requested size: 426.79135pt x 426.801pt.
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 869.
-
-<../mapy/firma.png, id=621, 1003.75pt x 1003.75pt>
-File: ../mapy/firma.png Graphic file (type png)
- <use ../mapy/firma.png>
-Package pdftex.def Info: ../mapy/firma.png used on input line 923.
-(pdftex.def)             Requested size: 426.79135pt x 426.79488pt.
+(amsmath)                 on input line 861.
 
 [36 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/typy.png (PNG cop
 y)> <C:/Users/Hubert/Desktop/master-thesis/master-thesis/mapy/ludnosc.png (PNG 
-copy)>] [37 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures
-/ludnosc.png>] <pictures/sprzedaz_marek.png, id=645, 481.8pt x 481.8pt>
+copy)>] <../mapy/firma.png, id=648, 1003.75pt x 1003.75pt>
+File: ../mapy/firma.png Graphic file (type png)
+
+<use ../mapy/firma.png>
+Package pdftex.def Info: ../mapy/firma.png used on input line 915.
+(pdftex.def)             Requested size: 426.79135pt x 426.79488pt.
+ [37 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/ludnos
+c.png>]
+<pictures/sprzedaz_marek.png, id=664, 481.8pt x 481.8pt>
 File: pictures/sprzedaz_marek.png Graphic file (type png)
 
 <use pictures/sprzedaz_marek.png>
-Package pdftex.def Info: pictures/sprzedaz_marek.png used on input line 935.
+Package pdftex.def Info: pictures/sprzedaz_marek.png used on input line 927.
 (pdftex.def)             Requested size: 426.79135pt x 426.801pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 944.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 936.
 
 
 LaTeX Warning: Reference `tab:cechyprodukty' on page 38 undefined on input line
- 944.
+ 936.
 
-[38]
-
-LaTeX Warning: Reference `fig:prognozy_porowniania' on page 39 undefined on inp
-ut line 975.
-
-
-LaTeX Warning: Reference `fig:przychody_koszty' on page 39 undefined on input l
-ine 975.
-
-[39] <pictures/prognozy_lg_kn.png, id=674, 481.8pt x 481.8pt>
+[38] [39] <pictures/prognozy_lg_kn.png, id=694, 481.8pt x 481.8pt>
 File: pictures/prognozy_lg_kn.png Graphic file (type png)
 
 <use pictures/prognozy_lg_kn.png>
-Package pdftex.def Info: pictures/prognozy_lg_kn.png used on input line 983.
+Package pdftex.def Info: pictures/prognozy_lg_kn.png used on input line 975.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<pictures/rozklad_prognoz.png, id=675, 481.8pt x 481.8pt>
+<pictures/rozklad_prognoz.png, id=695, 481.8pt x 481.8pt>
 File: pictures/rozklad_prognoz.png Graphic file (type png)
 
 <use pictures/rozklad_prognoz.png>
-Package pdftex.def Info: pictures/rozklad_prognoz.png used on input line 994.
+Package pdftex.def Info: pictures/rozklad_prognoz.png used on input line 986.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1013
+ [40]
+Underfull \hbox (badness 10000) in paragraph at lines 997--998
 
  []
 
-[40] <pictures/trasy.png, id=690, 481.8pt x 481.8pt>
+<pictures/trasy.png, id=713, 481.8pt x 481.8pt>
 File: pictures/trasy.png Graphic file (type png)
  <use pictures/trasy.png>
-Package pdftex.def Info: pictures/trasy.png used on input line 1024.
+Package pdftex.def Info: pictures/trasy.png used on input line 1009.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
 
  []
 
-[41] <pictures/przychody_koszty_lm.png, id=706, 481.8pt x 481.8pt>
+[41]
+
+LaTeX Warning: Reference `fig:lg_kn' on page 42 undefined on input line 1022.
+
+<pictures/przychody_koszty_lm.png, id=726, 481.8pt x 481.8pt>
 File: pictures/przychody_koszty_lm.png Graphic file (type png)
 
 <use pictures/przychody_koszty_lm.png>
 Package pdftex.def Info: pictures/przychody_koszty_lm.png used on input line 10
-44.
+30.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<pictures/przcyhody_koszty_kn.png, id=707, 481.8pt x 481.8pt>
+<pictures/przcyhody_koszty_kn.png, id=727, 481.8pt x 481.8pt>
 File: pictures/przcyhody_koszty_kn.png Graphic file (type png)
 
 <use pictures/przcyhody_koszty_kn.png>
 Package pdftex.def Info: pictures/przcyhody_koszty_kn.png used on input line 10
-51.
+37.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<pictures/zysk_lm.png, id=708, 481.8pt x 481.8pt>
+<pictures/zysk_lm.png, id=728, 481.8pt x 481.8pt>
 File: pictures/zysk_lm.png Graphic file (type png)
  <use pictures/zysk_lm.png>
-Package pdftex.def Info: pictures/zysk_lm.png used on input line 1064.
+Package pdftex.def Info: pictures/zysk_lm.png used on input line 1050.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
-<pictures/zysk_km.png, id=709, 481.8pt x 481.8pt>
+<pictures/zysk_km.png, id=729, 481.8pt x 481.8pt>
 File: pictures/zysk_km.png Graphic file (type png)
  <use pictures/zysk_km.png>
-Package pdftex.def Info: pictures/zysk_km.png used on input line 1071.
+Package pdftex.def Info: pictures/zysk_km.png used on input line 1057.
 (pdftex.def)             Requested size: 192.0548pt x 192.05493pt.
 
 [42] [43 <C:/Users/Hubert/Desktop/master-thesis/master-thesis/tekst/pictures/pr
@@ -1643,14 +1602,14 @@ sis/tekst/pictures/zysk_km.png>]
 ] [54
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1109.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1109.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1100.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1100.
  (C:\Users\Hubert\Desktop\master-thesis\master-thesis\tekst\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1109.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1109.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1100.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1100.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B00F3E2E3F8C9391AFEA0CB98C6B8AE8;2159.
+(rerunfilecheck)             Checksum: 3FADD7CC41B508DEA4D8EA3B3A2572E7;2176.
 
 
 LaTeX Warning: There were undefined references.
@@ -1658,20 +1617,23 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1109.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1100.
  ) 
 Here is how much of TeX's memory you used:
- 24126 strings out of 493921
- 440982 string characters out of 3144873
- 520182 words of memory out of 3000000
- 26734 multiletter control sequences out of 15000+200000
+ 24122 strings out of 493921
+ 440787 string characters out of 3144873
+ 521483 words of memory out of 3000000
+ 26730 multiletter control sequences out of 15000+200000
  55292 words of font info for 82 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,17n,67p,1564b,1970s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.53} has been referenced but does not ex
+ 55i,17n,67p,1576b,1970s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.54} has been referenced but does not ex
 ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.52} has been referenced but does not exis
+pdfTeX warning (dest): name{Hfootnote.53} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.51} has been referenced but does not exis
 t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.50} has been referenced but does not exis
@@ -1683,7 +1645,7 @@ t, replaced by a fixed one
 pdfTeX warning (dest): name{Hfootnote.48} has been referenced but does not exis
 t, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.47} has been referenced but does not exis
+pdfTeX warning (dest): name{Hfootnote.31} has been referenced but does not exis
 t, replaced by a fixed one
 
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
@@ -1705,9 +1667,9 @@ ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (54 pages, 814673 bytes).
+Output written on main.pdf (54 pages, 1293083 bytes).
 PDF statistics:
- 916 PDF objects out of 1000 (max. 8388607)
- 229 named destinations out of 1000 (max. 500000)
- 350 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 937 PDF objects out of 1000 (max. 8388607)
+ 230 named destinations out of 1000 (max. 500000)
+ 345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
