@@ -2,7 +2,7 @@
 \BOOKMARK [1][-]{section.2}{Cel, za\233ozenia i podstawy teoretyczne pracy}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Koncepcja pracy}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Podstawy teoretyczne}{section.2}% 4
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Przedsiebiorstwo jako system wieloagentowy}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Przedsiebiorstwo jako system wieloelementowy}{subsection.2.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.2.2}{Modelowanie predykcyjne}{subsection.2.2}% 6
 \BOOKMARK [3][-]{subsubsection.2.2.3}{Zadanie optymalizacyjne}{subsection.2.2}% 7
 \BOOKMARK [2][-]{subsection.2.3}{Proponowany algorytm optymalizacyjny}{section.2}% 8
@@ -12,18 +12,19 @@
 \BOOKMARK [2][-]{subsection.3.2}{Zastosowane narzedzia}{section.3}% 12
 \BOOKMARK [2][-]{subsection.3.3}{Struktura programu}{section.3}% 13
 \BOOKMARK [2][-]{subsection.3.4}{Generowanie srodowiska modelu}{section.3}% 14
-\BOOKMARK [3][-]{subsubsection.3.4.1}{Algorytm wyszukiwania drogi}{subsection.3.4}% 15
-\BOOKMARK [2][-]{subsection.3.5}{Agenci, ich rodzaje i w\233asciwosci}{section.3}% 16
-\BOOKMARK [3][-]{subsubsection.3.5.1}{Konsumenci}{subsection.3.5}% 17
-\BOOKMARK [3][-]{subsubsection.3.5.2}{Przedsiebiorstwo}{subsection.3.5}% 18
-\BOOKMARK [3][-]{subsubsection.3.5.3}{Produkt}{subsection.3.5}% 19
-\BOOKMARK [3][-]{subsubsection.3.5.4}{Konkurencja}{subsection.3.5}% 20
-\BOOKMARK [3][-]{subsubsection.3.5.5}{Sciezki i trasy dostaw}{subsection.3.5}% 21
-\BOOKMARK [2][-]{subsection.3.6}{Symulowanie decyzji konsumenckich}{section.3}% 22
-\BOOKMARK [1][-]{section.4}{Efekty dzia\233ania algorytmu optymalizacyjnego}{}% 23
-\BOOKMARK [2][-]{subsection.4.1}{Za\233ozenia modelu}{section.4}% 24
-\BOOKMARK [2][-]{subsection.4.2}{Przewidywanie decyzji konsument\363w}{section.4}% 25
-\BOOKMARK [2][-]{subsection.4.3}{Wp\233yw dzia\233ania algorytmu na dzia\233anie przedsiebiorstwo}{section.4}% 26
-\BOOKMARK [1][-]{section*.43}{Lista tablic}{}% 27
-\BOOKMARK [1][-]{section*.44}{Lista rysunk\363w}{}% 28
-\BOOKMARK [1][-]{section*.45}{Streszczenie}{}% 29
+\BOOKMARK [2][-]{subsection.3.5}{Agenci, ich rodzaje i w\233asciwosci}{section.3}% 15
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Konsumenci}{subsection.3.5}% 16
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Przedsiebiorstwo}{subsection.3.5}% 17
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Produkt}{subsection.3.5}% 18
+\BOOKMARK [3][-]{subsubsection.3.5.4}{Konkurencja}{subsection.3.5}% 19
+\BOOKMARK [3][-]{subsubsection.3.5.5}{Sciezki i trasy dostaw}{subsection.3.5}% 20
+\BOOKMARK [2][-]{subsection.3.6}{Symulowanie decyzji konsumenckich}{section.3}% 21
+\BOOKMARK [1][-]{section.4}{Efekty dzia\233ania algorytmu optymalizacyjnego}{}% 22
+\BOOKMARK [2][-]{subsection.4.1}{Za\233ozenia modelu}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.2}{Przewidywanie decyzji konsument\363w}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.3}{Wp\233yw dzia\233ania algorytmu na dzia\233anie przedsiebiorstwo}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.4}{Podsumowanie i wnioski}{section.4}% 26
+\BOOKMARK [1][-]{section.5}{Dodatek: Dodatkowe wykresy}{}% 27
+\BOOKMARK [1][-]{section*.42}{Lista tablic}{}% 28
+\BOOKMARK [1][-]{section*.43}{Lista rysunk\363w}{}% 29
+\BOOKMARK [1][-]{section*.44}{Streszczenie}{}% 30

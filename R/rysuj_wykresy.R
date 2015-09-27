@@ -6,7 +6,7 @@ plot(wykonanie$V1,wykonanie$V3)
 lines(wykonanie$V4, col="red")
 
 #Ludnosc
-ludnosc <- read.csv("rezultaty/ludnosc.csv")
+ludnosc <- read.csv("rezultaty/lm/ludnosc.csv")
 ludnosc <- ludnosc[,-2]
 ludnosc <- ludnosc[,-5]
 ludnosc$mezczyzna[ludnosc$mezczyzna==1] <- "Mezczyzna"
@@ -48,10 +48,15 @@ points(m_w$p, col="green")
 lines(m_w$p, col="green")
 dev.off()
 
+
+
 wiek <- read.csv("dane/wiek.csv",header=FALSE)
 png("tekst/pictures/wiek.png")
 plot(wiek, ylab="Prawdopodobienstwo", xlab="Wiek", main = 'Rozk³ad zmiennej wiek')
 dev.off()
+
+plot(x=ludnosc$wyksztalcenie,y=ludnosc$zarobki, ylab="Zarobki", xlab="Wykszta³cenie", main = 'Rozk³ad zmiennej zarobki w zale¿noœci od wykszta³cenia')
+ludnosc$wyksztalcenie <- as.factor(ludnosc$wyksztalcenie)
 
 
 produkty <- read.csv("rezultaty/produkty.csv")
